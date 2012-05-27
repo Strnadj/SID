@@ -1,13 +1,13 @@
 #ifndef HELPWINDOW_H
 #define HELPWINDOW_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class HelpWindow;
 }
 
-class HelpWindow : public QWidget
+class HelpWindow : public QDialog
 {
     Q_OBJECT
     

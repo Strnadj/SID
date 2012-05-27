@@ -2,7 +2,7 @@
 #include "ui_helpwindow.h"
 
 HelpWindow::HelpWindow(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::HelpWindow)
 {
     ui->setupUi(this);

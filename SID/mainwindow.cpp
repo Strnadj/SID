@@ -27,11 +27,8 @@ MainWindow::~MainWindow()
 
 /** Open Help window */
 void MainWindow::openHelp() {
-    if(!help) {
-        help = new HelpWindow(this);
-    }
+    help = new HelpWindow(this);
     help->show();
-    help->activateWindow();
 }
 
 /** Close window */
