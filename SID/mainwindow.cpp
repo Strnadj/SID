@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     version = QString("SID 0.1 pre-release");
 
     setWindowTitle(version);
+    setUnifiedTitleAndToolBarOnMac(true);
 
     // Open help window
     connect(ui->actionHelp, SIGNAL(triggered()), this, SLOT(openHelp()));
