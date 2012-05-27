@@ -4,15 +4,26 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 TARGET = SID
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    helpwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    helpwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    helpwindow.ui
+
+RESOURCES += \
+    resoruces.qrc
+
+OTHER_FILES += \
+    Resources/images/open.png \
+    Resources/images/help.png \
+    Resources/images/exit.png
