@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // Close application
     connect(ui->actionEnd, SIGNAL(triggered()), this, SLOT(close()));
 }
-
+/** Destroy main window */
 MainWindow::~MainWindow()
 {
     delete ui;
