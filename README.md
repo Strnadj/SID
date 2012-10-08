@@ -1,4 +1,4 @@
 SID
 ===
 
-Sql injection and XSS vulnerabilites detectior for PHP scripts.
+Sql injection detector for PHP scripts.
