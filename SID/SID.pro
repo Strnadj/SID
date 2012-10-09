@@ -26,4 +26,5 @@ RESOURCES += \
 OTHER_FILES += \
     Resources/images/open.png \
     Resources/images/help.png \
-    Resources/images/exit.png
+    Resources/images/exit.png \
+    Resources/images/splash.png

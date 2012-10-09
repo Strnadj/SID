@@ -1,7 +1,8 @@
- <!DOCTYPE RCC><RCC version="1.0">
- <qresource prefix="/myresources">
-     <file alias="open.png">Resources/images/open.png</file>
-     <file alias="help.png">Resources/images/help.png</file>
-     <file alias="exit.png">Resources/images/exit.png</file>
- </qresource>
- </RCC>
+<RCC>
+    <qresource prefix="/myresources">
+        <file alias="open.png">Resources/images/open.png</file>
+        <file alias="help.png">Resources/images/help.png</file>
+        <file alias="exit.png">Resources/images/exit.png</file>
+        <file alias="splash.png">Resources/images/splash.png</file>
+    </qresource>
+</RCC>
