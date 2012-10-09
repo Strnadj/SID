@@ -1,6 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QThread>
+
+class Wait : public QThread
+{
+public:
+        static void sleep(unsigned long secs) {
+                QThread::sleep(secs);
+        }
+};
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Close application
     connect(ui->actionEnd, SIGNAL(triggered()), this, SLOT(close()));
+
+
 }
 /** Destroy main window */
 MainWindow::~MainWindow()
@@ -47,4 +59,19 @@ void MainWindow::close() {
            // should never be reached
            break;
      }
+}
+
+/** Start click */
+void MainWindow::on_start_clicked()
+{
+    int value = 0;
+
+    ui->progressBar->setTextVisible(true);
+
+    for(value = 0; value <= 100000; value++) {
+        ui->progressBar->setValue(value/1000);
+        ui->progressBar->setFormat(QString("Hotovo: %1").arg(value/1000));
+    }
+
+
 }

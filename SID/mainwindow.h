@@ -24,6 +24,7 @@ private:
 private slots:
     void openHelp();
     void close();
+    void on_start_clicked();
 };
 
 #endif // MAINWINDOW_H

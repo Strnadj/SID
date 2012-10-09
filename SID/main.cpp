@@ -5,13 +5,14 @@
 #include <QPixmap>
 #include <QThread>
 
-class I : public QThread
+class Wait : public QThread
 {
 public:
         static void sleep(unsigned long secs) {
                 QThread::sleep(secs);
         }
 };
+
 
 int main(int argc, char *argv[])
 {
@@ -29,12 +30,12 @@ int main(int argc, char *argv[])
     splash->show();
 
     // Prepare for data loading!
-    I::sleep(1);
+    Wait::sleep(1);
     splash->showMessage(QObject::tr("Kontrola aktualizací..."), Qt::AlignRight | Qt::AlignBottom, Qt::white);
     a.processEvents();
-    I::sleep(3);
+    Wait::sleep(3);
     splash->showMessage(QObject::tr("Vytváření spojení..."), Qt::AlignRight | Qt::AlignBottom, Qt::white);
-    I::sleep(2);
+    Wait::sleep(2);
 
     // Main window
     MainWindow w;
