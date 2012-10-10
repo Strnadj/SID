@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QThread>
+#include <QDebug>
+#include <QDirIterator>
+#include <QDirModel>
 
 class Wait : public QThread
 {
@@ -29,12 +32,32 @@ MainWindow::MainWindow(QWidget *parent) :
     // Close application
     connect(ui->actionEnd, SIGNAL(triggered()), this, SLOT(close()));
 
+    // Open folder with project
+    connect(ui->actionOpenfolder, SIGNAL(triggered()), this, SLOT(openProjectFolder()));
 
 }
 /** Destroy main window */
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+/** Open folder with project */
+void MainWindow::openProjectFolder() {
+    QString folder = QFileDialog::getExistingDirectory(this, tr("Otevřít projektovou složku"), "", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    projectDir = QDir(folder);
+
+    QStringList fileTypes;
+    fileTypes << ".php";
+
+    dirModel = new QDirModel(this);
+    dirModel->setSorting(QDir::DirsFirst | QDir::IgnoreCase | QDir::Name);
+    ui->files->setModel(dirModel);
+    ui->files->setAnimated(true);
+    ui->files->setRootIndex(dirModel->index(folder));
+    ui->files->hideColumn(1);
+    ui->files->hideColumn(2);
+    ui->files->hideColumn(3);
 }
 
 /** Open Help window */
