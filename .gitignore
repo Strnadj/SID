@@ -11,4 +11,12 @@
 *.la
 *.a
 
+# QT Build Directories
 SID-build*
+
+# TeX data
+*.aux
+*.toc
+*.pdf
+*.log
+*.synctec.gz
