@@ -20,24 +20,7 @@ void MyFileSortModel::setPath(QString & path) {
 }
 
 void MyFileSortModel::createModel() {
-    if (projectDir->exists(projectPath)) {
-            Q_FOREACH(QFileInfo info, projectDir->entryInfoList(QDir::NoDotAndDotDot | QDir::System  | QDir::AllDirs | QDir::Files, QDir::DirsFirst)) {
-                if (info.isDir()) {
-                    QStandardItem * folder = new QStandardItem( * folderIcon, info.fileName());
-                    folder->setEditable(false);
-                    this->createItems(info.absoluteFilePath(), folder);
-                    this->appendRow(folder);
-                } else {
-                    QString fileName = info.fileName();
-                    if (fileName.endsWith(".php", Qt::CaseInsensitive)) {
-                        QStandardItem * file = new QStandardItem(* phpFileIcon, info.fileName());
-                        file->setEditable(false);
-                        this->appendRow(file);
-                    }
-                }
-            }
-
-        }
+    this->createItems(projectPath, NULL);
 }
 
 /** Create items */
@@ -49,13 +32,21 @@ void MyFileSortModel::createItems(const QString & dirName, QStandardItem * paren
                 QStandardItem * folder = new QStandardItem( * folderIcon, info.fileName());
                 folder->setEditable(false);
                 this->createItems(info.absoluteFilePath(), folder);
-                parent->appendRow(folder);
+                if (parent == NULL) {
+                    this->appendRow(folder);
+                } else {
+                    parent->appendRow(folder);
+                }
             } else {
                 QString fileName = info.fileName();
                 if (fileName.endsWith(".php", Qt::CaseInsensitive)) {
                     QStandardItem * file = new QStandardItem(* phpFileIcon, info.fileName());
                     file->setEditable(false);
-                    parent->appendRow(file);
+                    if (parent == NULL) {
+                        this->appendRow(file);
+                    } else {
+                        parent->appendRow(file);
+                    }
                 }
             }
         }
