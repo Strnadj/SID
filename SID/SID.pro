@@ -12,10 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    helpwindow.cpp
+    helpwindow.cpp \
+    myfilesortmodel.cpp
 
 HEADERS  += mainwindow.h \
-    helpwindow.h
+    helpwindow.h \
+    myfilesortmodel.h
 
 FORMS    += mainwindow.ui \
     helpwindow.ui
@@ -27,4 +29,7 @@ OTHER_FILES += \
     Resources/images/open.png \
     Resources/images/help.png \
     Resources/images/exit.png \
-    Resources/images/splash.png
+    Resources/images/splash.png \
+    Resources/images/folder.png \
+    Resources/images/file.png \
+    Resources/images/file_error.png

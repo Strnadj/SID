@@ -4,5 +4,8 @@
         <file alias="help.png">Resources/images/help.png</file>
         <file alias="exit.png">Resources/images/exit.png</file>
         <file alias="splash.png">Resources/images/splash.png</file>
+        <file alias="fileError.png">Resources/images/file_error.png</file>
+        <file alias="file.png">Resources/images/file.png</file>
+        <file alias="folder.png">Resources/images/folder.png</file>
     </qresource>
 </RCC>

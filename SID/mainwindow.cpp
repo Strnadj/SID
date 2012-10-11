@@ -1,19 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
-#include <QThread>
 #include <QDebug>
-#include <QDirIterator>
-#include <QDirModel>
-
-class Wait : public QThread
-{
-public:
-        static void sleep(unsigned long secs) {
-                QThread::sleep(secs);
-        }
-};
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -44,20 +32,18 @@ MainWindow::~MainWindow()
 
 /** Open folder with project */
 void MainWindow::openProjectFolder() {
-    QString folder = QFileDialog::getExistingDirectory(this, tr("Otevřít projektovou složku"), "", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    QString folder = QFileDialog::getExistingDirectory(this, tr("Otevřít projektovou složku"), "/Users/strnadj/Sites/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+
+    // For later use
     projectDir = QDir(folder);
 
-    QStringList fileTypes;
-    fileTypes << ".php";
+    MyFileSortModel * projectDirStructure = new MyFileSortModel( this );
+    projectDirStructure->setPath(folder);
+    projectDirStructure->createModel();
 
-    dirModel = new QDirModel(this);
-    dirModel->setSorting(QDir::DirsFirst | QDir::IgnoreCase | QDir::Name);
-    ui->files->setModel(dirModel);
+    // Set model to tree view
+    ui->files->setModel( projectDirStructure );
     ui->files->setAnimated(true);
-    ui->files->setRootIndex(dirModel->index(folder));
-    ui->files->hideColumn(1);
-    ui->files->hideColumn(2);
-    ui->files->hideColumn(3);
 }
 
 /** Open Help window */

@@ -8,6 +8,7 @@
 #include <QDir>
 #include <QStringList>
 #include <QDirModel>
+#include "myfilesortmodel.h"
 
 namespace Ui {
 class MainWindow;
