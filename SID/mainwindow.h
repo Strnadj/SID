@@ -9,6 +9,7 @@
 #include <QStringList>
 #include <QDirModel>
 #include "myfilesortmodel.h"
+#include <QCloseEvent>
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +23,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     QString version;
+
+protected:
+    void closeEvent(QCloseEvent *event);
     
 private:
     HelpWindow * help;

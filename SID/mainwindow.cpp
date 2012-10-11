@@ -24,6 +24,13 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionOpenfolder, SIGNAL(triggered()), this, SLOT(openProjectFolder()));
 
 }
+
+void MainWindow::closeEvent ( QCloseEvent *event )
+{
+    event->ignore();
+    MainWindow::close();
+}
+
 /** Destroy main window */
 MainWindow::~MainWindow()
 {
