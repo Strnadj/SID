@@ -7,16 +7,84 @@
 \begin{document}
 \author{Jan Strnádek}
 \date{10.10.2012}
-\title{SID\\\small{SQL Injection Detector}}
+\title{SID\\\small{SQL Injection Detector\\Tento program je určen pouze k školním a testovacím účelům! Je zakázáno ho využívat k nelegální činnosti a autor ani ZČU nenese jakoukoliv zodpovědnost škodám způsobeným využitím softwaru a ani jeho součástí pro nelegální účely}}
 \begin{titlepage}
 \maketitle
 \end{titlepage}
 \tableofcontents
 \chapter{Úvod}
-\chapter{Ukázka a rozbor situací}
+V dnešní době je většina věcí již ve webových aplikací, data jsou uchováváná v mnoha databázových systémech a jednou z otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, stránky nebo přímo servery je plno. Příkladem mohou být:
+\begin{itemize}
+\item SQL Injection - normal / blind
+\item XSS - Cross-Site scripting - local / persistent (stored) / non-persistent (reflected)
+\item CSFR - Cross-Site Request Forgery 
+\item PHP remote upload and execution scripts, Open Directory browsing
+\item a mnoho dalších...
+\end{itemize}
+Má bakalářská práce je však zaměřena na útkoky SQL Inejction, ale určitě za malou zmínku stojí i výčet dalších možných útoků.
+\section{XSS - Cross-Site scripting}
+XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat, vyřazení webových stránek atd. Existují tři typy XSS útoku. První a druhý typ XSS útoku (local a persistent) jsou v podstatě stejné, skript je podstrčen v parametru URL nebo v POST datech. Tento typ je snadno odhalitelný, ale může napáchat značné škody. Druhý typ persistentní, je mnohem nebezpečnější protože na napadné stránky už nemusíte vstupovat přes upravenou URL, ale kód se vykonává automaticky. Většina útočníků testuje různá diskusní fóra nebo komentáře, kam vlastní kód vloží a ten je následně prováděn všem, kteří na stránku vstoupí.
+\section{CSFR - Cross-Site Request Forgery}
+U tohoto typu útoku většinou potřebujeme "osobu uvnitř", která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela URL námi upravenou. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitmní zdroj. (Určitě také vyžaduje znát URL pro různé akce na webové stránce.)
+\section {PHP remote execution script, Open directory browsing atd..}
+Často jsou webové služby úspěšně napadány, díky špatné konfiguraci webových serverů (ať už je to Apache2, IIS, Nginx atd.). PHP remote execution využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát php skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytovřený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost (jednou z možností je využítí nástroje pro vytvoření reverzního shellu - umožňuje to velká spousta nástrojů příkladem může být oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}), většina web serverů by tyto funkce měla mít zakázány, minimálně příkaz \emph{system()}. Open Directory browsing je opět další ukázkou špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů.
+\chapter{Ukázka SQLi a rozbor situací}
+
+\section{Příklad SQL Injection}
+
+\section{Rozdíl mezi SQL Injection a Blind SQL Injection}
+
+\chapter{Existující nástroje}
+\section{OWASP ZAP}
+
+
 \chapter{Důsledky}
+
+\section{Ukázky možného napadení}
+
 \chapter{Algoritmus}
-\chapter{Testování}
+\section{Princip fungování algoritmu}
+Algoritmus pro detekci těchto problémů funguje na principu penetračního testu. Nejprve je od uživatele (\uv{vývojáře}) vyžádána www stránka, kde jsou stránky spuštěny, poté je možné zadat volitelnou informaci, zda-li prohledávat i subdomény a následně až do jaké hloubky hypertextové odkazy \/ formuláře na stránce indexovat. \textbf{Pro co nejúspěšnější test je vyžadována zapnutá direktiva \textit{display$\_$errors} na \textit{ALL}, protože se obsah stránek prohledává na standartní chyby způsobené úpravou SQL dotazu:}
+\begin{itemize}
+\item do verze PHP 5.2 - mysql$\_$error
+\item od verze PHP 5.2 - php notice pro nesprávné použití \textit{while} (v konstrukcích iterací výsledky) nebo pro přístup k asociovaným polím, které neexistují.
+\end{itemize}
+Pokud bychom ovšem chtěli test provést bez zapnuté direktivy, máme i tuto možnost, která je \textit{experimentální}, protože není vždy jednoznačené co se s obsahem stránky stane, pokud se do dotazu dostane speicální znak (v našem případě uvozovka).
+
+\section{Výstup algoritmu}
+
+Napadli mě 2 možnosti implementace algoritmu, ideální bude použít obě dvě.
+\section{První test parametrů}
+Program bude přímo testovat a procházet již hotovou webovou aplikaci, vezmu seznam \uv{nebezpečných proměnných}, které se budou nahrazovat do URL adres odkazů stránky. Algoritmus bude pracovat následovně:
+\begin{enumerate}
+\item Uživatel bude vyzván pro zapnutí zobrazování chyb na web serveru (není to nezbytné, ale pokud budou chyby zapnuté, algoritmus bude mít větší úspěšnost odhalení problémů)
+\item Pokud bude stránka využívat .htaccess s funkcí \uv{mod\_rewrite}, bude uživatel vyzván k zadání struktury (opět je možné tuto strukturu odhadnout \textbf{Zjistit do příště jak?! Kromě hádání!})
+\item Uživatel bude moci zadat maximální \uv{zanoření odkazů} a zda-li využít nebo nevyužít odkazy na subdomény - není nutné, bude se od toho ale odvíjet rychlost algoritmu
+\item Algoritmus začne procházet webové stránky a sbírat všechny \uv{href} z odkazů a post/get z formulářů + jejich pole, která se odesílají
+\item Poté co algoritmus shromáždí veškerá potřebná data z webových stránek, začne se dotazovat webového serveru nejprve s běžnou URL stránkou, jejíž výstup si uloží a následně s URL se změněnými parametry, zde bude využit jednoduchý trik příklad: \emph{ ?getPage=4 } bude nahrazeno za \emph{ ?getPage=4\' }, uvozovka byla vybrána jelikož způsobuje největší \uv{neplechu} v SQL dotazu. PHP Interpret totiž následně zobrazí chybu \textbf{mysql\_query error}, jejíž přítomnost bude na stránce hledána! Pokud bude nalezena, odhalili jsme s velkou pravděpodobností možnost SQLi útoku a nezabezpečenou proměnnou, kterou s i uložíme.
+\item Po nalezení všech problémů začneme procházet zdrojový kód aplikace a vytvářet strom proměnných z globálních polí \textbf{\$\_GET} a \textbf{\$\_POST}, následně vyhledáme názvy nalezených proměnných a uživateli zobrazíme práci s nimi, pro kontrolu.
+\end{enumerate}
+Zde mě napadlo několik vylepšeních pro různé případy, ale upozorňuji, že tímto způsobem už to nebude zrovna moc legální nástroj, ale to už víme od začátku\ldots
+\begin{enumerate}
+\item Pokud nebude zapnuté zobrazování chyb php interpretu, je logicky možné porovnávat obsahy stránek. Jestliže stránka bude mít více nebo méně znaků a nenajdu zde text upozorňující na chybu, je zde jistá pravděpodobnost, že je tu problém.
+\item Struktura htaccessu by měla jít nějakým způsobem zjistit, podle mě je docela dobře možné udělat si nějaký seznam, jak se htaccess většinou používá a URL odkazy přes regulární výraz upravit do daného formátu.
+\end{enumerate}
+\section{Procházení zdrojového kódu}
+Následuje možnost přímého procházení zdrojového kódu. \textbf{Tato metoda vyžaduje přibalení funkčního PHP interpretu ke programu!}
+\begin{enumerate}
+\item Nejprve uživatele požádám o funkční zdrojové kódy php projektu.
+\item Následně všechny php kódy projdu (od \emph{index.php}) a začnu si vytvářet strom proměnných z globálních polí \textbf{\$\_GET} a \textbf{\$\_POST}  a budu si k nim uchovávat řádky, kde se s nimi něco děje. Jednu z nejdůležitějších činností, co algoritmus musí podchytit je přiřazení do jiné proměnné (i pomocí ternárního opertátoru, který by zde byl vyhodnocován ve prospěch proměnné z globálních polí!).
+\item Po získání všech proměnných se zdrojový kód projde znovu a bude se hledat manipulace s nimi! Pokud narazím na využití následujících konstrukcí nebo funkcí:
+\begin{itemize}
+\item htmlspecialchars()
+\item přetypování
+\item vlastní escapovací funkce, který bude vyexportována s testovacími řetězci do souboru a bude otestována její funkčnost na zadaných řetězcích. Jestliže by se export nepovedl, bude funkce označena za varování a bude uživateli zobrazena pro ověření.
+\end{itemize}
+\item Zbytek proměnných, se kterými bude pracováno budou označené za \uv{nebezpečené} a zobrazené uživateli pro ověření práce s nimi.
+\end{enumerate}
+
+\chapter{Ukázky}
+
 \chapter{Porovnání}
 \chapter{Závěr}
 \end{document}
