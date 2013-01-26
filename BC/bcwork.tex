@@ -4,16 +4,46 @@
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue
+}
 \begin{document}
 \author{Jan Strnádek}
 \date{10.10.2012}
-\title{SID\\\small{SQL Injection Detector\\Tento program je určen pouze k školním a testovacím účelům! Je zakázáno ho využívat k nelegální činnosti a autor ani ZČU nenese jakoukoliv zodpovědnost škodám způsobeným využitím softwaru a ani jeho součástí pro nelegální účely}}
+\title{KIV/PRJ5\\SID\\\small{SQL Injection Detector\\Tento program je určen pouze k školním a testovacím účelům! Je zakázáno ho využívat k nelegální činnosti a autor ani ZČU nenese jakoukoliv zodpovědnost škodám způsobeným využitím softwaru a ani jeho součástí pro nelegální účely}}
 \begin{titlepage}
-\maketitle
+\begin{center}
+\textsc{\Large Západočeská Univerzita v Plzni}
+\\[0.3cm]
+\textsc{\Large Fakulta Aplikovaných Věd}
+\\[0.3cm]
+\textsc{\Large Katedra Informatiky a výpočetní techniky}
+\\[6cm]
+\textbf{\LARGE Dokumentace k projektu 5}
+\\[3cm]
+\textbf{\LARGE SID\\[0.3cm] Sql Injection Detector}
+\\[7cm]
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+\large
+Plzeň, 2013
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} 
+Jan Strnádek
+\end{flushright}
+\end{minipage}
+\vfill
+\end{center}
 \end{titlepage}
 \tableofcontents
 \chapter{Úvod}
-V dnešní době je většina věcí již ve webových aplikací, data jsou uchováváná v mnoha databázových systémech a jednou z otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, stránky nebo přímo servery je plno. Příkladem mohou být:
+V dnešní době je většina dat a různých informacích dostupných přes různorodé webových aplikace a stránky, data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, stránky nebo přímo servery je plno. Příkladem mohou být:
 \begin{itemize}
 \item SQL Injection - normal / blind
 \item XSS - Cross-Site scripting - local / persistent (stored) / non-persistent (reflected)
@@ -21,26 +51,110 @@ V dnešní době je většina věcí již ve webových aplikací, data jsou ucho
 \item PHP remote upload and execution scripts, Open Directory browsing
 \item a mnoho dalších...
 \end{itemize}
-Má bakalářská práce je však zaměřena na útkoky SQL Inejction, ale určitě za malou zmínku stojí i výčet dalších možných útoků.
+Tato práce je zaměřena na detekci prvního zmíněného problémů a to je SQL Injection. Ale určitě stojí za zmínku i trocha teorie k dalším typům útoků, které jsou také dosti časté.
 \section{XSS - Cross-Site scripting}
-XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat, vyřazení webových stránek atd. Existují tři typy XSS útoku. První a druhý typ XSS útoku (local a persistent) jsou v podstatě stejné, skript je podstrčen v parametru URL nebo v POST datech. Tento typ je snadno odhalitelný, ale může napáchat značné škody. Druhý typ persistentní, je mnohem nebezpečnější protože na napadné stránky už nemusíte vstupovat přes upravenou URL, ale kód se vykonává automaticky. Většina útočníků testuje různá diskusní fóra nebo komentáře, kam vlastní kód vloží a ten je následně prováděn všem, kteří na stránku vstoupí.
+XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), znedostupnění webových stránek atd. Existují dva základní typy XSS útoku. První typ XSS útoku, využívá nezabezpečených vstupních proměnných z URL adresy / POST dat, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým jiným způsobem (například sociálním inženrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento okdaz kliknout. Tento typ je snadno odhalitelný, ale může napáchat značné škody. Druhý typ \textit{persistentní}, je mnohem nebezpečnější protože na napadné stránky se nevstupuje přes  upravenou URL adresu, ale kód se vykonává automaticky (tato chyba se často objevuje v různých diskusních fórech, návštěvních knihách, kde se nevalidují vstupy). Do těch těchto nezabezpečených vstupů stačí pouze účtočníkovi vložit JS kód, který se následně provede každému, kdo tuto stránku otevřou.
 \section{CSFR - Cross-Site Request Forgery}
-U tohoto typu útoku většinou potřebujeme "osobu uvnitř", která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela URL námi upravenou. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitmní zdroj. (Určitě také vyžaduje znát URL pro různé akce na webové stránce.)
+U tohoto typu útoku většinou potřebujeme "osobu uvnitř", která má dostatečná oprávnění a my jsme schopni jí přesvědčit (opět často pomocí sociálního inženýrství), aby spustila nebo otevřela URL námi upravenou. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitmní zdroj. (Tento postup často vyžaduje znát URL pro různé akce na webové stránce.)
+\subsection{Příkald CSFR}
+Jednoduchým příkladem může být jakýkoliv redakční systém (nejjednoduší je pokud server na který útočíme používá nějaké známé CMS - například Joomla, Drupal atd.. zde URL adresy pro vykonávání určitých akcí známe, protože si je můžeme vyzkoušet sami doma). Tento redakční systém má script \textit{admin.php} a například tyto parametry:
+\begin{itemize}
+\item \textbf{action} - Která akce bude provedena
+\item \textbf{user} - Uživatel
+\item \textbf{hodnota} - Nějaká další hodnota
+\end{itemize}
+Takže například:
+\begin{center}
+\textit{http://portal.czu.cz/admin.php?action=changeRole\&user=2\&role=admin}
+\end{center}
+Jestliže tento příkaz (\textit{změna role uživatele \uv{2 - Honza} na roli \uv{hlavního administrátora}}) zavoláme jako neautorizovaná osoba, příkaz se neprovede a bude nám vypsáno, že nemáme dostatečná oprávnění. Jestliže ovšem zašleme třeba podvodný email správci portálu, který na tento link klikne a bude zároveň přihlášen na zmíněné stránce {http://portal.czu.cz} tak tento příkaz proběhne bez problémů a uživatel Honza má práva \uv{hlavního administrátora}.
 \section {PHP remote execution script, Open directory browsing atd..}
-Často jsou webové služby úspěšně napadány, díky špatné konfiguraci webových serverů (ať už je to Apache2, IIS, Nginx atd.). PHP remote execution využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát php skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytovřený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost (jednou z možností je využítí nástroje pro vytvoření reverzního shellu - umožňuje to velká spousta nástrojů příkladem může být oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}), většina web serverů by tyto funkce měla mít zakázány, minimálně příkaz \emph{system()}. Open Directory browsing je opět další ukázkou špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů.
+Často jsou webové služby úspěšně napadány, díky špatné konfiguraci webových serverů (ať už je to Apache2, IIS, Nginx atd.). 
+\subsection{PHP remote execution}
+Tento typ útoku využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát php skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytovřený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost (jednou z možností je využítí scriptu pro vytvoření reverzního shellu - tento script umí vytvořit velká spousta nástrojů příkladem může být oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}), většina web serverů by tyto funkce měla mít zakázány, minimálně příkaz \emph{system()}. 
+\subsection{Open Directory browsing}
+Další ukázka špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů a z ní mnoho vyčíst. Příkladem mohli být dříve používane soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standartně nevykonával. Často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovali většinou údaje pro připojení k databázi atd\ldots
+
 \chapter{Ukázka SQLi a rozbor situací}
 
 \section{Příklad SQL Injection}
+Mějme tabulku (například v databázovém systému \textit{MySQL}) se seznamem písniček.
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|l|l|}
+\hline
+\bf ID Písničky & \bf ID Kategorie & \bf Autor & \bf Název písničky \\
+\hline
+\hline
+\bf 1. & \bf 2 & Celldweller & One good reason \\
+\hline
+\bf 2. & \bf 3 & Asonance & Království Keltů \\
+\hline
+\bf 3. & \bf 2 & Celldweller & EON \\
+\hline
+\bf 4. & \bf 4 & Hectix & Return \\
+\hline
+\end{tabular}
+\label{tab:haz}
+\caption{Tabulka hudebního katalogu}
+\end{table}
+\newline
+Ve webové aplikaci přejdeme na URL:
+\begin{center}
+http://localhost/songs.php?categoryId=2
+\end{center}
+Script \textit{songs.php} načte parametr \textit{categoryId} a podle něj vytvoří dotaz, který vybere písničky z dané kategorie:
+\begin{center}
+SELECT * FROM songs WHERE category\_id = 2
+\end{center}
+Dotaz bude vykonán a na webové stránce se zobrazí pouze písničky z kategorie číslo 2. Pokud bychom ale URL ručně přepsali a nahradili bychom kritickou část, například:
+\begin{center}
+http://localhost/songs.php?categoryId = 2 OR 1 = 1
+\end{center}
+a script by nebyl ochráněn proti těmto \uv{nevhodným} vstupům, zachoval by se stejně a vygeneroval by následující dotaz:
+\begin{center}
+SELECT * FROM songs WHERE category\_id = 2 OR 1 = 1
+\end{center}
+Tento dotaz je ovšem úplně jiný, vrací totiž všechny skladby!!!!
 
 \section{Rozdíl mezi SQL Injection a Blind SQL Injection}
+Podstata útoku je v obou případech stejná, ovšem u \textit{Blind SQL Injetion} nevidíme výsledek, což znamená delší hledání problému. Tudíž v předchozím případě jsme výsledek viděli ihned, zobrazily se všechny skladby a ne pouze daná kategorie (což znamenalo odhalení tohoto problému). 
 
-\chapter{Existující nástroje}
-\section{OWASP ZAP}
+\section{Předcházení a obrana}
+\begin{itemize}
+\item Kontrola příchozích dat na aplikační vrstvě - pokud vím, že mi v parametru \textit{category\_id} má přijít číslo, tak budu validovat číslo.
+\item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohlo SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit} za text.
+\item Využití databázového layeru, který má jedním z cílů právě předcházet těmto rizikům (příkladem může být \textit{Dibi - Database Abstraction Library pro PHP}\footnote{Je zdarma k dispozici na http://dibiphp.com}).
+\item Správně nastavená oprávnění - pro připojení webový aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme!) - pokud zakážeme například:
+\begin{enumerate}
+\item EXEC
+\item DROP
+\item ALTER
+\item ...
+\end{enumerate}
+Tak i kdyby útočník objevil SQL Injection vulnerabilitu, tak nám například nemůže vymazat všechny tabulky...
+\end{itemize}
+\subsection{Frameworky}
+V dnešní době je oblíbená veliká spousta frameworků pro vývoj webu. Většina z nich klade také důraz na bezpečnost a tím pádem i obranu proti SQLi, ale lze jim věřit? Příkladem \ldots
+
+\begin{enumerate}
+\item Zend DB - neřeší escapování, nutné využití dalších funkcí (stejně jako v čistém PHP)
+\item SQL Injection v Ruby On Rails v modulu Active Record - \href{https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/dUaiOOGWL1k}{odkaz}
+\item DJango (python) :
+\begin{itemize}
+\item Querysets - escapují proměnné automaticky
+\item RAW queries - neescapují
+\end{itemize}
+\item Nette - při využití \textit{Database} se escapují všechny proměnné automaticky
+\end{enumerate}
+
+%\chapter{Existující nástroje}
+%\section{OWASP ZAP}
 
 
-\chapter{Důsledky}
+%\chapter{Důsledky}
 
-\section{Ukázky možného napadení}
+%\section{Ukázky možného napadení}
 
 \chapter{Algoritmus}
 \section{Princip fungování algoritmu}
@@ -83,8 +197,8 @@ Následuje možnost přímého procházení zdrojového kódu. \textbf{Tato meto
 \item Zbytek proměnných, se kterými bude pracováno budou označené za \uv{nebezpečené} a zobrazené uživateli pro ověření práce s nimi.
 \end{enumerate}
 
-\chapter{Ukázky}
+%\chapter{Ukázky}
 
-\chapter{Porovnání}
-\chapter{Závěr}
+%\chapter{Porovnání}
+% \chapter{Závěr}
 \end{document}
