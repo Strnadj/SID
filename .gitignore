@@ -16,6 +16,7 @@ SID-build*
 
 # TeX data
 *.aux
+*.out
 *.toc
 *.pdf
 *.log
