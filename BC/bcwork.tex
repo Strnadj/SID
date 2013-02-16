@@ -123,7 +123,7 @@ Podstata útoku je v obou případech stejná, ovšem u \textit{Blind SQL Injeti
 \section{Předcházení a obrana}
 \begin{itemize}
 \item Kontrola příchozích dat na aplikační vrstvě - pokud vím, že mi v parametru \textit{category\_id} má přijít číslo, tak budu validovat číslo.
-\item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohlo SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit} za text.
+\item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohly SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit} za text.
 \item Využití databázového layeru, který má jedním z cílů právě předcházet těmto rizikům (příkladem může být \textit{Dibi - Database Abstraction Library pro PHP}\footnote{Je zdarma k dispozici na http://dibiphp.com}).
 \item Správně nastavená oprávnění - pro připojení webový aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme!) - pokud zakážeme například:
 \begin{enumerate}
@@ -157,48 +157,45 @@ V dnešní době je oblíbená veliká spousta frameworků pro vývoj webu. Vět
 %\section{Ukázky možného napadení}
 
 \chapter{Algoritmus}
+
 \section{Princip fungování algoritmu}
-Algoritmus pro detekci těchto problémů funguje na principu penetračního testu. Nejprve je od uživatele (\uv{vývojáře}) vyžádána www stránka, kde jsou stránky spuštěny, poté je možné zadat volitelnou informaci, zda-li prohledávat i subdomény a následně až do jaké hloubky hypertextové odkazy \/ formuláře na stránce indexovat. \textbf{Pro co nejúspěšnější test je vyžadována zapnutá direktiva \textit{display$\_$errors} na \textit{ALL}, protože se obsah stránek prohledává na standartní chyby způsobené úpravou SQL dotazu:}
+Navržený algoritmus pro detekci problémů funguje na principu penetračního testu. Nejprve je od uživatele (\uv{vývojáře}) vyžádána www stránka, kde jsou stránky spuštěny, poté je možné zadat volitelnou informaci, zda-li prohledávat i subdomény a následně až do jaké hloubky hypertextové odkazy a formuláře na stránce indexovat. Nalezená URL adresa je rozdělena na parametry, které jsou uloženy. Po dokončení procházení se začínají generovat možné kombinace parametrů a tyto kombinace se začínají postupně zkoušet. Jedním z nejzásadnějších problémů je v SQL dotazu \' (uvozovka), která dotaz rozdělí a SQL interpret dotaz nevyhodnotí.
+ \textbf{Pro co nejpřesnější výsledky testu je vyžadována zapnutá direktiva \textit{display$\_$errors} na \textit{ALL}, protože se obsah stránek prohledává na standartní chyby způsobené úpravou SQL dotazu:}
 \begin{itemize}
 \item do verze PHP 5.2 - mysql$\_$error
 \item od verze PHP 5.2 - php notice pro nesprávné použití \textit{while} (v konstrukcích iterací výsledky) nebo pro přístup k asociovaným polím, které neexistují.
 \end{itemize}
 Pokud bychom ovšem chtěli test provést bez zapnuté direktivy, máme i tuto možnost, která je \textit{experimentální}, protože není vždy jednoznačené co se s obsahem stránky stane, pokud se do dotazu dostane speicální znak (v našem případě uvozovka).
 
-\section{Výstup algoritmu}
-
-Napadli mě 2 možnosti implementace algoritmu, ideální bude použít obě dvě.
-\section{První test parametrů}
-Program bude přímo testovat a procházet již hotovou webovou aplikaci, vezmu seznam \uv{nebezpečných proměnných}, které se budou nahrazovat do URL adres odkazů stránky. Algoritmus bude pracovat následovně:
-\begin{enumerate}
-\item Uživatel bude vyzván pro zapnutí zobrazování chyb na web serveru (není to nezbytné, ale pokud budou chyby zapnuté, algoritmus bude mít větší úspěšnost odhalení problémů)
-\item Pokud bude stránka využívat .htaccess s funkcí \uv{mod\_rewrite}, bude uživatel vyzván k zadání struktury (opět je možné tuto strukturu odhadnout \textbf{Zjistit do příště jak?! Kromě hádání!})
-\item Uživatel bude moci zadat maximální \uv{zanoření odkazů} a zda-li využít nebo nevyužít odkazy na subdomény - není nutné, bude se od toho ale odvíjet rychlost algoritmu
-\item Algoritmus začne procházet webové stránky a sbírat všechny \uv{href} z odkazů a post/get z formulářů + jejich pole, která se odesílají
-\item Poté co algoritmus shromáždí veškerá potřebná data z webových stránek, začne se dotazovat webového serveru nejprve s běžnou URL stránkou, jejíž výstup si uloží a následně s URL se změněnými parametry, zde bude využit jednoduchý trik příklad: \emph{ ?getPage=4 } bude nahrazeno za \emph{ ?getPage=4\' }, uvozovka byla vybrána jelikož způsobuje největší \uv{neplechu} v SQL dotazu. PHP Interpret totiž následně zobrazí chybu \textbf{mysql\_query error}, jejíž přítomnost bude na stránce hledána! Pokud bude nalezena, odhalili jsme s velkou pravděpodobností možnost SQLi útoku a nezabezpečenou proměnnou, kterou s i uložíme.
-\item Po nalezení všech problémů začneme procházet zdrojový kód aplikace a vytvářet strom proměnných z globálních polí \textbf{\$\_GET} a \textbf{\$\_POST}, následně vyhledáme názvy nalezených proměnných a uživateli zobrazíme práci s nimi, pro kontrolu.
-\end{enumerate}
-Zde mě napadlo několik vylepšeních pro různé případy, ale upozorňuji, že tímto způsobem už to nebude zrovna moc legální nástroj, ale to už víme od začátku\ldots
-\begin{enumerate}
-\item Pokud nebude zapnuté zobrazování chyb php interpretu, je logicky možné porovnávat obsahy stránek. Jestliže stránka bude mít více nebo méně znaků a nenajdu zde text upozorňující na chybu, je zde jistá pravděpodobnost, že je tu problém.
-\item Struktura htaccessu by měla jít nějakým způsobem zjistit, podle mě je docela dobře možné udělat si nějaký seznam, jak se htaccess většinou používá a URL odkazy přes regulární výraz upravit do daného formátu.
-\end{enumerate}
-\section{Procházení zdrojového kódu}
-Následuje možnost přímého procházení zdrojového kódu. \textbf{Tato metoda vyžaduje přibalení funkčního PHP interpretu ke programu!}
-\begin{enumerate}
-\item Nejprve uživatele požádám o funkční zdrojové kódy php projektu.
-\item Následně všechny php kódy projdu (od \emph{index.php}) a začnu si vytvářet strom proměnných z globálních polí \textbf{\$\_GET} a \textbf{\$\_POST}  a budu si k nim uchovávat řádky, kde se s nimi něco děje. Jednu z nejdůležitějších činností, co algoritmus musí podchytit je přiřazení do jiné proměnné (i pomocí ternárního opertátoru, který by zde byl vyhodnocován ve prospěch proměnné z globálních polí!).
-\item Po získání všech proměnných se zdrojový kód projde znovu a bude se hledat manipulace s nimi! Pokud narazím na využití následujících konstrukcí nebo funkcí:
-\begin{itemize}
-\item htmlspecialchars()
-\item přetypování
-\item vlastní escapovací funkce, který bude vyexportována s testovacími řetězci do souboru a bude otestována její funkčnost na zadaných řetězcích. Jestliže by se export nepovedl, bude funkce označena za varování a bude uživateli zobrazena pro ověření.
-\end{itemize}
-\item Zbytek proměnných, se kterými bude pracováno budou označené za \uv{nebezpečené} a zobrazené uživateli pro ověření práce s nimi.
-\end{enumerate}
+\section{Grafické rozhraní}
+Po průchodu nalezenými stránkami a parametry, jsou parametry, které jsou podezdřelé na možnost této chyby vyhledány ve zdrojových kódech stránky a zobrazeny uživateli pro kontrolu.
+Test lze spustit bez bez grafického rozhraní pouze z konzole a je možné zadat i formát výstupu, aby ho bylo možné dále použít.
 
 %\chapter{Ukázky}
 
 %\chapter{Porovnání}
-% \chapter{Závěr}
+\chapter{Závěr}
+V první části bakalářské práce (pod názvem Projekt 5) jsem analyzoval detailně bezpečností problém a možnosti jeho detekce, navrhl jsem úspěšně algoritmus, který bude tento problém vyhledávat. A našel jsem již existující podobné softwary (OWASP - ZAP  atd.), se kterými budu úspěšnost mého algoritmu porovnávat.
+
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{Použitá literatura}
+\bibitem{HackingBezTajemstvi}{\em Joel Scambray, Stuart McClure, George Kurtz}
+               {\bf Hacking bez Tajemství} \\
+           Computer Press, 2010
+\bibitem{owasp}{\em OWASP comunity}
+	{\bf OWASP Wiki} \\
+	\texttt{https://www.owasp.org/index.php/SQL\_Injection}
+
+\bibitem{php}{\em The PHP Group}
+	{\bf PHP - Documentation}\\
+	\texttt{http://php.net/manual/en/}
+
+\bibitem{exploitdb}{\em Offensive Security}
+	{\bf Exploit-Db}\\
+	\texttt{http://www.exploit-db.com/webapps/}
+
+\bibitem{backtrack}{\em Linux Penetration Distribution} {\bf BackTrack 5}\\
+	\texttt{http://www.backtrack-linux.org/}
+
+\end{thebibliography}
 \end{document}

@@ -160,7 +160,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpenfolder">
    <property name="icon">
-    <iconset resource="resoruces.qrc">
+    <iconset resource="../../../Dropbox/ZCU/3_ZS/UPS/Semestralka/Client/Piskvorky/resources.qrc">
      <normaloff>:/myresources/open.png</normaloff>:/myresources/open.png</iconset>
    </property>
    <property name="text">
@@ -183,7 +183,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionHelp">
    <property name="icon">
-    <iconset resource="resoruces.qrc">
+    <iconset>
      <normaloff>:/myresources/help.png</normaloff>:/myresources/help.png</iconset>
    </property>
    <property name="text">
@@ -202,7 +202,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionEnd">
    <property name="icon">
-    <iconset resource="resoruces.qrc">
+    <iconset resource="../../../Dropbox/ZCU/3_ZS/UPS/Semestralka/Client/Piskvorky/resources.qrc">
      <normaloff>:/myresources/exit.png</normaloff>:/myresources/exit.png</iconset>
    </property>
    <property name="text">
@@ -224,8 +224,6 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="resoruces.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
