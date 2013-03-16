@@ -7,7 +7,8 @@ module Parser
     attr_accessor :url, :attr
 
     def initialize(args)
-      super(args)
+      @url = args[:url]
+      @attr = args[:attr]
     end
   end
 end

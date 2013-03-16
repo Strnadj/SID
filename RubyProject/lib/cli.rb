@@ -6,6 +6,7 @@ require "#{File.dirname(__FILE__)}/tester/url_tester"
 
 require 'optparse'
 require 'ostruct'
+require 'open-uri'
 
 module PenTest
   class CLI

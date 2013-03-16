@@ -1,8 +1,9 @@
 # Parser class for Penetration test
 # @author Strnadj <jan.strnadek@gmail.com>
 
-require "#{File.dirname(__FILE__)}/support_classes/form_container"
-require "#{File.dirname(__FILE__)}/support_classes/a_container"
+require_relative './support_classes/form_container'
+require_relative './support_classes/a_container'
+require_relative './support_classes/stack_item'
 require 'nokogiri'
 require 'open-uri'
 
@@ -24,7 +25,7 @@ module Parser
     # Start parsing url
     def start_parsing()
       print "Start parsing\n" if @options[:debug]
-      @url_stack << @start_url
+      @url_stack << Parser::StackItem.new({ :url => @start_url, :level => 0})
       self.run()
     end
 
@@ -41,16 +42,17 @@ module Parser
     # Run parsing method
     def run()
       while @url_stack.length > 0
-        current_url = @url_stack.pop
-        print "Parsing: " << current_url << "\n" if @options[:debug]
-        self.parse_url(current_url)
+        current_stack_item = @url_stack.pop
+        print "Parsing: " << current_stack_item.url << "\n" if @options[:debug]
+        self.parse_url(current_stack_item.url, current_stack_item.level + 1)
       end
     end
 
 
     # Parse URL and get form, links etc..
-    # @param [String] current_url Curent URL
-    def parse_url(current_url)
+    # @param [String] current_url  Curent URL
+    # @param [Integer] depth_level Level
+    def parse_url(current_url, depth_level)
       # Open URL via Nokogiri
       doc = Nokogiri::HTML(open(current_url))
 
@@ -59,22 +61,37 @@ module Parser
       doc.css('a').each{
         |link|
         if link['href']
+          # Validate link
           valid_link = self.validate_link(current_url, link['href'])
+
+          # Add to stack
+          if @options[:depth_level] == 0 || @options[:depth_level] >= depth_level
+            exist_in_stack = false
+
+            @url_stack.each {
+                |item|
+              exist_in_stack = true if item.url == valid_link.to_s
+            }
+
+            @url_stack << Parser::StackItem.new({:url => valid_link.to_s, :level => depth_level}) unless exist_in_stack
+          end
+
           print "\t" << valid_link.to_s << "\n" if @options[:debug]
           # Create link container if not exist, or add parameters to exist link container
           exist_container = nil
           @links.each { |link|
-            link.url == valid_link.to_s
-            exist_container = link
+            print "\tPorovnavam: " << link.url << "\n"
+            exist_container = link if link.url == valid_link.to_s
             break
           }
           if exist_container != nil
-
+            print 'Existuje' << "\n"
           else
+            print "Pridavam" << "\n"
             new_link = Parser::AContainer.new({ :url => valid_link.to_s, :attr => Array.new })
+            # add link to container
+            @links.push(new_link)
           end
-          # Add link container to links
-          links << link['href']
         end
       }
 
