@@ -1,0 +1,198 @@
+# Parser class for Penetration test
+# @author Strnadj <jan.strnadek@gmail.com>
+
+require_relative './support_classes/form_container'
+require_relative './support_classes/a_container'
+require_relative './support_classes/stack_item'
+require 'nokogiri'
+require 'open-uri'
+require 'colored'
+require 'public_suffix'
+
+module Parser
+  class UrlParser
+    attr_accessor :links, :post_forms, :get_forms, :start_url, :url_stack, :options, :url_host, :url_history
+
+    # Initialization of Parser class
+    # @param [Hash] options  Options
+    def initialize(options)
+      @links      = Array.new
+      @post_forms = Array.new
+      @get_forms  = Array.new
+      @url_stack  = Array.new
+      @url_history= Array.new
+      @start_url  = options[:base_url]
+      @options    = options
+
+      # get url domain via PublicSuffix
+      host = URI(@start_url).host
+      if host == "localhost"
+        @url_host = host
+      else
+        domain = PublicSuffix.parse(URI(@start_url).host)
+        @url_host = domain.sld
+      end
+    end
+
+    # Start parsing url
+    def start_parsing()
+      print "Start parsing:\n".bold.green if @options[:debug]
+      @url_stack << Parser::StackItem.new({ :url => @start_url, :level => 0})
+      self.run()
+    end
+
+    # Return parser scan results
+    # @return [Hash] Result
+    def get_results()
+      ret = {}
+      ret[:links]      = @links
+      ret[:post_forms] = @post_forms
+      ret[:get_forms]  = @get_forms
+      ret
+    end
+
+    # Run parsing method
+    def run()
+      while @url_stack.length > 0
+        current_stack_item = @url_stack.pop
+
+        # Add to url history
+        @url_history << current_stack_item
+
+        # Count temporary items on page
+        links_count = @links.count()
+        forms_count = @post_forms.count() + @get_forms.count()
+
+        # Print debug
+        print "Parsing: ".red << current_stack_item.url.green << "\n" if @options[:debug]
+
+        # Start parsing
+        self.parse_url(current_stack_item.url, current_stack_item.level + 1)
+
+        # Print debug
+        if @options[:debug]
+          print "Founded:\n\t" << (@links.count() - links_count).to_s << " links" << "\n\t" << (@post_forms.count() + @get_forms.count() - forms_count).to_s << " forms\n"
+        end
+      end
+    end
+
+
+    # Parse URL and get form, links etc..
+    # @param [String] current_url  Curent URL
+    # @param [Integer] depth_level Level
+    def parse_url(current_url, depth_level)
+      # Open URL via Nokogiri
+      doc = Nokogiri::HTML(open(current_url))
+
+      # Debug output link search
+      puts "Links:".bold.yellow << "\n" if @options[:debug]
+
+      # Iterate links
+      doc.css('a').each{
+        |link|
+        if link['href']
+          # Validate link
+          valid_link = self.validate_link(current_url, link['href'])
+
+          # Test on host
+          if valid_link.host == "localhost"
+            test_sld = "localhost"
+          else
+            test_sld = PublicSuffix.parse(valid_link.host).sld
+          end
+
+          if test_sld != @url_host
+            puts "\tSkip: " << valid_link.to_s.red << " - out of server!" << "\n" if @options[:debug]
+            next
+          end
+
+          # Add to stack
+          if @options[:depth_level] == 0 || @options[:depth_level] >= depth_level
+
+            # Exist link?!
+            exist_in_stack = false
+            @url_stack.each {
+                |item|
+              exist_in_stack = true if item.url == valid_link.to_s
+            }
+
+            @url_history.each  {
+              |item|
+              exist_in_stack = true if item.url == valid_link.to_s
+            }
+
+            @url_stack << Parser::StackItem.new({:url => valid_link.to_s, :level => depth_level}) unless exist_in_stack
+          end
+
+          # Extract query data
+          query_params = URI::decode_www_form(valid_link.query) if valid_link.query
+
+          # Remove query part
+          valid_link.query = nil
+
+          # Create link container if not exist, or add parameters to exist link container
+          exist_index     = nil
+          @links.each_with_index { |link, index|
+            exist_index = index if link.url == valid_link.to_s
+          }
+          if exist_index != nil
+            @links[exist_index].extends_params(query_params) if query_params
+          else
+            new_link = Parser::AContainer.new({ :url => valid_link.to_s, :attr => query_params })
+            # add link to container
+            @links.push(new_link)
+          end
+        end
+      }
+
+      # Debug output form search
+      puts "Forms:".bold.yellow << "\n" if @options[:debug]
+
+      # Iterate forms
+      doc.css('form').each {
+        |form|
+        type = (form['method'] == 'POST') ? FormContainer::POST_FORM : FormContainer::GET_FORM
+        valid_link = self.validate_link(current_url, form['action'])
+        puts "\t" << type.to_s << "  - " << valid_link.to_s if @options[:debug]
+
+        # Inputs, select array
+        attributes = Array.new
+
+        # Get properties
+        form.css('input').each {
+          |input|
+          puts "\t\t" << input['name'] << " - " << input['type'] << "\n"  if input['name']
+          attributes << { :name => input['name'], :type => input['type'] } if input['name']
+        }
+
+        form.css('select').each {
+          |select|
+          puts "\t\tSelect: ".blue << select['name'] << "\n" if select['name']
+        }
+
+        # Attribute
+
+
+      }
+    end
+
+    def create_param_array(link)
+
+    end
+
+    # Method for clear and validate link
+    # @param [String] current_url Current URL
+    # @param [String] link        A form link
+    # @return [URI] Uri instance without fragment
+    def validate_link(current_url, link)
+      begin
+        valid_link = URI.join(current_url, URI.encode(link))
+        valid_link.fragment =  nil # Remove fragment!!
+      rescue
+        puts "ERROR: ".red << current_url << " - " << link << "\n"
+        valid_link = ""
+      end
+      valid_link
+    end
+  end
+end
