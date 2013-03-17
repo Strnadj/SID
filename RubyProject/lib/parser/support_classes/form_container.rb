@@ -13,17 +13,16 @@ module Parser
     GET_FORM  = :get
 
     # Initiate of form container
-    # @param [String] type Type of form
-    # @param [URL] action  Url of action
-    def initialize(type, action)
+    # @param [Hash] attr Attributes
+    def initialize(attr)
        case type
          when POST_FORM, GET_FORM
-           @type = type
+           @type = attr[:type]
          else raise('Invalid form type')
        end
 
-       @params = Array.new
-       @action = action
+       @params = attr[:params]
+       @action = attr[:action]
     end
   end
 end

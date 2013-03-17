@@ -1,0 +1,2090 @@
+[32m[1mStart parsing:
+[0m[0m[31mParsing: [0m[32mhttp://alfa.beta.cz/[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+[32m[1mStart parsing:
+[0m[0m[31mParsing: [0m[32mhttp://alfa.beta.cz/[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/reference
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	10 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m
+[33m[1mLinks:[0m[0m
+Vyhledavam: http://alfa.beta.cz/
+	Porovnani s:http://alfa.beta.cz/ stav: true
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/
+Vyhledavam: http://alfa.beta.cz/profil
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: true
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/profil
+Vyhledavam: http://alfa.beta.cz/cim-se-lisime
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: true
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/cim-se-lisime
+Vyhledavam: http://alfa.beta.cz/rodinne-domy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: true
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rodinne-domy
+Vyhledavam: http://alfa.beta.cz/garantovane-postupy
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: true
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/garantovane-postupy
+Vyhledavam: http://alfa.beta.cz/rekonstrukce
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: true
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/rekonstrukce
+Vyhledavam: http://alfa.beta.cz/projekty
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: true
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/projekty
+Vyhledavam: http://alfa.beta.cz/reference
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: true
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/reference
+Vyhledavam: http://alfa.beta.cz/kontakt
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: true
+	http://alfa.beta.cz/kontakt
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+Vyhledavam: http://alfa.beta.cz/novinky
+	Porovnani s:http://alfa.beta.cz/ stav: false
+	Porovnani s:http://alfa.beta.cz/profil stav: false
+	Porovnani s:http://alfa.beta.cz/cim-se-lisime stav: false
+	Porovnani s:http://alfa.beta.cz/rodinne-domy stav: false
+	Porovnani s:http://alfa.beta.cz/garantovane-postupy stav: false
+	Porovnani s:http://alfa.beta.cz/rekonstrukce stav: false
+	Porovnani s:http://alfa.beta.cz/projekty stav: false
+	Porovnani s:http://alfa.beta.cz/reference stav: false
+	Porovnani s:http://alfa.beta.cz/kontakt stav: false
+	Porovnani s:http://alfa.beta.cz/novinky stav: true
+	http://alfa.beta.cz/novinky
+	Skip: [31mhttp://www.estetica.cz[0m - out of server!
+[33m[1mForms:[0m[0m
+Founded:
+	0 links
+	0 forms
+[31mParsing: [0m[32mhttp://alfa.beta.cz/novinky[0m

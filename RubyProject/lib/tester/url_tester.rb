@@ -9,4 +9,8 @@ class UrlTester
   def initialize(parser_results)
     @parser_results = parser_results
   end
+
+  def startPenTest()
+
+  end
 end

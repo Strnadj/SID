@@ -7,6 +7,7 @@ require "#{File.dirname(__FILE__)}/tester/url_tester"
 require 'optparse'
 require 'ostruct'
 require 'open-uri'
+require 'colored'
 
 module PenTest
   class CLI
@@ -28,6 +29,9 @@ module PenTest
     # Create tester
     url_tester = UrlTester.new(result)
 
+    # Start parsing
+    url_tester.startPenTest()
+
     # Exit
     exit 0
     end
@@ -47,7 +51,7 @@ module PenTest
 
       # Base URL! - non-optional parameter!
       opts = OptionParser.new do |opts|
-        opts.banner = "Welcome to SID - SQL Injection Detector script\n\tAuthor: Strnadj <jan.strnadek@gmail.com>\n\tAgreement: Only for studding purposes!\n\nUsage: ./pentest [options]"
+        opts.banner = "Welcome to SID - SQL Injection Detector script\n".red << "\tAuthor:".green << " Strnadj <jan.strnadek@gmail.com>\n\t" << "Agreement:".green << " Only for studding purposes!\n\nUsage: ./pentest [options]"
 
         opts.separator ''
         opts.separator 'Required options:'
