@@ -67,11 +67,11 @@ module Parser
         print "Parsing: ".red << current_stack_item.url.green << "\n" if @options[:debug]
 
         # Start parsing
-        self.parse_url(current_stack_item.url, current_stack_item.level + 1)
+        ret = self.parse_url(current_stack_item.url, current_stack_item.level + 1)
 
         # Print debug
-        if @options[:debug]
-          print "Founded:\n\t" << (@links.count() - links_count).to_s << " links" << "\n\t" << (@post_forms.count() + @get_forms.count() - forms_count).to_s << " forms\n"
+        if @options[:debug] && ret
+          print "Founded:\n\t".bold.yellow << (@links.count() - links_count).to_s << " links" << "\n\t" << (@post_forms.count() + @get_forms.count() - forms_count).to_s << " forms\n"
         end
       end
     end
@@ -82,7 +82,13 @@ module Parser
     # @param [Integer] depth_level Level
     def parse_url(current_url, depth_level)
       # Open URL via Nokogiri
-      doc = Nokogiri::HTML(open(current_url))
+      begin
+        doc = Nokogiri::HTML(open(current_url))
+      rescue => e
+        # Bad code - show debug and return
+        puts "\tError: ".bold.red << e.message << "\n"
+        return nil
+      end
 
       # Debug output link search
       puts "Links:".bold.yellow << "\n" if @options[:debug]
@@ -94,34 +100,8 @@ module Parser
           # Validate link
           valid_link = self.validate_link(current_url, link['href'])
 
-          # Test on host
-          if valid_link.host == "localhost"
-            test_sld = "localhost"
-          else
-            test_sld = PublicSuffix.parse(valid_link.host).sld
-          end
-
-          if test_sld != @url_host
-            puts "\tSkip: " << valid_link.to_s.red << " - out of server!" << "\n" if @options[:debug]
+          unless add_url_to_stack(valid_link, depth_level)
             next
-          end
-
-          # Add to stack
-          if @options[:depth_level] == 0 || @options[:depth_level] >= depth_level
-
-            # Exist link?!
-            exist_in_stack = false
-            @url_stack.each {
-                |item|
-              exist_in_stack = true if item.url == valid_link.to_s
-            }
-
-            @url_history.each  {
-              |item|
-              exist_in_stack = true if item.url == valid_link.to_s
-            }
-
-            @url_stack << Parser::StackItem.new({:url => valid_link.to_s, :level => depth_level}) unless exist_in_stack
           end
 
           # Extract query data
@@ -151,9 +131,15 @@ module Parser
       # Iterate forms
       doc.css('form').each {
         |form|
-        type = (form['method'] == 'POST') ? FormContainer::POST_FORM : FormContainer::GET_FORM
+
+        # Get type
+        type = (form['method'] == 'POST') ? Parser::FormContainer::POST_FORM : Parser::FormContainer::GET_FORM
+
+        # Get action link
         valid_link = self.validate_link(current_url, form['action'])
-        puts "\t" << type.to_s << "  - " << valid_link.to_s if @options[:debug]
+
+        # Add to stack
+        add_url_to_stack(valid_link, depth_level)
 
         # Inputs, select array
         attributes = Array.new
@@ -161,24 +147,83 @@ module Parser
         # Get properties
         form.css('input').each {
           |input|
-          puts "\t\t" << input['name'] << " - " << input['type'] << "\n"  if input['name']
           attributes << { :name => input['name'], :type => input['type'] } if input['name']
         }
 
         form.css('select').each {
           |select|
-          puts "\t\tSelect: ".blue << select['name'] << "\n" if select['name']
+
+          # Values array
+          values = Array.new
+
+          # Get values
+          select.css('option').each {
+            |option|
+            values << option['value'] if option['value']
+          }
+
+          attributes << { :name => select['name'], :type => Parser::FormContainer::SELECT, :values => values } if select['name']
         }
 
-        # Attribute
+        # Create form container
+        form = Parser::FormContainer.new({ :action => valid_link.to_s, :type => type, :params => attributes })
 
-
+        # Try if there is in form array exactly the same form! If there is not
+        if type == Parser::FormContainer::GET_FORM
+          form_exist = false
+          @get_forms.each {
+            |tForm|
+            form_exist = true if tForm == form
+          }
+          @get_forms << form unless form_exist
+        else
+          form_exist = falses
+          @post_forms.each {
+            |tForm|
+            form_exist = true if tForm == form
+          }
+          @post_forms << form unless form_exist
+        end
       }
+
+      return true
     end
 
-    def create_param_array(link)
+    def add_url_to_stack(valid_link, depth_level)
+      # Test on host
+      if valid_link.host == "localhost"
+        test_sld = "localhost"
+      else
+        test_sld = PublicSuffix.parse(valid_link.host).sld
+      end
 
+      if test_sld != @url_host
+        puts "\tSkip: " << valid_link.to_s.red << ' - out of server!' << "\n" if @options[:debug]
+        return false
+      end
+
+      # Add to stack
+      if @options[:depth_level] == 0 || @options[:depth_level] >= depth_level
+
+        # Exist link?!
+        exist_in_stack = false
+        @url_stack.each {
+            |item|
+          exist_in_stack = true if item.url == valid_link.to_s
+        }
+
+        @url_history.each  {
+            |item|
+          exist_in_stack = true if item.url == valid_link.to_s
+        }
+
+        @url_stack << Parser::StackItem.new({:url => valid_link.to_s, :level => depth_level}) unless exist_in_stack
+        puts "\t" << valid_link.to_s unless exist_in_stack
+      end
+
+      return true
     end
+
 
     # Method for clear and validate link
     # @param [String] current_url Current URL

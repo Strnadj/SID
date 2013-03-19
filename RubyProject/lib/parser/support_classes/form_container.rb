@@ -12,17 +12,42 @@ module Parser
     # Get form
     GET_FORM  = :get
 
+    # Select type
+    SELECT = :select
+
     # Initiate of form container
     # @param [Hash] attr Attributes
     def initialize(attr)
-       case type
-         when POST_FORM, GET_FORM
-           @type = attr[:type]
-         else raise('Invalid form type')
-       end
-
-       @params = attr[:params]
-       @action = attr[:action]
+      @type   = attr[:type]
+      @params = attr[:params]
+      @action = attr[:action]
     end
+
+    # Equals method for comparing
+    # @param [FormContainer] another_form_container Another form container
+    # @return [boolean] True or false
+    def ==(another_form_container)
+      # Action URL
+      return false if @action != another_form_container.action
+
+      # Different type
+      return false if @type != another_form_container.type
+
+      # Parameters
+      return false if @params != another_form_container.params
+
+      # Everything ok!
+      return true
+    end
+
+    # Alias for ==
+    alias eql? ==
+
+    # Override to string method
+    # @return [String] String representation of form
+    def to_s
+      "Form:\n\tAction: " << @action << "\n\tParams: " << @params.to_s << "\n\tType: " << @type.to_s
+    end
+
   end
 end
