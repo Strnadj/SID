@@ -1,8 +1,8 @@
 # Pen Test - in ruby
 # @author Jan Strnadek <jan.strnadek@gmail.com>
 
-require "#{File.dirname(__FILE__)}/parser/parser"
-require "#{File.dirname(__FILE__)}/tester/url_tester"
+require_relative './parser/parser'
+require_relative './tester/url_tester'
 
 require 'optparse'
 require 'ostruct'
@@ -26,11 +26,18 @@ module PenTest
     # Get result
     result = parser.get_results()
 
+    # Options debug? results
+    if options[:debug]
+      puts "\n = Parser results: = ".bold.red << "\n"
+      puts '   Links total: ' << result[:links].count().to_s.bold.yellow << "\n"
+      puts '   Forms total: ' << (result[:post_forms].count() + result[:get_forms].count()).to_s.bold.yellow << "\n\n"
+    end
+
     # Create tester
-    url_tester = UrlTester.new(result)
+    url_tester = ContentTester::UrlTester.new(result, options)
 
     # Start parsing
-    url_tester.startPenTest()
+    url_tester.start_test()
 
     # Exit
     exit 0
@@ -94,7 +101,7 @@ module PenTest
         end
 
         opts.on_tail('-v', '--version', 'Show version') do
-          print 'PenTest 0.1\n'
+          print "SID 0.1\n"
           exit
         end
       end

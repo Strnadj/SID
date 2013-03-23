@@ -4,6 +4,7 @@
 require_relative './support_classes/form_container'
 require_relative './support_classes/a_container'
 require_relative './support_classes/stack_item'
+
 require 'nokogiri'
 require 'open-uri'
 require 'colored'
@@ -36,7 +37,7 @@ module Parser
 
     # Start parsing url
     def start_parsing()
-      print "Start parsing:\n".bold.green if @options[:debug]
+      print " = Start parsing: = \n".bold.green if @options[:debug]
       @url_stack << Parser::StackItem.new({ :url => @start_url, :level => 0})
       self.run()
     end
