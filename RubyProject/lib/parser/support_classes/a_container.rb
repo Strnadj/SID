@@ -17,8 +17,12 @@ module Parser
     # @param [Hash] param_array array with params
     # @return nil
     def extends_params(param_array)
-      @attr = @attr.concat(param_array)
-      @attr.uniq! { |s| s.first }
+      if @attr == nil
+        @attr = param_array
+      else
+        @attr = @attr.concat(param_array)
+        @attr.uniq! { |s| s.first }
+      end
     end
 
     # To string for debug purposes

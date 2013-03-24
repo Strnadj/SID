@@ -12,7 +12,7 @@ require 'public_suffix'
 
 module Parser
   class UrlParser
-    attr_accessor :links, :post_forms, :get_forms, :start_url, :url_stack, :options, :url_host, :url_history
+    attr_accessor :links, :post_forms, :get_forms, :start_url, :url_stack, :options, :url_host, :url_history, :trd_host
 
     # Initialization of Parser class
     # @param [Hash] options  Options
@@ -29,9 +29,11 @@ module Parser
       host = URI(@start_url).host
       if host == "localhost"
         @url_host = host
+        @trd_host = nil # Nil means there is no TRD record
       else
         domain = PublicSuffix.parse(URI(@start_url).host)
         @url_host = domain.sld
+        @trd_host = domain.trd == 'www' ? nil : domain.trd
       end
     end
 
@@ -101,6 +103,10 @@ module Parser
           # Validate link
           valid_link = self.validate_link(current_url, link['href'])
 
+          # Skip bad links
+          next unless valid_link
+
+          # Skip links, which are already in stack?!
           unless add_url_to_stack(valid_link, depth_level)
             next
           end
@@ -138,6 +144,9 @@ module Parser
 
         # Get action link
         valid_link = self.validate_link(current_url, form['action'])
+
+        # Skip invalid links
+        next unless valid_link
 
         # Add to stack
         add_url_to_stack(valid_link, depth_level)
@@ -178,7 +187,7 @@ module Parser
           }
           @get_forms << form unless form_exist
         else
-          form_exist = falses
+          form_exist = false
           @post_forms.each {
             |tForm|
             form_exist = true if tForm == form
@@ -190,16 +199,33 @@ module Parser
       return true
     end
 
+    # Add url to searching stack
+    # @param [URI] valid_link Valid link
+    # @param [Integer] depth_level Level of depth
+    # @return [nil] Nothing
     def add_url_to_stack(valid_link, depth_level)
       # Test on host
       if valid_link.host == "localhost"
         test_sld = "localhost"
       else
-        test_sld = PublicSuffix.parse(valid_link.host).sld
+        begin
+          ps_temp = PublicSuffix.parse(valid_link.host)
+          test_sld = ps_temp.sld
+          test_trd = ps_temp.trd == 'www' ? nil : ps_temp.trd # WWW = NIL!
+        rescue  => e
+          puts "\tERROR TEST_SLD: ".red.bold << valid_link.host.to_s << " - " << e.message << "\n"
+          return false
+        end
       end
 
       if test_sld != @url_host
         puts "\tSkip: " << valid_link.to_s.red << ' - out of server!' << "\n" if @options[:debug]
+        return false
+      end
+
+      # If full domain options is false - follow only same TRD
+      if !@options[:full_domain] && @trd_host != test_trd
+        puts "\tSkip: " << valid_link.to_s.red << ' - out of TRD domain!' << "\n" if @options[:debug]
         return false
       end
 
@@ -234,11 +260,19 @@ module Parser
       begin
         valid_link = URI.join(current_url, URI.encode(link))
         valid_link.fragment =  nil # Remove fragment!!
+
+        # Add WWW? when valid_link is not localhost and www is missing (trd = nil)
+        if valid_link.host != 'localhost'
+          if PublicSuffix.parse(valid_link.host).trd == nil
+            valid_link.host = 'www.' + valid_link.host
+          end
+        end
       rescue
-        puts "ERROR: ".red << current_url << " - " << link << "\n"
-        valid_link = ""
+        puts "\tERROR: ".red << current_url << " - " << link << "\n"
+        return false
       end
-      valid_link
+
+      return valid_link
     end
   end
 end
