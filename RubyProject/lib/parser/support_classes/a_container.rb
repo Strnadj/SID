@@ -1,6 +1,9 @@
 # Container for links
 # @author Strnadj <jan.strnadek@gmail.com>
 
+
+require 'open-uri'
+
 module Parser
   class AContainer
     # Attributes
@@ -31,6 +34,14 @@ module Parser
       ret[:url] = @url
       ret[:attr] = @attr.to_s
       ret.to_s
+    end
+
+    # Get original URI
+    # @return [URI] URI instance
+    def get_uri
+      ret = URI(@url)
+      ret.query = URI.encode_www_form(@attr)
+      ret
     end
   end
 end

@@ -140,7 +140,7 @@ module Parser
         |form|
 
         # Get type
-        type = (form['method'] == 'POST') ? Parser::FormContainer::POST_FORM : Parser::FormContainer::GET_FORM
+        type = (form['method'].downcase == 'post') ? Parser::FormContainer::POST_FORM : Parser::FormContainer::GET_FORM
 
         # Get action link
         valid_link = self.validate_link(current_url, form['action'])
