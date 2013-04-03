@@ -23,7 +23,7 @@
 \\[0.3cm]
 \textsc{\Large Katedra Informatiky a výpočetní techniky}
 \\[6cm]
-\textbf{\LARGE Dokumentace k projektu 5}
+\textbf{\LARGE Bakalářská Práce}
 \\[3cm]
 \textbf{\LARGE SID\\[0.3cm] Sql Injection Detector}
 \\[7cm]
@@ -43,19 +43,97 @@ Jan Strnádek
 \end{titlepage}
 \tableofcontents
 \chapter{Úvod}
-V dnešní době je většina dat a různých informacích dostupných přes různorodé webových aplikace a stránky, data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, stránky nebo přímo servery je plno. Příkladem mohou být:
+V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá jedno stejné heslo a to všude, proto obezřetnému hackerovi stačí získat email a heslo z jedné databáze a zkusit to i jinde. Situace, která se stala nedávno při hacku pornostránek skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, tato skupina následně data zveřejnila (hesla nebyla v DB nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena normálně) a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, kteří tito uživatelé využívali. Nikdy přesně nevíme komu vlastně  data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, webové stránky nebo přímo servery je mnoho. Příkladem mohou být:
 \begin{itemize}
 \item SQL Injection - normal / blind
 \item XSS - Cross-Site scripting - local / persistent (stored) / non-persistent (reflected)
 \item CSFR - Cross-Site Request Forgery 
-\item PHP remote upload and execution scripts, Open Directory browsing
-\item a mnoho dalších...
+\item DT - Directory traversal
+\item PHP remote upload and execution scripts
+\item a mnoho dalších, protože webový server je pořád server s operačním systémem, který již v základu nějaké chyby obsahuje.
 \end{itemize}
-Tato práce je zaměřena na detekci prvního zmíněného problémů a to je SQL Injection. Ale určitě stojí za zmínku i trocha teorie k dalším typům útoků, které jsou také dosti časté.
+Tato práce je zaměřena na detekci prvního zmíněného problémů a to je SQL Injection. Aktuálně je podle serveru \uv{http://techworld.com} je za zhruba 97\% úniky dat právě zneužití této chyby. Se zajímavými daty přichází i server \uv{http://cnet.com}, který uvádí, že každé 2 minuty je atakována nějaká webová stránka a to s následujícími typy:
+\begin{itemize}
+\item 37\% - Directory traversal
+\item 36\% - Cross Site Scripting
+\item 23\% - SQLi
+\item 4\% - remote file inclusion
+\end{itemize}
+
 \section{XSS - Cross-Site scripting}
-XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), znedostupnění webových stránek atd. Existují dva základní typy XSS útoku. První typ XSS útoku, využívá nezabezpečených vstupních proměnných z URL adresy / POST dat, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým jiným způsobem (například sociálním inženrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento okdaz kliknout. Tento typ je snadno odhalitelný, ale může napáchat značné škody. Druhý typ \textit{persistentní}, je mnohem nebezpečnější protože na napadné stránky se nevstupuje přes  upravenou URL adresu, ale kód se vykonává automaticky (tato chyba se často objevuje v různých diskusních fórech, návštěvních knihách, kde se nevalidují vstupy). Do těch těchto nezabezpečených vstupů stačí pouze účtočníkovi vložit JS kód, který se následně provede každému, kdo tuto stránku otevřou.
+XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), znedostupnění webových stránek atd. Existují dva základní typy XSS útoku:
+
+\subsection{Nepersistentní}
+Tento typ využívá nezabezpečených vstupních proměnných z URL adresy / POST dat, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým jiným způsobem (například sociálním inženrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento okdaz kliknout. 
+
+\subsection{Persistentní}
+Tento typ je mnohem nebezpečnější protože na napadné stránky se nevstupuje přes upravenou URL adresu, ale kód se vykonává automaticky (tato chyba se často objevuje v různých diskusních fórech, návštěvních knihách, kde se nevalidují vstupy). Do těch těchto nezabezpečených vstupů stačí pouze účtočníkovi vložit JS kód, který se následně provede každému, kdo tuto stránku otevře. 
+
+\subsection{Ukázka}
+Na obrázku \ref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
+\begin{center}
+\textit{<script type="text/javascritpt"$>$alert("XSS by PiratezSec");</script>}
+\end{center}
+Tato chyba byla objevena skupinou Czechurity, která má na svědomí i hacknutí webových stránek Unicredit bank v březnu 2013, které bylo médii chybně interpretováno jako DDoS\footnote{Distributed Denial of Service - útok, který zahlcuje službu pro pád nebo nedostupnost pro ostatní uživatele.}.
+\begin{figure}
+\includegraphics[width=390px]{./examples/xss-airbank.png}
+\caption{Non-persistent XSS}
+\label{obr.airbank}
+\end{figure}
+
+\subsection{Různé varianty zapsání XSS}
+Výstupy na různých webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag, lze toto obejít? Odpovědí je bohužel ano, možné to je a je to značně jednoduché, zde několik příkladů:
+
+\begin{itemize}
+\item Schování javascriptu do neexistujícího obrázku: \textit{<img src="javascript:alert('XSS');">}
+\item Zakázané uvozovky? není problém \textit{<img src=javascript:alert(\&quot;XSS\&quot;)>}
+\end{itemize}
+
+\subsection{Obrana}
+Obrana před XSS není snadná, velké webové portály mají desítky různých vstupů a ty všechny se musí hlídat. Ideální obranou je pokud se rozhodneme využít nějaký framework, tak vybereme ten jehož předností je právě těmto incidentům předcházet (Nette, RoR apod.). Nebo proti persitentním útokům hlídat co ukládáme do databáze popřípadě do jiných úložišť.
+
+
+\section{Directory traversal}
+Webový server slouží hlavně pro \uv{servírování} souborů, soubory mohou být statické (obrázky, css styly, HTML soubory) nebo dynamické (Ruby, PHP, ASP atd.). Pokud vytvoříme požadavek na web server server nám při statickém obsahu soubor okamžitě vrací, při dynamickém ho nejdříve zpracuje a následně vrátí. Při útoku typu \uv{direcotry traversal} využívá útočník špatného (žádného) omezení přístupu k souborům přes webový server.
+
+\subsection{Příklad directory traversal útoku}
+Mějme URL adresu:
+\begin{center}
+\textit{http://portal.czu.cz/index.php?item=novinky.html}
+\end{center}
+název souboru \uv{novinky.html} nám naznačuje, že by mohlo jít o vložení obsahu souboru \uv{novinky.html} odněkud ze souborového systému do stránky. Otázkou však zůstává co se bude dít, budeme-li tento parametr měnit ručně? a kam až se dostanem?
+\begin{center}
+\textit{http://portal.czu.cz/index.php?item=../.htaccess}\\
+Pokus o získání \.htaccess souboru
+\newline
+\textit{http://portal.czu.cz/index.php?item=../config/config.neon}\\
+Pokus o získání neon souboru na webech využívající Nette\footnote{Nette Framework - Framework sloužící pro zajištění MVC architektury v PHP aplikacích, v config.neon jsou uložena přístupová data k databázím a další nastavení.}
+\end{center}
+
+\subsection{IIS Web Server}
+Starší verze IIS\footnote{Internet Information Service - web server od společnosti Microsoft} umožňovaly dokonce i vykonávat soubory na serveru!
+
+\begin{center}
+\textit{http://iis.czu.cz/scr/..\%5c../winnt/system32/ cmd.exe?/c+dir+c:$\backslash$}
+\end{center}
+
+Tento příkaz spustil \uv{cmd.exe}\footnote{Příkazová řádka systému Windows} a v něm příkaz \uv{dir c:$\backslash$}. Nic nám tedy nebrání přidávat uživatele do systému, nebo formátovat pevné disky.
+
+\subsection{Praktická ukázka}
+\begin{figure}[h!]
+\includegraphics[width=390px]{./examples/dir_example.png}
+\caption{Directory traversal - zobrazení souboru config.neon}
+\label{obr.airbank}
+\end{figure}
+
+\subsection{Obrana?}
+\begin{itemize}
+\item Správně nastavená oprávnění a cesty jednotlivých webových serverů (virtuálních hostů)
+\item Kontrolovat to co vlastně vkládáme do stránky
+\end{itemize}
+
 \section{CSFR - Cross-Site Request Forgery}
-U tohoto typu útoku většinou potřebujeme "osobu uvnitř", která má dostatečná oprávnění a my jsme schopni jí přesvědčit (opět často pomocí sociálního inženýrství), aby spustila nebo otevřela URL námi upravenou. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitmní zdroj. (Tento postup často vyžaduje znát URL pro různé akce na webové stránce.)
+U tohoto typu útoku většinou potřebujeme "osobu uvnitř", která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela URL námi upravenou. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitmní zdroj. (Tento postup často vyžaduje znát URL pro různé akce na webové stránce.)
 \subsection{Příkald CSFR}
 Jednoduchým příkladem může být jakýkoliv redakční systém (nejjednoduší je pokud server na který útočíme používá nějaké známé CMS - například Joomla, Drupal atd.. zde URL adresy pro vykonávání určitých akcí známe, protože si je můžeme vyzkoušet sami doma). Tento redakční systém má script \textit{admin.php} a například tyto parametry:
 \begin{itemize}
@@ -73,7 +151,7 @@ Jestliže tento příkaz (\textit{změna role uživatele \uv{2 - Honza} na roli 
 \subsection{PHP remote execution}
 Tento typ útoku využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát php skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytovřený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost (jednou z možností je využítí scriptu pro vytvoření reverzního shellu - tento script umí vytvořit velká spousta nástrojů příkladem může být oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}), většina web serverů by tyto funkce měla mít zakázány, minimálně příkaz \emph{system()}. 
 \subsection{Open Directory browsing}
-Další ukázka špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů a z ní mnoho vyčíst. Příkladem mohli být dříve používane soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standartně nevykonával. Často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovali většinou údaje pro připojení k databázi atd\ldots
+Další ukázka špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů a z ní mnoho vyčíst. Příkladem mohli být dříve používane soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standartně nevykonával. Tyto soubory je stále možné vyhledávat přes google (často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovali většinou údaje pro připojení k databázi a jiné konfigurace).
 
 \chapter{Ukázka SQLi a rozbor situací}
 
@@ -151,10 +229,10 @@ V dnešní době je oblíbená veliká spousta frameworků pro vývoj webu. Vět
 %\chapter{Existující nástroje}
 %\section{OWASP ZAP}
 
+\chapter{Důsledky}
 
-%\chapter{Důsledky}
 
-%\section{Ukázky možného napadení}
+\section{Ukázky možného napadení}
 
 \chapter{Algoritmus}
 
@@ -166,10 +244,6 @@ Navržený algoritmus pro detekci problémů funguje na principu penetračního 
 \item od verze PHP 5.2 - php notice pro nesprávné použití \textit{while} (v konstrukcích iterací výsledky) nebo pro přístup k asociovaným polím, které neexistují.
 \end{itemize}
 Pokud bychom ovšem chtěli test provést bez zapnuté direktivy, máme i tuto možnost, která je \textit{experimentální}, protože není vždy jednoznačené co se s obsahem stránky stane, pokud se do dotazu dostane speicální znak (v našem případě uvozovka).
-
-\section{Grafické rozhraní}
-Po průchodu nalezenými stránkami a parametry, jsou parametry, které jsou podezdřelé na možnost této chyby vyhledány ve zdrojových kódech stránky a zobrazeny uživateli pro kontrolu.
-Test lze spustit bez bez grafického rozhraní pouze z konzole a je možné zadat i formát výstupu, aby ho bylo možné dále použít.
 
 %\chapter{Ukázky}
 
@@ -196,6 +270,9 @@ V první části bakalářské práce (pod názvem Projekt 5) jsem analyzoval de
 
 \bibitem{backtrack}{\em Linux Penetration Distribution} {\bf BackTrack 5}\\
 	\texttt{http://www.backtrack-linux.org/}
+
+\bibitem{LearnRubyHardWay}{\em E-Book} {\bf Learn Ruby The Hard Way}\\
+	\texttt{http://programming-motherfucker.com/}
 
 \end{thebibliography}
 \end{document}
