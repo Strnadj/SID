@@ -1,7 +1,7 @@
 SID
 ===
 
-Sql injection detector for PHP scripts.
+Sql injection detector for web applications..
 
 INFORMATIONS
 ===
