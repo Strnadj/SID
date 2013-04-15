@@ -77,19 +77,19 @@ Jan Strnádek
 \end{titlepage}
 \tableofcontents
 \chapter{Úvod}
-V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá jedno stejné heslo a to všude, proto obezřetnému hackerovi stačí získat email a heslo z jedné databáze a zkusit to i jinde. Situace, která se stala nedávno při hacku pornostránek skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, tato skupina následně data zveřejnila (hesla nebyla v DB nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v plain textové podobě) a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, kteří tito uživatelé využívali. Nikdy přesně nevíme komu vlastně  data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, webové stránky nebo přímo servery je mnoho.  Asi nejvýznamnějšími bude následující skupina:
+V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá všude jedno a totéž heslo, proto obezřetnému hackerovi stačí získat email a heslo z jedné databáze a zkusit to i jinde. K této situace došlo nedávno při hacku pornostránek skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, která následně získaná data zveřejnila. Hesla nebyla v DB nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v plain textové podobě, a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, které tito uživatelé využívali. Nikdy přesně nevíme, komu vlastně data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, webové stránky nebo přímo servery je mnoho.  Asi nejvýznamnějšími bude následující skupina:
 \begin{itemize}
 \item SQL Injection - normal / blind
 \item XSS - Cross-Site scripting - local / persistent (stored) / non-persistent (reflected)
 \item CSRF - Cross-Site Request Forgery 
 \item DT - Directory traversal
 \item PHP remote upload and execution scripts
-\item a mnoho dalších, protože webový server je pořád server s operačním systémem, který již v základu nějaké chyby obsahuje, dále pak dost často neobsluhuje pouze roli webového serveru, ale i poštovního, databázového a s počtem používaných aplikací samozřejmě stoupá počet bezpečnostních chyb.
+\item a mnoho dalších, protože webový server je pořád server s operačním systémem, který již v základu nějaké chyby obsahuje. Navíc dost často kromě webového serveru plní roli i serveru poštovního či databázového, přičemž s počtem používaných aplikací samozřejmě stoupá počet bezpečnostních chyb.
 \end{itemize}
-Tato práce je zaměřena na detekci prvního ze zmíněných problémů a tím je SQL Injection. Aktuálně je podle serveru \uv{http://techworld.com} je za zhruba 97\% úniky dat právě zneužití této chyby. 
+Tato práce je zaměřena na detekci prvního ze zmíněných problémů, kterým je SQL Injection. Aktuálně je podle serveru \uv{http://techworld.com} za zhruba 97\% úniků dat zneužití právě této chyby. 
 
 \section{Nejčastější typy útoků}
-Se zajímavými daty přichází i server \uv{http://cnet.com}, který uvádí, že každé 2 minuty je útočeno na nějakou webovou stránku a to s následujícími typy, které jsou vidět na grafu \ref{chart.attack}.
+Se zajímavými daty přichází i server \uv{http://cnet.com}, který uvádí, že každé 2 minuty je atakována nějaká webová stránka. Poměr typů provedených útoků je vidět na následujícím grafu \ref{chart.attack}.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=250px]{./examples/chart.png}}
@@ -102,26 +102,27 @@ Se zajímavými daty přichází i server \uv{http://cnet.com}, který uvádí, 
 XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), znedostupnění webových stránek atd. Existují dva základní typy XSS útoku:
 
 \subsection{Nepersistentní}
-Tento typ využívá nezabezpečených vstupních proměnných z URL adresy / POST dat\footnote{GET a POST jsou základní způsoby jak přenést parametry na další stranu, rozdíl je v tom, že GET jsou vidět v URL a POST ne. Ale oba dva lze bez problémů podvrhovat!}, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým jiným způsobem (například sociálním inženrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento okdaz kliknout. 
+Tento typ využívá nezabezpečených vstupních proměnných z URL adresy / POST dat\footnote{GET a POST jsou základní způsoby jak přenést parametry na další stranu, rozdíl je v tom, že GET jsou vidět v URL a POST ne. Ale oba dva lze bez problémů podvrhovat!}, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým způsobem (například sociálním inženýrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento odkaz kliknout. 
 
 \subsection{Persistentní}
-Tento typ je mnohem nebezpečnější protože na napadné stránky se nevstupuje přes upravenou URL adresu, ale kód se vykonává automaticky (tato chyba se často objevuje v různých diskusních fórech, návštěvních knihách, kde se nevalidují vstupy). Do těch těchto nezabezpečených vstupů stačí pouze účtočníkovi vložit Java Scriptový kód, který se následně provede každému, kdo tuto stránku otevře. 
+Tento typ je mnohem nebezpečnější, protože na napadné stránky se nevstupuje přes upravenou URL adresu, ale kód se vykonává automaticky. Tato chyba se často objevuje v různých diskusních fórech či návštěvních knihách, kde se nevalidují vstupy. Do těchto nezabezpečených vstupů stačí účtočníkovi pouze vložit Java Scriptový kód, který se následně provede každému, kdo tuto stránku otevře. 
 
 \subsection{Ukázka}
-Na obrázku \ref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
+Na obrázku \ref{obr.airbank} na straně \pageref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
 \begin{lstlisting}[label=some-code, language=HTML, caption=Výstražná hláška v jazyce JavaScript]
-<script type="text/javascritpt">alert("XSS");</script>
+<script type="text/javascritpt">alert("XSS by PiratezSec");</script>
 \end{lstlisting}
 
-Tato chyba byla objevena skupinou Czechurity, která má na svědomí i hacknutí webových stránek Unicredit bank v březnu 2013, které bylo médii chybně interpretováno jako DDoS\footnote{Distributed Denial of Service - útok, který zahlcuje službu pro pád nebo nedostupnost pro ostatní uživatele.}.
 \begin{figure}[h!]
 \includegraphics[width=390px]{./examples/xss-airbank.png}
 \caption{Non-persistent XSS}
 \label{obr.airbank}
 \end{figure}
 
+Tato chyba byla objevena skupinou Czechurity, která má na svědomí i hacknutí webových stránek Unicredit bank v březnu 2013, které bylo médii chybně interpretováno jako DDoS\footnote{Distributed Denial of Service - útok, který zahlcuje službu, až dojde k jejímu pádu nebo nedostupnosti pro ostatní uživatele.}.
+
 \subsection{Různé varianty zapsání XSS}
-Výstupy na různých webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag, lze toto obejít? Odpovědí je bohužel ano, možné to je a je to velice jednoduché, zde několik příkladů (ne všechny prohlížeče toto interpretují):
+Výstupy na webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag. Lze toto obejít? Odpovědí je bohužel: \uv{Ano, možné to je a je to velice jednoduché}. Zde několik příkladů (ale ne všechny prohlížeče toto interpretují):
 
 \begin{lstlisting}[label=some-code, language=HTML, caption=Schování JavaScriptu do neexistujícího obrázku]
 <img src="javascript:alert('XSS');">
@@ -138,20 +139,20 @@ Výstupy na různých webových stránkách mohou být různým způsobem filtro
 \end{lstlisting}
 
 \subsection{Obrana}
-Obrana před XSS není snadná, velké webové portály mají desítky různých vstupů a ty všechny se musí hlídat. Ideální obranou je pokud se rozhodneme využít nějaký framework, tak vybereme ten jehož předností je právě těmto incidentům předcházet (Nette Framework, Ruby on Rails apod.). Dále proti persitentním útokům striktně hlídat co ukládáme do databází popřípadě do jiných úložišť.
+Obrana před XSS není snadná. Velké webové portály mají desítky různých vstupů a ty všechny je třeba hlídat. Pokud se rozhodneme využít nějaký framework, pak je ideální obranou výběr takového, který právě těmto incidentům dovede předcházet (Nette Framework, Ruby on Rails apod.). Dále je kvůli zamezení persitentním útokům striktně hlídat, co ukládáme do databází či do jiných úložišť.
 
 \subsection{Důsledky}
-Asi nejzásadnějším důsledkem úspěšného XSS útoku bude tzv. \textit{sessions hijacking}. Je to odcizení sessions$\_$id (sessions$\_$key), což je unikátní ID uživatele pro přihlašování ke vzdáleným serverům. Toto ID je možné zjistit několika způsoby, ale pořád je nejúčinější zjistit ho pomocí XSS. Pokud útočník toto ID získá, může se normálně autorizovat k zabezpečenému serveru.
+Asi nejzásadnějším důsledkem úspěšného XSS útoku bude tzv. \textit{sessions hijacking}. Je to odcizení sessions$\_$id (sessions$\_$key), což je unikátní ID uživatele pro přihlašování ke vzdáleným serverům. Toto ID je možné zjistit několika způsoby, ale nejúčinějším způsobem, jak jej zjistit, je právě pomocí XSS. Pokud útočník toto ID získá, může se normálně autorizovat k zabezpečenému serveru.
 
 \section{Directory traversal}
-Webový server slouží hlavně pro \uv{servírování} souborů, soubory mohou být statické (obrázky, css styly, HTML soubory) nebo dynamické (Ruby, PHP, ASP atd.). Pokud vytvoříme požadavek na web server server nám při statickém obsahu soubor okamžitě interpretuje, při dynamickém ho nejdříve zpracuje a pak interpretuje. Při útoku typu \uv{directory traversal} využívá útočník špatného (žádného) omezení přístupu k souborům přes webový server.
+Webový server slouží hlavně pro \uv{servírování} souborů. Ty mohou být statické (obrázky, css styly, HTML soubory) nebo dynamické (Ruby, PHP, ASP atd.). Pokud vytvoříme požadavek na web server, pak nám server při statickém obsahu soubor okamžitě interpretuje, ale při dynamickém ho nejdříve zpracuje a pak interpretuje. Při útoku typu \uv{directory traversal} využívá útočník špatného či dokonce žádného omezení přístupu k souborům právě přes dynamický obsah webového serveru.
 
 \subsection{Příklad directory traversal útoku}
 Mějme:
 \begin{lstlisting}[label=some-code,caption=URL adresa s podezdřením na include souboru]
 http://portal.czu.cz/index.php?item=novinky.html
 \end{lstlisting}
-při bližším zkoumání vidíme, že se zde pravděpodobně vkládá soubor \uv{novin ky.html} do stránky a to odněkud ze souborového systému. Otázkou však zůstává co se bude dít, budeme-li tento parametr měnit ručně? a kam až se dostanem?
+Při bližším zkoumání vidíme, že se zde pravděpodobně vkládá soubor \uv{novin ky.html} do stránky, a to odněkud ze souborového systému. Otázkou však zůstává, co se bude dít, budeme-li tento parametr měnit ručně, a kam až se dostaneme.
 
 \begin{lstlisting}[label=man_url_get_htaccess,caption=Manipulace s URL - získání .htaccess]
 http://portal.czu.cz/index.php?item=../.htaccess
@@ -161,30 +162,30 @@ http://portal.czu.cz/index.php?item=../.htaccess
 http://portal.czu.cz/index.php?item=../config/config.neon
 \end{lstlisting}
 
-V prvním příkladě \ref{man_url_get_htaccess} jsme se snažili získat soubor \uv{.htaccess}, který může obsahovat autentizační metody, nastavení práv apod. Ve druhém příkladě \ref{man_url_get_neon} jsme se poukoušeli získat soubor \uv{config.neon}, tento soubor slouží pro uchování \uv{citlivých} informací na webech, které využívají Nette Framework. Příkladem těchto informací může být přihlášení k databázi.
+V prvním příkladě \ref{man_url_get_htaccess} jsme se snažili získat soubor \uv{.htaccess}, který může obsahovat autentizační metody, nastavení práv apod. Ve druhém příkladě \ref{man_url_get_neon} jsme se poukoušeli získat soubor \uv{config.neon}. Tento soubor slouží pro uchování \uv{citlivých} informací na webech, které využívají Nette Framework. Příkladem takových informací může být přihlášení k databázi.
 
 \subsection{IIS Web Server}
-Starší verze IIS (Internet Information Service - Microsoftí obdoba webového serveru Apache2) umožňovaly dokonce i vykonávat soubory na serveru!
+Starší verze IIS (Internet Information Service - Microsoftem distribuovaná obdoba webového serveru Apache2) umožňovaly dokonce i vykonávat příkazy na serveru!
 
 \begin{lstlisting}[label=iis_derave,caption=Ukázka URL pro \uv{děravé} IIS]
 http://iis.czu.cz/scr/..%5c../winnt/system32/ cmd.exe?/c+dir+c:\
 \end{lstlisting}
 
-Tento příkaz spustil \uv{cmd.exe} (příkazová řádka systému Windows) a v něm příkaz \uv{dir c:$\backslash$}. Nic nám tedy nebrání přidávat uživatele do systému, nebo formátovat pevné disky.
+Tento příkaz spustil \uv{cmd.exe} (příkazová řádka systému Windows) a v něm příkaz \uv{dir c:$\backslash$}. Nic nám tedy nebrání přidávat uživatele do systému, nebo formátovat pevné disky, jak lze vidět zde:
 
 \begin{lstlisting}[label=iis_derave_format,caption=Formátování disku C: přes chybu v IIS]
 http://iis.czu.cz/scr/..%5c../winnt/system32/ cmd.exe?/c+format+c:\
 \end{lstlisting}
 
-\subsection{Obrana?}
+\subsection{Obrana}
 \begin{itemize}
-\item Správně nastavená oprávnění a cesty jednotlivých webových serverů (virtuálních hostů).
-\item Kontrolovat to co vlastně vkládáme do stránky.
+\item Mít správně nastavená oprávnění a cesty jednotlivých webových serverů (virtuálních hostů).
+\item Kontrolovat, co vlastně do stránky vkládáme.
 \item Úplně se vyhnout vkládání dat do stránky (například v PHP můžeme použít \textit{spl$\_$autoload$\_$register}, který nám automaticky podle zadané funkce načítá třídy ze souborového systému).
 \end{itemize}
 
 \subsection{Praktická ukázka}
-Na obrázku \ref{obr.directory} vidíme úspěšný directory traversal útok na vkládání v parametru \uv{name} a získaný soubor je \uv{config.neon} z něj se následně dozvíme, že přihlašovací jméno k databázi je \uv{franta} a heslo je také \uv{franta}.
+Na obrázku \ref{obr.directory} vidíme úspěšný directory traversal útok na vkládání v parametru \uv{name}. Ze získaného souboru \uv{config.neon} se následně dozvíme, že přihlašovací jméno k databázi je \uv{franta} a heslo je také \uv{franta}.
 \begin{figure}[h!]
 \centerline{\includegraphics[width=380px]{./examples/dir_example.png}}
 \caption{Directory traversal - zobrazení souboru config.neon}
@@ -192,57 +193,57 @@ Na obrázku \ref{obr.directory} vidíme úspěšný directory traversal útok na
 \end{figure}
 
 \section{CSRF - Cross-Site Request Forgery}
-U tohoto typu útoku většinou potřebujeme \uv{osobu uvnitř}, která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela námi upravenou URL. Tento útok využívá situace, že přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitimní zdroj. (Tento postup často vyžaduje znát URL pro různé akce na webové stránce.)
-\subsection{Příkald CSRF}
-Jednoduchým příkladem může být jakýkoliv redakční systém (nejjednoduší je pokud server na který útočíme používá nějaké známé CMS\footnote{Content Managment System - systém zajišťující správu webového obsahu} - například Joomla, Drupal a další. Zde URL adresy pro vykonávání určitých akcí známe, protože si je můžeme vyzkoušet sami). Mějme redakční systém, který má script \textit{admin.php} a například tyto parametry:
+U tohoto typu útoku většinou potřebujeme \uv{osobu uvnitř}, která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela námi upravenou URL. Tento útok využívá situace, že sice přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitimní zdroj. (Tento postup často vyžaduje znát URL pro různé akce na webové stránce.)
+\subsection{Příklad CSRF}
+Jednoduchým příkladem může být jakýkoliv redakční systém. Nejjednoduší je, pokud server, na který útočíme, používá nějaké známé CMS\footnote{Content Managment System - systém zajišťující správu webového obsahu} - například Joomla, Drupal a další. Zde URL adresy pro vykonávání určitých akcí známe, protože si je můžeme vyzkoušet sami. Mějme tedy redakční systém, který má script \textit{admin.php} a například tyto parametry:
 \begin{itemize}
 \item \textbf{action} - Která akce bude provedena
 \item \textbf{user} - Uživatel
 \item \textbf{hodnota} - Nějaká další hodnota
 \end{itemize}
 
-Takže například:
+Můžeme tedy spustit například toto:
 \begin{lstlisting}[label=csfr_example1,caption=URL změny uživatelské role]
 http://portal.czu.cz/admin.php?action=changeRole&user=2&role=admin
 \end{lstlisting}
 
-Jestliže tento příkaz (\textit{změna role uživatele \uv{2 - Honza} na roli \uv{hlavního administrátora}}) zavoláme jako neautorizovaná osoba, příkaz se neprovede a bude nám vypsáno, že nemáme dostatečná oprávnění. Jestliže ovšem zašleme třeba podvodný email správci portálu, který na tento link klikne a bude zároveň přihlášen na zmíněné stránce {http://portal.czu.cz} tak tento příkaz proběhne bez problémů a uživatel Honza má práva \uv{hlavního administrátora}. Což je značný bezpečnostní problém.
+Jestliže tento příkaz (\textit{změna role uživatele \uv{2}, což jsme například právě my, na roli \uv{hlavního administrátora}}) zavoláme jako neautorizovaná osoba, příkaz se neprovede a bude nám vypsáno, že nemáme dostatečná oprávnění. Jestliže ovšem zašleme třeba podvodný email správci portálu, který na tento link klikne a bude zároveň přihlášen na zmíněné stránce {http://portal.czu.cz}, tak tento příkaz proběhne bez problémů a uživatel Honza má náhle práva \uv{hlavního administrátora}. A to už je značný bezpečnostní problém.
 
 \subsection{Obrana proti CSRF}
-Nejúčinější obranou proti CSRF je generování a kontrolování tokenů. Do každého formuláře, popřípadě i odkazu přidáme tzv. \uv{token} (náhodně vygenerovaný řetězec, příklad URL s tokenem viz. \ref{token_url}), který se uloží a přidá se do každého formuláře / odkazu na aktuální stránce. Při přechodu na další stránku se přijatý token ověří proti uloženému, pokud je vše v pořádku akce se provede. Pokud ne, tak je uživatel přesměrován na \uv{bezpečnou} stránku, na které je informován o neplatné akci. Tato metoda obrany stojí na tom, že útočník není schopen token předvídat, samozřejmě pokud by byla chyba při generování tokenu, popřípadě by se z nějakého důvodu neměnil, je zde možnost, že ho útočník zjistí.
+Nejúčinější obranou proti CSRF je generování a kontrolování tokenů. Do každého formuláře, popřípadě i odkazu, přidáme tzv. \uv{token} (tj. náhodně vygenerovaný řetězec; příklad URL s tokenem viz. \ref{token_url}), který se uloží a následně přidá do každého formuláře / odkazu na aktuální stránce. Při přechodu na další stránku se přijatý token ověří proti uloženému. Pokud je vše v pořádku, akce se provede. Pokud token nesouhlasí, je uživatel přesměrován na \uv{bezpečnou} stránku, která jej informuje o neplatné akci. Tato metoda obrany je založena na tom, že útočník není schopen token předvídat. Samozřejmě, pokud by byla chyba při generování tokenu, popřípadě by se z nějakého důvodu neměnil, je zde možnost, že jej útočník zjistí.
 
 \begin{lstlisting}[label=token_url,language=HTML, caption=CSRF obrana - token]
 http://czu.cz/admin.php?action=changeRole&user=2&role=1&token=ad70CZf82
 \end{lstlisting}
 
 \section{Remote execution script}
-Tento typ útoku využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát php skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytovřený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost (jednou z možností je využítí scriptu pro vytvoření reverzního shellu\footnote{Reverse Shell - otevření spojení z cílového stroje na náš počítač \uv{jakoby} SSH obráceně} - tento script umí vytvořit například oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}, který toho umí opravdu hodně.).
+Tento typ útoku využívá situace, kdy můžeme přes formulář pro nahrání souborů nahrát PHP skript, který je dostupný přes URL a je web serverem vykonáván. Správně vytvořený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost. Jednou z možností je využítí scriptu pro vytvoření reverzního shellu\footnote{Reverse Shell - otevření spojení z cílového stroje na náš počítač \uv{jakoby} SSH obráceně}. Tento script umí vytvořit například oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}, který pak skýtá opravdu široké využití.
 
 \subsection{Obrana}
-Zde je obrana jednoduchá, dávát si pozor na to co je vlastně nahráváno. Takže soubory můžeme jednoduše přejmenovávat, nebo zakázat jejich vykonávání. Další užitečnou funkcí pro \uv{předejití} problémů je zakázat funkce \textit{eval()} a \textit{system()}. Dalším značným problémem je, když webový server běží pod superuživatelem (\textit{root}), útočník tedy získává automaticky práva hlavního administrátora a je velký problém, proto se webové servery a další služby spoušťí pod speciálními uživateli s omezenými právy.
+Zde je obrana jednoduchá, a to dávát si pozor na to, co je vlastně nahráváno. Soubory můžeme tedy jednoduše přejmenovávat nebo zakázat jejich vykonávání. Další užitečnou funkcí pro \uv{předejití} problémům je zákaz funkcí \textit{eval()} a \textit{system()}. Značný problém je, když webový server běží pod superuživatelem (\textit{root}). Útočník tedy získává automaticky práva hlavního administrátora, což může mít neblahé následky. Proto se webové servery a další služby spoušťí pod speciálními uživateli s omezenými právy.
 
 \section{Open Directory browsing}
-Další ukázka špatně nastaveného serveru, jsme totiž schopni zjistit adresářovou strukturu projektů a z ní mnoho vyčíst. Příkladem mohli být dříve používane soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standartně nevykonával. Tyto soubory je stále možné vyhledávat přes google (často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovali většinou údaje pro připojení k databázi a jiné konfigurace).
+Další ukázka špatně nastaveného serveru. Jsme totiž schopni zjistit adresářovou strukturu projektů a z ní vyčíst mnoho informací, které měly zůstat skryty. Příkladem mohly být dříve používané soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standardně nevykonával. Tyto soubory je stále možné nalézt pomocí internetových vyhledávačů (často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovaly většinou údaje pro připojení k databázi a jiné konfigurační údaje).
 
 \section{Frameworky}
-Dnes jsou v oblibě frameworky pro rychlejší a snažší vývoj webů, některé z nich kladou důraz na obranu proti XSS, CSRF i SQLi, ale lze jim věřit? Dále budou uvedeny základní bezpečnostní nedostatky některých z nich, které byly objeveny za posledních pár měsíců.
+Dnes jsou v oblibě frameworky pro rychlejší a snažší vývoj webů. Některé z nich kladou důraz na obranu proti XSS, CSRF i SQLi, ale lze jim věřit? U většiny frameworků je zmíněno tzv. \uv{escapování}, což znamená převedení nebezpečných znaků: \uv{<>\"} atd. na bezpečné, které nejsou prohlížečem nebo SQL interpretem vykonávány. Jestliže vypisujeme neescapovanou proměnnou, může to znamenat bezpečnostní riziko! Dále budou uvedeny základní bezpečnostní nedostatky některých z nich, které byly objeveny za posledních několik měsíců.
 
 \begin{enumerate}
 \item \textit{Zend Framework - PHP} 
 \begin{itemize}
 \item \textit{http://framework.zend.com/}
-\item \textit{SQL Inejction a XSS} - neprovádí escapování, nutné využití dalších funkcí (stejně jako v čistém PHP)
-\item \textit{CSRF} - obranu proti CSRF je plně v roli programátora
+\item \textit{SQL Inejction a XSS} - neprovádí escapování a je nutné využít další funkce (stejně jako v čistém PHP)
+\item \textit{CSRF} - obrana proti CSRF je plně na bedrech programátora
 \end{itemize}
 \item \textit{Ruby on Rails - Ruby}
 \begin{itemize}
 \item \textit{http://rubyonrails.org/}
-\item \textit{SQL Inejction} - 2. 1. 2013 byla objevena zásadní chyba s označením CVE-2012-5664 tohoto typu v modulu Active Record, který Ruby on Rails využívá jako ORM\footnote{ORM - objektové relační mapování - mapuje data z databází na objekty}, kterou jsou postiženy všechny verze Ruby on Rails: \textit{https://groups.google.com/forum/$\#$!topic/ rubyonrails-security/DCNTNp$\_$qjFM}. Jinak veškeré dotazy jsou striktně escapovány, ale pro určite položky to lze vypnout.
+\item \textit{SQL Inejction} - 2. 1. 2013 byla objevena zásadní chyba tohoto typu v modulu Active Record, který Ruby on Rails využívá jako ORM\footnote{ORM - objektové relační mapování - mapuje data z databází na objekty}. Chybou, která byla označena jako CVE-2012-5664, jsou postiženy všechny verze Ruby on Rails: \textit{https://groups.google.com/forum/$\#$!topic/ rubyonrails-security/DCNTNp$\_$qjFM}. Veškeré dotazy jsou striktně escapovány, ale pro určite položky to lze vypnout.
 \item \textit{CSRF} - Tokeny jsou přidávány ke všem formulářům automaticky od Ruby on Rails verze 2.
 \item \textit{XSS} 
 \begin{itemize}
-\item RoR ve verzi 2 - nehlídala výstupy v šablonách, bylo nutné používat helper\footnote{Jednoduché makro používané v šabloně.}
-\item RoR ve verzi 3 - hlídá vše, ale je ovšem možné vynutit vypsání normální (hodí se například pokud máme \uv{předtím} postaven Markdown\footnote{Nástroj pro převádění textu do HTML pomocí speciálních značek.}, který vstup a výstup hlídá sám).
+\item RoR ve verzi 2 nehlídala výstupy v šablonách a bylo nutné používat helper\footnote{Jednoduché makro používané v šabloně.}.
+\item RoR ve verzi 3 hlídá vše, ale je možné vynutit vypsání normální (hodí se například pokud máme \uv{před tím} postaven Markdown\footnote{Nástroj pro převádění textu do HTML pomocí speciálních značek.}, který vstup a výstup hlídá sám).
 \end{itemize}
 \end{itemize} 
 \item \textit{DJango - Python}
@@ -250,32 +251,32 @@ Dnes jsou v oblibě frameworky pro rychlejší a snažší vývoj webů, někter
 \item \textit{https://www.djangoproject.com/}
 \item \textit{SQL Inejction}
 \begin{itemize}
-\item Querysets - ORM - hlídají proměnné automaticky, lze vynutit aby se tak nedělo
+\item Querysets - ORM - hlídají proměnné automaticky, lze vynutit, aby se tak nedělo
 \item RAW queries - neescapují vůbec
 \end{itemize}
-\item \textit{CSRF} - Django obsahuje \textit{middleware}\footnote{Middleware je tzv. \uv{protředník} v tomhle případě mezi jádrem Djanga a naší aplikací.}, který nám umožní přidávat CSRF token k formulářům a následně ho ověřovat %https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
-\item \textit{XSS} - Šablony djanga automaticky escapují proměnné, ale ne vše (více informací na: \textit{https://docs.djangoproject.com/en/dev/topics/ security/}
+\item \textit{CSRF} - Django obsahuje \textit{middleware}\footnote{Middleware je tzv. \uv{prostředník}, v tomto případě mezi jádrem DJanga a naší aplikací.}, který nám umožní přidávat CSRF token k formulářům a následně ho ověřovat: - víc e informcí na: \textit{https://docs.djangoproject.com/en/dev/ref/contrib/csrf/}.
+\item \textit{XSS} - Šablony DJanga automaticky escapují proměnné, ale ne všechny (více informací na: \textit{https://docs.djangoproject.com/en/ dev/topics/security/}).
 \end{itemize}
 \item \textit{Nette Framework - PHP}
 \begin{itemize}
 \item \textit{http://nette.org/cs/}
 \item \textit{SQL Inejction}  - při využití \textit{Nette$\backslash$Database} se escapují všechny proměnné automaticky (ovšem lze zde vynutit neescapování).
-\item \textit{CSRF} - Nette$\backslash$Forms\footnote{Třída reprezentující formuláře v Nette} mají volbu zapnout přidávání CSRF tokenu a následně ho sami ověřují (pomocí metody \textit{addProtection()}.
-\item \textit{XSS} - Veškeré proměnné vypisované do šablon jsou automaticky escapovány, lze opět vynutit aby se toto nedělo.
+\item \textit{CSRF} - Nette$\backslash$Forms\footnote{Třída reprezentující formuláře v Nette} mají volbu zapnout přidávání CSRF tokenu a následně ho sami ověřují (pomocí metody \textit{addProtection()}).
+\item \textit{XSS} - Veškeré proměnné vypisované do šablon jsou automaticky escapovány. Lze opět vynutit, aby k tomu nedocházelo.
 \end{itemize}
  
 \item \textit{ASP - C$\#$}
 \begin{itemize}
-\item \textit{SQL Injection} - Pokud je použitá výchozí databázová vrstva ASP escapuje se úplně vše a není možné tuto funkčnost vypnout, ovšem pokud SQL dotaz je napsán ručně, je to čistě na nás.
+\item \textit{SQL Injection} - Pokud je použitá výchozí databázová vrstva ASP, escapuje se úplně vše a není možné tuto funkčnost vypnout. Pokud je ovšem SQL dotaz napsán ručně, je to čistě na programátorovi.
 \item \textit{XSS} - Striktně se escapují všechny proměnné, které se vkládají do šablon.
-\item \textit{CSRF} - Tokeny ve formulářích nejsou implicitně zapnuty, ale je možné využít \textit{ViewStateUserKey} popřípadě nějaký 3rd party knihovny.
+\item \textit{CSRF} - Tokeny ve formulářích nejsou implicitně zapnuty, ale je možné využít \textit{ViewStateUserKey} popřípadě nějaké knihovny třetích stran.
 \end{itemize}
 \end{enumerate}
 
 \chapter{Ukázka SQLi a rozbor situací}
 
 \section{Příklad SQL Injection}
-Mějme tabulku (například v databázovém systému \textit{MySQL}) se seznamem písniček, ukázku tabulky můžeme vidět v tabulce níže.
+Mějme tabulku (například v databázovém systému \textit{MySQL}) se seznamem písniček. Ukázku tabulky můžeme vidět v tabulce:
 \begin{table}[!h]
 \centering
 \begin{tabular}{|c|c|l|l|}
@@ -322,22 +323,22 @@ SELECT * FROM songs WHERE category_id = 2 OR 1 = 1
 Tento dotaz je ovšem úplně jiný, vrací totiž všechny skladby.
 
 \section{Rozdíl mezi SQL Injection a Blind SQL Injection}
-Podstata útoku je v obou případech stejná, ovšem u \textit{Blind SQL Injetion} nevidíme výsledek, což znamená delší hledání problému. Tudíž v předchozím případě jsme výsledek viděli ihned, zobrazily se všechny skladby a ne pouze daná kategorie (což znamenalo odhalení tohoto problému). 
+Podstata útoku je v obou případech stejná, ovšem u \textit{Blind SQL Injection} nevidíme výsledek, což znamená delší hledání problému. Oproti tomu v předchozím případě jsme výsledek viděli ihned (zobrazily se všechny skladby a ne pouze daná kategorie), což znamenalo odhalení tohoto problému. 
 
 \section{Předcházení a obrana}
 \begin{itemize}
 \item Kontrola příchozích dat na aplikační vrstvě - pokud vím, že mi v parametru \textit{category\_id} má přijít číslo, tak budu validovat číslo.
-\item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohly SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit} za text.
-\item Využití databázové vrstvy, která má jedním z cílů právě předcházet těmto rizikům (příkladem může být \textit{Dibi - Database Abstraction Library pro PHP}\footnote{Je zdarma k dispozici na http://dibiphp.com}).
-\item Správně nastavená oprávnění - pro připojení webových aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme), ideálně aplikace a k ní konkrétní uživatel s jednou databází, který nikam jinam nemůže (zabránění aby se z DB jedné aplikace dostal i do dalších), dále zakázání nepotřebných příkazů pro tyto uživatele (například exec, drop, alter). Tak i kdyby útočník objevil SQL Injection vulnerabilitu, tak nám například nemůže vymazat všechny tabulky...
+\item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohly SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit}, na text.
+\item Využití databázové vrstvy, která má jako jeden z cílů právě předcházení těmto rizikům (příkladem může být \textit{Dibi - Database Abstraction Library pro PHP}\footnote{Je zdarma k dispozici na http://dibiphp.com}).
+\item Správně nastavená oprávnění - pro připojení webových aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme). Ideálně aplikace a k ní konkrétní uživatel s jednou databází, který nikam jinam nemůže (zabránění, aby se z DB jedné aplikace dostal i do dalších), dále zakázání nepotřebných příkazů pro tyto uživatele (například exec, drop, alter). Pak i kdyby útočník objevil SQL Injection vulnerabilitu, tak nám například nemůže vymazat všechny tabulky...
 \end{itemize}
 
 \chapter{Důsledky}
-Důsledky napadení mohou být fatální, ať je to získání administrátorského přístupu do webové aplikace, odcizení dat nebo až k úplné kontrole cílového serveru.
+Důsledky napadení mohou být fatální, ať je to získání administrátorského přístupu do webové aplikace, odcizení dat nebo až získání úplné kontroly nad cílovým serverem.
 
 \section{Ukázky možného napadení}
 \subsection{SQLi v redakčním systému}
-Tato chyba byla nahlášena přes \textit{http://exploit-db.org/} a její kód zveřejněn, bylo zasaženy desítky webů používajících tento redakční systém (WordPress).
+Tato chyba byla nahlášena přes \textit{http://exploit-db.org/} a její kód zveřejněn. Byly zasaženy desítky webů používajících redakční systém WordPress.
 \begin{figure}[h!]
 \centering{\includegraphics[width=390px]{./examples/squash-sqli.png}}
 \caption{SQL injection v redakčním systému}
@@ -345,7 +346,7 @@ Tato chyba byla nahlášena přes \textit{http://exploit-db.org/} a její kód z
 \end{figure}
 
 \subsection{Chybný přihlašovací formulář}
-Chybně zabezpečný vstup přihlašovacího formuláře na nejmenovaném portálu české firmy.
+Chybně zabezpečný vstup přihlašovacího formuláře na nejmenovaném portálu jedné české firmy.
 \begin{figure}[h!]
 \centering{\includegraphics[width=282px]{./examples/login_test.png}}
 \caption{Zápis SQLi}
@@ -360,7 +361,7 @@ Chybně zabezpečný vstup přihlašovacího formuláře na nejmenovaném portá
 
 
 \subsection{Sony Pictures - 2011}
-Rozhodně své o tom ví společnost Sony, která byla v roce 2011 několikrát atakována DDoS útoky a nakonec vše vyústilo k odcizení dat skupinou LulzSec pomocí SQL injection (jejich webová stránka byla zablokována, ale twitter zůstal \textit{https://twitter.com/LulzSec}). I taková velká společnost jako sony, měla údaje v nešifrované podobě v databázích. Hackerům se podařilo odcizit 1 milionů uživatelských dat (jména, hesla, adresy a datumy narození), dále hesla administrátorů sony a mnoho dalšího - více v \textit{http://www.thewhir.com/web-hosting-news/hackers-attack-sony-pictures-with-single-sql-injection}. LulzSec následně spolupracovala s dobře známou skupinou Anonymous. Tato skupina byla nedávno pochytána, díky chybě a následné spolupráci jejich hlavního člena.
+O cíleném napadání ví své společnost Sony, která byla v roce 2011 několikrát atakována DDoS útoky a nakonec vše vyústilo v odcizení dat skupinou LulzSec pomocí SQL injection (jejich webová stránka byla zablokována, ale twitter zůstal \textit{https://twitter.com/LulzSec}). I taková velká společnost jako sony, měla údaje v nešifrované podobě v databázích. Hackerům se podařilo odcizit 1 milion uživatelských dat (jména, hesla, adresy a datumy narození), dále hesla administrátorů a mnoho dalšího - více v \textit{http://www.thewhir.com/web-hosting-news/hackers-attack-sony-pictures-with-single-sql-injection}. Tato skupina byla nedávno pochytána díky chybě a následné spolupráci jejich hlavního člena.
 
 \begin{center}
 \textit{You call it war; we laugh at your battleships.}\\
@@ -380,11 +381,11 @@ Rozhodně své o tom ví společnost Sony, která byla v roce 2011 několikrát 
 \item Vytvoření stromu webové stránky
 \begin{itemize}
 \item Extrahování formulářů a hypertextových odkazů z webové stránky (pro vytvoření stromu).
-\item Normalizace URL adres, kvůli detekování přechodu na jiné domény a sjednocení všech možných kombinací relativní a absolutních URL adres.
+\item Normalizace URL adres kvůli detekování přechodu na jiné domény a sjednocení všech možných kombinací relativních a absolutních URL adres.
 \end{itemize}
 \item Otestování hypertextových odkazů
 \begin{itemize}
-\item Otestování možnosti SQLi v hypertextových odkazech pomocí analýzy webové stránky (změna stránky - počtu elementů v závislosti úpravy sql dotazu).
+\item Otestování možnosti SQLi v hypertextových odkazech pomocí analýzy webové stránky (změna stránky - počtu elementů v závislosti na úpravě sql dotazu).
 \end{itemize}
 \item Otestování formulářů
 \begin{itemize}
@@ -392,12 +393,12 @@ Rozhodně své o tom ví společnost Sony, která byla v roce 2011 několikrát 
 \end{itemize}
 \item Reprezentace výsledků
 \begin{itemize}
-\item Reprezentace výsledků na standartní výstup, popřípadě ve specifickém formátu do souboru, pro další zpracování.
+\item Reprezentace výsledků pro další zpracování - na standardní výstup, popřípadě ve specifickém formátu do souboru.
 \end{itemize}
 \end{enumerate}
 
 \section{Analýza zdrojového kódu stránky}
-Při analýze stálo za rozvahu napsat si vlastní HTML parser, nebo použít nějaký stávající a tím pádem by bylo rozhodnuto o jazyce, ve kterém bude testovací script napsán. Mezi volbami byly následující HTML parsery:
+Při analýze stojí za úvahu, zda si napsat vlastní HTML parser nebo použít nějaký stávající, čímž by bylo rozhodnuto i o jazyce, ve kterém bude testovací script napsán. Mezi volbami byly následující HTML parsery:
 \begin{itemize}
 \item XML Reader - PHP
 \item Simple HTML DOM - PHP
@@ -407,12 +408,12 @@ Při analýze stálo za rozvahu napsat si vlastní HTML parser, nebo použít n�
 \end{itemize}
 
 \subsection{Testování parserů}
-Pro testování jsem si napsal 2 webové stránky, první s validním a správně napsaným HTML a druhou s rozházenými tagy, nedokončenými uvozovkami, která by měla více reprezentovat reálný model webových stránek. I přes xHTML standardy je většina projektů psaná \uv{ve spěchu} a kód bývá dost často nepořádný, proto je nutné se s tímto problémem vypořádat.\\
+Pro testování jsem si napsal 2 webové stránky, první s validním a správně napsaným HTML a druhou s rozházenými tagy, nedokončenými uvozovkami, která by měla více reprezentovat reálný model webových stránek. I přes xHTML standardy je většina projektů psaná \uv{ve spěchu} a kód bývá dost často nepořádný, proto je nutné tento problémem zohlednit.\\
 \newline
 \textbf{XML Reader - PHP} - Tento parser je primárně pro parsování validních XML dokumentů, proto se ukázal pro parsování HTML stránek jako nevhodný.\\
 \textit{(Ke stažení na: http://php.net/manual/en/book.xmlreader.php)}\\
 \newline
-\textbf{Simple HTML DOM - PHP} - Parser v PHP určený přímo pro parsování HTML DOM Modelu, první verze penetračního testu tento parser využívala, ale při otestování na reálném webu (sestavování stromu webové stránky) se ukázal parser nepoužitelný, opravdu špatným způsobem reagoval na další chyby v HTML stránce, které nebylo možné rozumně zachytávat. Také jeho výběr prvků a následné parsování dat bylo nutné kombinovat s regulárními výrazy, proto jsem od tohoto parseru velice rychle upustil.\\
+\textbf{Simple HTML DOM - PHP} - Parser v PHP určený přímo pro parsování HTML DOM Modelu využívala první verze penetračního testu, ale při otestování na reálném webu (sestavování stromu webové stránky) se parser ukázal jako nepoužitelný. Velmi špatně reagoval na další chyby v HTML stránce a nebylo možné je rozumně zachytávat. Také jeho výběr prvků a následné parsování dat bylo nutné kombinovat s regulárními výrazy. Ze zmíněných důvodů jsem od tohoto parseru velice rychle upustil.\\
 \textit{(Ke stažení na: http://simplehtmldom.sourceforge.net/)}\\
 \newline
 \textbf{Nokogiri - Ruby} - První parser v testu, který si bez problémů poradil s parsováním špatných HTML stránek, byl schopen rozpoznat správně odkazy, chybné uzavírání parametrů. Další obrovským přínosem je, že funguje na principu CSS3 selektorů:
@@ -434,23 +435,23 @@ end
 \end{lstlisting}
 \textit{(Ke stažení na: http://nokogiri.org/)}\\
 \newline
-\textbf{HPricot - Ruby} - Další parser v Ruby, který je hodně podobný předchozímu NokoGiri. Opět si poradí s CSS3 selektory, Xpath výrazy atd. Má jedinou nevýhodu a tou je, že už není dále vyvíjen a podporován!\\
+\textbf{HPricot - Ruby} - Další parser v Ruby, který je hodně podobný předchozímu Nokogiri. Opět si poradí s CSS3 selektory, Xpath výrazy atd. Má jedinou nevýhodu: není již dále vyvíjen a podporován!\\
 \textit{(Ke stažení na: https://github.com/hpricot/hpricot/)}\\
 \newline
-\textbf{JSoup - Java} - První HTML parser, který je napsán v programovacím jazyce Java. Podporuje XPath, ale pouze CSS selektory. Největší nevýhodou je programovací jazyk, vývoj v Javě je opravdu dosti zdlouhavý a proto jsem volil rychlejší programovací jazyky, další výhodou zmiňovaného Ruby je možná integrace do Metasploit frameworku (o Metasploitu byla řeč v kapitole 1.5.0), který je v Ruby napsán.\\
+\textbf{JSoup - Java} - První HTML parser, který je napsán v programovacím jazyce Java. Podporuje XPath, ale pouze CSS selektory. Největší nevýhodou je samotný programovací jazyk. Vývoj v Javě je opravdu dosti zdlouhavý, a proto jsem volil rychlejší programovací jazyky, kterým je Ruby a PHP. Další nevýhodou Javy je, že není možná integrace do Metasploit frameworku (o Metasploitu byla řeč v kapitole 1.5.0), který je napsán v Ruby.\\
 \textit{(Ke stažení na: http://jsoup.org/)}
 
 \subsection{Závěr testu parserů}
-Každý v testu parserů měl své pro a proti, z testů vyšel jednoznačně nejlépe parser \textit{Nokogiri}, který určil i programovací jazyk, ve kterém penetrační test budu napsán - \textit{Ruby ve verzi 1.9.2}. 
+Každý z testovaných parserů měl své pro a proti, nicméně z testů vyšel jednoznačně nejlépe parser \textit{Nokogiri}, který určil i programovací jazyk, ve kterém penetrační test budu napsán - \textit{Ruby ve verzi 1.9.2}. 
 
 \section{Vytváření stromu webových stránek}
-Abychom mohli získat všechny odkazy a formuláře na webových stránkách musíme určit URL strom, který je na obrázku \ref{obr.url_tree} a z něj následně získat všechny odkazy a formuláře.
+Abychom mohli získat všechny odkazy a formuláře na webových stránkách, musíme určit URL strom, který je na obrázku \ref{obr.url_stack}, a z něj následně získat všechny odkazy a formuláře.
 \begin{figure}[h!]
 \centering{\includegraphics[width=200px]{url_tree.eps}}
 \caption{Ukázka stromu webových stránek}
-\label{obr.url_tree}
+\label{obr.url_stack}
 \end{figure}
-Získávání stromu je postaveno na zásobníku a datovém poli. V zásobníku se ukládají URL pro další provádění a úroveň zanoření (scriptu je možné přes parametr \textit{-l N} kde N je hloubka zanoření, definovat, kam až má - do jaké \uv{hloubky} odkazy prohledávat). Na referenčním obrázku \ref{obr.url_tree} vidíme, že zanoření úrovně 0 je stránka \textit{http://unicv.zcu.cz}, zanoře ní úrovně 1 jsou podstránky \textit{/prihlaseni, /registrace, /vyhledavani, /kontakt} a tak dále.
+Získávání stromu je postaveno na zásobníku a datovém poli. V zásobníku se ukládají URL pro další provádění a úroveň zanoření (scriptu je možné přes parametr \textit{-l N}, kde N je hloubka zanoření, definovat, kam až má, tj. do jaké \uv{hloubky}, odkazy prohledávat). Na referenčním obrázku \ref{obr.url_tree} vidíme, že zanoření úrovně 0 je stránka \textit{http://unicv.zcu.cz}, zanoření úrovně 1 jsou podstránky \textit{/prihlaseni, /registrace, /vyhledavani, /kontakt} a tak dále.
 
 \subsection{Funkce zásobníku}
 \begin{figure}[h!]
@@ -458,7 +459,7 @@ Získávání stromu je postaveno na zásobníku a datovém poli. V zásobníku 
 \caption{Ukázka stromu webových stránek}
 \label{obr.url_tree}
 \end{figure}
-Do zásobníku jsou ukládány instance třídy \textit{Parser::StackItem} (tato třída je pouze \uv{přepravka}\footnote{Třída, která slouží pouze k uchování dat, nic jiného neumí.}), které mají 2 atributy URL a hloubka zanoření. Před samotným spuštěním procházení je do zásobníku vložena kořenová stránka (v našem případě \textit{http://unicv.zcu.cz}). Následně je spuštěn cyklus, který běží dokud zásobník není prázdný. Pokud stránku zpracujeme a na ní všechny odkazy a formuláře, je uložena do pole historie, každá nově přidávaná stránka do zásobníku je ověřována proti zásobníku i proti historii, aby nebyla jedna stránka procházena 2x.
+Do zásobníku jsou ukládány instance třídy \textit{Parser::StackItem} (tato třída je pouze \uv{přepravka}\footnote{Třída, která slouží pouze k uchování dat, nic jiného neumí.}), které mají 2 atributy: URL a hloubku zanoření. Před samotným spuštěním procházení je do zásobníku vložena kořenová stránka (v našem případě \textit{http://unicv.zcu.cz}). Následně je spuštěn cyklus, který běží dokud zásobník není prázdný. Pokud stránku zpracujeme a na ní všechny odkazy a formuláře, je uložena do pole historie. Každá nově přidávaná stránka do zásobníku je ověřována proti zásobníku i proti historii, aby nebyla jedna stránka procházena 2x.
 
 \subsection{Získávání a uchovávání odkazů}
 Při vytváření URL stromu webových stránek se ihned prochází načtené stránky a zjišťují se formuláře a odkazy na dané stránce. Pro uchování a následné zpracování se využívají 2 pomocné třídy:
@@ -466,9 +467,9 @@ Při vytváření URL stromu webových stránek se ihned prochází načtené st
 \item \textit{Parser::AContainer} - uchovává odkazy a parametry
 \item \textit{Parser::FormContainer} - uchovává formuláře, metodu odesílání a jejich parametry
 \end{itemize}
-Při nalezení nového formuláře nebo odkazu jsou nejprve data porovnávány s poli ve třídě a pokud už pole obsahuje formulář nebo odkaz jsou tyto rozšiřovány, viz příklad \ref{equals_classes}, který ukazuje jednoduchost porovnání (za zmínku stojí i aliasování metod, které je ukázáno: \textit{alias eql? ==}).
+Při nalezení nového formuláře nebo odkazu jsou nejprve data porovnávána s poli ve třídě. Pokud již pole obsahuje formulář nebo odkaz, jsou tyto rozšiřovány, což je vidět u příkladu \ref{equals_classes2}, který ukazuje jednoduchost porovnání (za zmínku stojí i aliasování metod, které je řešeno takto: \textit{alias eql? ==}).
 
-\begin{lstlisting}[label=equals_classes,language=Ruby, caption=Porovnání dvou instancí třídy FormContainer]
+\begin{lstlisting}[label=equals_classes2,language=Ruby, caption=Porovnání dvou instancí třídy FormContainer]
 # Equals method for comparing
 # @param [FormContainer] another_form_container Another form container
 # @return [boolean] True or false
@@ -482,7 +483,7 @@ alias eql? ==
 \end{lstlisting}
 
 \subsection{Normalizace URL}
-Na webové stránce máme relativně hodně možností jak zapisovat různé odkazy, od relativních cest \textit{./}, přes absolutní \textit{http://server.cz/index.php?action=nova} až k pouhým \uv{skokům} na stránce \textit{$\#$novinky}. Veškeré tyto URL je potřeba normalizovat, ověřit server (zda-li odkazy nesměřují mimo naší doménu, tyto odkazy jsou ihned zahazovány), získat data a odstranit nepotřebné věci. Při spuštění skriptu můžeme definovat \uv{wildcardování} domén, což znamená, že zadáme doménu prvního řádu: \textit{http://zcu.cz} a pokud je povoleno, bude skritp indexovat i domény vyšších řádů, například \textit{http://unicv.zcu.cz}. V následující tabulce je ukázka případů, kořenová doména je \textit{http://unicv.zcu.cz/}:
+Na webové stránce máme relativně hodně možností jak zapisovat různé odkazy, od relativních cest \textit{./}, přes absolutní \textit{http://server.cz/index.php?action=nova}, až k pouhým \uv{skokům} na stránce \textit{$\#$novinky}. Veškeré tyto URL je potřeba normalizovat, ověřit server (pokud odkazy směřují mimo naší doménu, jsou ihned zahazovány), získat data a odstranit nepotřebné věci. Při spuštění skriptu můžeme definovat \uv{wildcardování} domén, což znamená, že zadáme doménu prvního řádu: \textit{http://zcu.cz} a pokud je povoleno, bude skritp indexovat i domény vyšších řádů, například \textit{http://unicv.zcu.cz}. V následující tabulce je ukázka případů, kde kořenová doména je \textit{http://unicv.zcu.cz/}:
 
 \begin{table}[!h]
 \centering
@@ -504,9 +505,9 @@ http://www.seznam.cz/ & \bf Chybná URL - mimo zadaný server \\
 \caption{Příklady normalizování URL}
 \end{table}
 
-První variantou bylo najít již hotové řešení a výsledek byl překvapující, Ruby již v základu obsahuje knihovnu \textit{uri}, která tyto věci bez problémů umí a dokonce umí s URL i pracovat a velice snadno:
+Prvním krokem bylo nalezení již hotového řešení a výsledek byl překvapující. Ruby již v základu obsahuje knihovnu \textit{uri}, která požadované věci bez problémů zvládá a dokonce umí s URL i velice snadno pracovat:
 
-\begin{lstlisting}[label=equals_classes,language=Ruby, caption=Normalizování URL přes uri a třídu URI]
+\begin{lstlisting}[label=equals_classes,language=Ruby, caption=Normalizování URL pomocí třídy URI]
 # Spojeni 2 URL
 url = URI.join("./index.php?action=help#fragment", "http://unicv.zcu.cz/") 
 # http://unicv.zcu.cz/index.php?action=help#fragment
@@ -521,7 +522,7 @@ url.query
 \end{lstlisting}
 
 \section{Testování se zapnutými chybovými direktivami pro PHP}
-Testování se zapnutými chybovými direktivami, do parametrů se postupně přidá uvozovka, která \uv{zničí} SQL dotaz, ve kterém bude uvozovka navíc a tento dotaz se nepodaří provést. Na stránce je pak následně vyhledáváno:
+Testování se zapnutými chybovými direktivami, kdy se do parametrů postupně přidá uvozovka, která \uv{zničí} SQL dotaz, ve kterém bude uvozovka navíc a tento dotaz se nepodaří provést. Na stránce je pak následně vyhledáváno:
 \begin{itemize}
 \item do verze PHP 5.2 - mysql$\_$error
 \item od verze PHP 5.2 - php notice pro nesprávné použití \textit{while} (v konstrukcích iterací výsledky) nebo pro přístup k asociovaným polím, které neexistují.
@@ -529,54 +530,54 @@ Testování se zapnutými chybovými direktivami, do parametrů se postupně př
 Pokud je tento text ve stránce nalezen, je zde vysoká pravděpodobnost, že ve vstupu proměnné / formuláře se dostal znak uvozovky až do dotazu bez jakéhokoliv ošetření.
 
 \section{Testování a výměna parametrů}
-Testování bez zapnutých direktiv není jednoznačné a výsledky, chce ověřit jistě dále ručně. Pro porovnání výsledků se používají pro nahrazení parametrů 3 možné případy:
+Testování bez zapnutých direktiv není jednoznačné a výsledky je třeba ověřit dále ještě ručně. Pro porovnání výsledků s nahrazením parametrů se používají 3 možné případy:
 \begin{enumerate}
 \item \textit{'} - \uv{rozbití} SQL dotazu
 \item \textit{' --} - zakomentování zbytku SQL příkazu
 \item \textit{' OR '1' = '1} - logická pravda
 \end{enumerate}
-u všech je nutné počítat i s jejich \uv{"} - dvojitou uvozovkou variantou, takže ve výsledku máme 6 získaných stránek.
+U všech je nutné počítat i s jejich \uv{"} - dvojitou uvozovkovou variantou, takže ve výsledku máme 6 získaných stránek.
 
 \subsection{Testování výsledků formulářů}
 Formuláře se obecně používají na běžných webových stránkách ke 3 účelům:
 \begin{enumerate}
 \item Přihlašování
-\item Vyhledávání ( Filtrování )
+\item Vyhledávání (filtrování)
 \end{enumerate}
-Pokud se \uv{podvodný} vstup dostane do dotazu, bude mít u každého typu formuláře jiný výsledek a tudíž se musí otestovat stránka jinak. Máme tudíž ve výsledku 4 webové stránky a nějaký vektor prvků na stránce. Vezmeme-li si možné situace, uvidíme co se s vektory bude dít oproti originálnímu.
+Pokud se \uv{podvodný} vstup dostane do dotazu, bude mít u každého typu formuláře jiný výsledek, proto se musí otestovat stránka jinak. Máme tudíž ve výsledku 4 webové stránky a nějaký vektor prvků na stránce. Vezmeme-li si možné situace, uvidíme, co se s vektory bude dít oproti originálu.
 
 \begin{itemize}
 \item \textbf{Přihlašování}
 \begin{enumerate}
-\item Snížení počtu prvků na stránce, často přesměrování na nový formulář s hláškou, že nelze zpracovat.
-\item Velká změna při nahrazení v položce \uv{jména}, díky zakomentování dotazu bude uživatel autorizován a bude přesměrován na stránku s jiným obsahem.
-\item To samé jako v bodu 2)
+\item Snížení počtu prvků na stránce, často přesměrování na nový formulář s hláškou, že chybný požadavek nelze zpracovat.
+\item Velká změna při nahrazení v položce \uv{jména}. Díky zakomentování dotazu bude uživatel autorizován a bude přesměrován na stránku s jiným obsahem.
+\item To samé jako v bodě 2)
 \end{enumerate}
 \item \textbf{Vyhledávání}
 \begin{enumerate}
-\item Snížení počtu prvků na 0, dotaz nevrátí žádný výsledek! - změna počtu elementů dolů.
-\item Zvýšení počtu elementů, může být dosti zásadní (vypisují se všechny prvky) nebo malá (přibudou položky ve stránkování).
+\item Snížením počtu prvků na 0 dotaz nevrátí žádný výsledek! - snížení počtu elementů stránky.
+\item Zvýšení počtu elementů, může být dosti zásadní (vypisují se všechny prvky) nebo menší (přibudou položky ve stránkování).
 \end{enumerate}
 \end{itemize}
-Je tudíž potřeba určit všechny možnosti a zjistit značné rozdíly, dle modelu chování, protože nejsme schopni strojově rozpoznat co za formulář testujeme.
+Z výše zmíněného vyplývá, že je třeba určit všechny možnosti a zjistit značné rozdíly dle modelu chování, protože nejsme schopni strojově rozpoznat, jaký formulář testujeme.
 
 \subsection{Testování výsledků odkazů}
-Odkazy se testují na stejném principu jako formuláře, hledají se změny obsahu pomocí vektoru elementů na stránce.
+Odkazy se testují na stejném principu jako formuláře, tj. hledají se změny obsahu pomocí vektoru elementů na stránce.
 
 \subsection{Brute-force metoda}
-Do každého dotazu je přidána direktiva \textit{'; DROP ALL tables; ' --} nebo \textit{'; TRUNCATE ALL tables; ' --}, která způsobí vymazání všech tabulek, pokud tento dotaz projde změna obsahu bude zásadní, popřípadě bude zobrazena stránka 500 (služba je nedostupná).
+Do každého dotazu je přidána direktiva \textit{'; DROP ALL tables; ' --} nebo \textit{'; TRUNCATE ALL tables; ' --}, která způsobí vymazání všech tabulek. Pokud tento dotaz projde, změna obsahu bude skutečně zásadní, popřípadě bude zobrazena stránka 500 (služba je nedostupná).
 
 % \chapter{Ukázky}
 
 % \chapter{Porovnání}
 
 \chapter{Závěr}
-V první části bakalářské práce (pod názvem Projekt 5) jsem analyzoval detailně bezpečností problém a možnosti jeho detekce, navrhl jsem úspěšně algoritmus, který bude tento problém vyhledávat. A našel jsem již existující podobné softwary (OWASP - ZAP  atd.), se kterými budu úspěšnost mého algoritmu porovnávat.
+V první části bakalářské práce (pod názvem Projekt 5) jsem detailně analyzoval bezpečnostní problém a možnosti jeho detekce, úspěšně jsem navrhl algoritmus, který bude tento problém vyhledávat, a zároveň našel již existující podobný software (OWASP - ZAP  atd.), se kterým budu úspěšnost mého algoritmu porovnávat.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Použitá literatura}
 \bibitem{HackingBezTajemstvi}{\em Joel Scambray, Stuart McClure, George Kurtz}
-               {\bf Hacking bez Tajemství} \\
+               {\bf Hacking bez tajemství} \\
            Computer Press, 2010
 \bibitem{owasp}{\em OWASP comunity}
 	{\bf OWASP Wiki} \\
