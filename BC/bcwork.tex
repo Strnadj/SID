@@ -83,7 +83,7 @@ Jan Strnádek
 Rád bych touto cestou poděkoval Ing. Pavlu Královi, Ph.D. za odborné vedení a podnětné rady k bakalářské práci, dále pak panu Josefu Šimánkovi za odborné konzultace týkající se vývoje v Ruby a doporučení použitých knihoven.
 \\[9cm]
 \subsection*{Čestné prohlášení}
-Prohlašuji, že svou bakalářskou práci na téma \uv{SID - SQL Injeciton Detector} jsem vypracoval samostatně pod vedením vedoucího bakalářské práce a s použitím odborných zdrojů a literatury, které jsou citovány a uvedeny v seznamu literatury, popřípadě u některých zdrojů přímo v textu. Jako autor práce dále prohlašuji, že jsem v souvislosti s jejím vytvořením neporušil autorská práva třetích osob.
+Prohlašuji, že svou bakalářskou práci na téma \uv{SID - SQL Injection Attack Detector} jsem vypracoval samostatně pod vedením vedoucího bakalářské práce a s použitím odborných zdrojů a literatury, které jsou citovány a uvedeny v seznamu literatury, popřípadě u některých zdrojů přímo v textu. Jako autor práce dále prohlašuji, že jsem v souvislosti s jejím vytvořením neporušil autorská práva třetích osob.
 \\[1.5cm]
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft}
@@ -99,20 +99,25 @@ $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$
 \thispagestyle{empty}
 \section*{Abstrakt}
 \subsection*{English}
-The main issue of this bachelor thesis is the analysis of the most recent attacks on web sites and web applications. In the theoretical part of this thesis chosen cases of attacks have been thoroughly investigated and compared and the methods of prevention have been proposed. These methods cover wide range of possible attacts both with and without frameworks. \\
-The practical part has been focused on development of the penetration test for detection of one of the most dangerous security risk - SQL Injection. The suggested penetration test uses parameters that are automatically changeable to be fitted for the certain web site or application. The changes in the web site or web application are recorded and compared.\\
-The proposed penetration test have been tested and compared with existing tools. Unfortunately, there has been found no similar tool available for free with direct detection function for SQL Injection, therefore the most similar freeware tools trying to test this security threat have been used for the comparison.
+The main goal of this bachelor thesis is the analysis of the most recent attacks on web sites and web applications. In the theoretical part of this thesis chosen attacks have been thoroughly investigated and compared and the methods of prevention have been proposed. These methods cover wide range of possible attacts both with and without frameworks.
+
+The practical part has been focused on development of the tool for penetration testing for detection of one of the most dangerous security risk - SQL Injection. The suggested tool uses parameters that are automatically changeable to be fitted for the certain web site or application. The changes in the web site or web application are recorded and compared.
+
+The tool have been tested and compared with existing tools. Unfortunately, there has been found no similar tool available for free with a direct detection function for SQL Injection, therefore the most similar freeware tools trying to test this security threat have been used for the comparison.
 
 \subsection*{Česky}
-Tato bakalářská práce se zabývá analýzou nejběžnějších útoků na webové stránky a aplikace, jejich porovnání, ukázkou a rozebrání možností zabezpečení při použití stadartního jazyka nebo při využití různých frameworkových nástrojů.\\
-Druhá praktická část se zabývá vytvořením nástroje (penetračního testu) pro odhalení jednoho z největších bezpečnostních rizik - SQL Injection. Penetrační test využívá automatické úpravy parametrů v požadavcích na webovou aplikaci a porovnávání změny obsahu stránky.\\
-Ve třetí části je výsledný test srovnáván s existujícími nástroji a porovnávány výsledky, bohužel k absenci podobného nástroje, který by byl zdarma je porovnáván s \uv{podobnými} nástroji, které se o detekci snaží.
+Hlavním cílem této bakalářské práce je analýza nejčastějších typů útoků na webové stránky a aplikace. V teoretické části jsou vybrané útoky důkladně prošetřeny a jsou ukázány metody prevence. Metody prevence jsou ukázány s i bez použití frameworků.
 
+Praktická část byla zaměřena na vývoj nástroje pro penetrační testování pro detekci jednoho z nejnebezpečnějších bezpečnostních rizik - SQL injection. Navržený nástroj využívá změnu parametrů a vyhodnocení změn obsahu na stránce před a po úpravě.
+
+Nástroj byl testován ve srovnání s existujícími nástroji a byly porovnány výsledky, bohužel zde bylo zjištěno, že není podobný nástroj zdarma a proto byly v testu použity zdarma dostupné nástroje, které se tuto problematiku snaží řešit.
 
 
 \chapter{Úvod}
-V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá všude stejné heslo, proto obezřetnému hackerovi stačí získat login a heslo z jedné databáze a zkusit to i jinde. K této situace došlo nedávno při napadení pornostránek (\textit{http://pron.com}) skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, která následně získaná data zveřejnila. Hesla nebyla v databázích nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v podobě otevřeného textu, a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, které tito uživatelé využívali. Nikdy přesně nevíme, komu vlastně data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchováváná v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové applikace, webové stránky nebo přímo servery je mnoho. Významnější budou popsány v následující kaptiole.\\
-Cílem této práce je seznámení čtenáře s bezpečnostními riziky webových aplikací a jak jim předejít, dále podrobnější seznámení s problémem SQL injection a v praktické části vytvořením nástroje pro penetrační testy na detekci těchto bezpečnostních rizik.\\
+V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá všude stejné heslo, proto obezřetnému hackerovi stačí získat login a heslo z jedné databáze a zkusit to i jinde. K této situace došlo nedávno při napadení porno stránek (\textit{pron.com}) skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, která následně získaná data zveřejnila. Hesla nebyla v databázích nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v podobě otevřeného textu, a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, které tito uživatelé využívali. Nikdy přesně nevíme, komu vlastně data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchovávána v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové aplikace, webové stránky nebo přímo servery je mnoho. Významnější budou popsány v následující kapitole.
+
+Cílem této práce je seznámení čtenáře s bezpečnostními riziky webových aplikací a jak jim předejít, dále podrobnější seznámení s problémem SQL injection a v praktické části vytvořením nástroje pro penetrační testy na detekci těchto bezpečnostních rizik.
+
 Celá tato práce je především zaměřena na detekci problému SQL injection. Aktuálně je podle serveru \uv{http://techworld.com} za zhruba 97\% úniků dat zneužití právě této chyby. 
 
 \chapter{Útoky na webové aplikace}
@@ -129,7 +134,7 @@ Přehled typů útoků, které budou dále detailně rozebrány.
 \end{itemize}
 \item CSRF - Cross-Site Request Forgery 
 \begin{itemize}
-\item Volání nelegitimních akcí z legitmního zdroje.
+\item Volání nelegitimních akcí z legitimního zdroje.
 \end{itemize}
 \item PHP remote upload and execution scripts
 \begin{itemize}
@@ -139,7 +144,7 @@ Přehled typů útoků, které budou dále detailně rozebrány.
 \begin{itemize}
 \item Úpravy databázových dotazů přes neochráněné vstupy.
 \end{itemize}
-\item a další, protože webový server je jen počítačs operačním systémem, který obsahuje bezpečnostní chyby
+\item a další, protože webový server je jen počítač s operačním systémem, který obsahuje bezpečnostní chyby
 \end{itemize}
 
 \section{Nejčastější typy útoků}
@@ -153,30 +158,30 @@ Se zajímavými daty přichází server \textit{http://cnet.com}, který uvádí
 
 
 \section{XSS - Cross-Site scripting}
-XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), znedostupnění webových stránek atd. Existují dva základní typy XSS útoku:
+XSS využívá podobně jako SQLi neochráněných vstupních proměnných na webových stránkách. Díky nim může do aplikací podstrčit svůj vlastní (například JavaScriptový) kód, což může následně využít k získání dat (zejména cookies od uživatelů), zastavení webových stránek atd. Existují dva základní typy XSS útoku:
 
 \subsection{Nepersistentní}
 Tento typ využívá nezabezpečených vstupních proměnných z URL adresy / POST dat\footnote{GET a POST jsou základní způsoby jak přenést parametry na další stranu, rozdíl je v tom, že GET jsou vidět v URL a POST ne. Ale oba dva lze bez problémů podvrhovat!}, které jsou vypisovány na stránku. Útočníkovi stačí URL upravit a nějakým způsobem (například sociálním inženýrstvím, podvrženým emailem z banky apod.) donutit uživatele na tento odkaz kliknout. 
 
 \subsection{Persistentní}
-Tento typ je mnohem nebezpečnější, protože na napadné stránky se nevstupuje přes upravenou URL adresu, ale kód se vykonává automaticky. Tato chyba se často objevuje v různých diskusních fórech či návštěvních knihách, kde se nevalidují vstupy. Do těchto nezabezpečených vstupů stačí účtočníkovi pouze vložit Java Scriptový kód, který se následně provede každému, kdo tuto stránku otevře. 
+Tento typ je mnohem nebezpečnější, protože na napadené stránky se nevstupuje přes upravenou URL adresu, ale kód se vykonává automaticky. Tato chyba se často objevuje v různých diskusních fórech či návštěvních knihách, kde se nevalidují vstupy. Do těchto nezabezpečených vstupů stačí útočníkovi pouze vložit Java Scriptový kód, který se následně provede každému, kdo tuto stránku otevře. 
 
 \subsection{Ukázka}
-Na obrázku \ref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
+Na obrázku \ref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. (Bohužel nebyly zveřejněny detaily a byl zveřejněn pouze tento obrázek v dost špatné kvalitě.) V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
 \begin{lstlisting}[label=some-code, language=HTML, caption=Výstražná hláška v jazyce JavaScript]
 <script type="text/javascritpt">alert("XSS by PiratezSec");</script>
 \end{lstlisting}
 
 \begin{figure}[h!]
-\includegraphics[width=390px]{./examples/xss-airbank.png}
-\caption{Non-persistent XSS}
+\includegraphics[width=395px]{./examples/xss-airbank2.png}
+\caption{Non-persistent XSS [Zdroj: https://twitter.com/Czechurity]}
 \label{obr.airbank}
 \end{figure}
 
 Tato chyba byla objevena skupinou Czechurity (\textit{https://twitter.com/Czechurity}), která má na svědomí i kompromitaci webových stránek Unicredit bank v březnu 2013, které bylo médii chybně interpretováno jako DDoS\footnote{Distributed Denial of Service - útok, který zahlcuje službu, až dojde k jejímu pádu nebo nedostupnosti pro ostatní uživatele.}.
 
 \subsection{Různé varianty zapsání XSS}
-Výstupy na webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag. Toto lze bohužel jednoduše obejít. Zde několik příkladů (ale ne všechny prohlížeče toto interpretují):
+Výstupy na webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag. Toto lze bohužel jednoduše obejít\cite{soom.cz}. Zde několik příkladů (ale ne všechny prohlížeče toto interpretují):
 
 \begin{lstlisting}[label=some-code, language=HTML, caption=Schování JavaScriptu do neexistujícího obrázku]
 <img src="javascript:alert('XSS');">
@@ -193,13 +198,13 @@ Výstupy na webových stránkách mohou být různým způsobem filtrovány, pop
 \end{lstlisting}
 
 \subsection{Obrana}
-Obrana před XSS není snadná. Velké webové portály mají desítky různých vstupů, které je třeba hlídat. Pokud se rozhodneme využít nějaký framework, pak je ideální obranou výběr takového, který právě těmto incidentům dovede předcházet (Nette Framework\footnote{http://nette.org}, Ruby on Rails\footnote{http://rubyonrails.org} apod.). Dále je kvůli zamezení persitentním útokům třeba striktně hlídat, co ukládáme do databází či do jiných úložišť.
+Obrana před XSS není snadná. Velké webové portály mají desítky různých vstupů, které je třeba hlídat. Pokud se rozhodneme využít nějaký framework, pak je ideální obranou výběr takového, který právě těmto incidentům dovede předcházet (Nette Framework\footnote{http://nette.org}, Ruby on Rails\footnote{http://rubyonrails.org} apod.). Dále je kvůli zamezení persistentním útokům třeba striktně hlídat, co ukládáme do databází či do jiných úložišť.
 
 \subsection{Důsledky}
 Asi nejzásadnějším důsledkem úspěšného XSS útoku bude tzv. \textit{sessions hijacking}. Je to odcizení sessions$\_$id (sessions$\_$key), což je unikátní ID uživatele pro přihlašování ke vzdáleným serverům. Toto ID je možné zjistit několika způsoby, ale nejúčinějším způsobem, jak jej zjistit, je právě pomocí XSS. Pokud útočník toto ID získá, může se autorizovat k zabezpečenému serveru.
 
 \section{Directory traversal}
-Webový server slouží hlavně pro poskytování souborů, které mohou být statické (obrázky, css styly, HTML soubory) nebo dynamické (Ruby, PHP, ASP atd.). Pokud vytvoříme požadavek na web server, pak nám server při statickém obsahu soubor okamžitě interpretuje, ale při dynamickém ho nejdříve zpracuje a pak interpretuje. Při útoku typu \uv{directory traversal} využívá útočník špatného či dokonce žádného omezení přístupu k souborům právě pomocí dynamického obsahu webového serveru.
+Webový server slouží hlavně pro poskytování souborů, které mohou být statické (obrázky, css styly, HTML soubory) nebo dynamické (Ruby, PHP, ASP atd.). Pokud vytvoříme požadavek na web server, pak nám server při statickém obsahu soubor okamžitě interpretuje, ale při dynamickém ho nejdříve zpracuje a pak interpretuje. Při útoku typu \uv{directory traversal} (někdy se mu taky říká \uv{path traversal})\cite{owasppt} využívá útočník špatného či dokonce žádného omezení přístupu k souborům právě pomocí dynamického obsahu webového serveru.
 
 \subsection{Příklad directory traversal útoku}
 Mějme:
@@ -216,7 +221,7 @@ http://portal.czu.cz/index.php?item=../.htaccess
 http://portal.czu.cz/index.php?item=../config/config.neon
 \end{lstlisting}
 
-V prvním příkladě jsme se snažili získat soubor \uv{.htaccess}, který může obsahovat autentizační metody, nastavení práv apod. Ve druhém příkladě jsme se poukoušeli získat soubor \uv{config.neon}. Tento soubor slouží pro uchování citlivých informací na webech, které využívají Nette Framework. Příkladem takových informací může být přihlášení k databázi.
+V prvním příkladě jsme se snažili získat soubor \uv{.htaccess}, který může obsahovat autentizační metody, nastavení práv apod. Ve druhém příkladě jsme se pokoušeli získat soubor \uv{config.neon}. Tento soubor slouží pro uchování citlivých informací na webech, které využívají Nette Framework. Příkladem takových informací může být přihlášení k databázi.
 
 \subsection{IIS Web Server}
 Starší verze IIS\footnote{Internet Information Service - Microsoftem distribuovaná obdoba webového serveru Apache2} umožňovaly dokonce i vykonávat příkazy na serveru.
@@ -239,15 +244,16 @@ http://iis.czu.cz/scr/..%5c../winnt/system32/ cmd.exe?/c+format+c:\
 \end{itemize}
 
 \subsection{Praktická ukázka}
-Na obrázku \ref{obr.directory} vidíme úspěšný directory traversal útok na vkládání v parametru \uv{name}. Ze získaného souboru \uv{config.neon} se následně dozvíme, že přihlašovací jméno k databázi je \uv{franta} a heslo je také \uv{franta}.
+Na obrázku \ref{obr.directory} vidíme úspěšný directory traversal útok na vkládání v parametru \uv{name}. Ze získaného souboru \uv{config.neon} se následně dozvíme, že přihlašovací jméno k databázi je \uv{admin} a heslo je také \uv{test}.
 \begin{figure}[h!]
-\centerline{\includegraphics[width=380px]{./examples/dir_example.png}}
-\caption{Directory traversal - zobrazení souboru config.neon}
+\centerline{\includegraphics[width=416px]{./examples/dir_ex2.png}}
+\caption{Directory traversal - zobrazení obsahu souboru config.neon}
 \label{obr.directory}
 \end{figure}
 
 \section{CSRF - Cross-Site Request Forgery}
-U tohoto typu útoku většinou potřebujeme \uv{osobu uvnitř}, která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela námi upravenou URL. Tento útok využívá situace, že sice přijde požadavek na vykonání určité akce od legitmního uživatele, ale na neligitimní zdroj. (Tento postup často vyžaduje zanlost URL pro různé akce na webové stránce.)
+U tohoto typu útoku většinou potřebujeme \uv{osobu uvnitř}, která má dostatečná oprávnění a my jsme schopni jí přesvědčit (často pomocí sociálního inženýrství), aby spustila nebo otevřela námi upravenou URL. Tento útok využívá situace, že sice přijde požadavek na vykonání určité akce od legitimního uživatele, ale na nelegitimní zdroj.\cite{cgisecurity} (Tento postup často vyžaduje znalost URL pro různé akce na webové stránce.)
+
 \subsection{Příklad CSRF}
 Jednoduchým příkladem může být jakýkoliv redakční systém. Nejjednoduší je, pokud server, na který útočíme, používá nějaký známý CMS\footnote{Content Managment System - systém zajišťující správu webového obsahu} - například Joomla\footnote{http://www.joomla.org/ - PHP CMS}, Drupal\footnote{http://www.drupal.org/ - Open CMS system} a další. Zde URL adresy pro vykonávání určitých akcí známe, protože si je můžeme vyzkoušet sami. Mějme tedy redakční systém, který má script \textit{admin.php} a například tyto parametry:
 \begin{itemize}
@@ -271,10 +277,10 @@ http://czu.cz/admin.php?action=changeRole&user=2&role=1&token=ad70CZf82
 \end{lstlisting}
 
 \section{Remote execution script}
-Tento typ útoku využívá situaci, kdy můžeme pomocí formuláře pro nahrání souborů nahrát PHP skript, který je dostupný pomocí URL a je web serverem vykonáván. Správně vytvořený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost. Jednou z možností je využítí scriptu pro vytvoření reverzního shellu\footnote{Reverse Shell - otevření spojení z cílového stroje na náš počítač \uv{jakoby} SSH obráceně}. Tento script umí vytvořit například oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}, který pak skýtá opravdu široké využití.
+Tento typ útoku využívá situaci, kdy můžeme pomocí formuláře pro nahrání souborů nahrát PHP skript, který je dostupný pomocí URL a je web serverem vykonáván. Správně vytvořený PHP skript pak může naše akce směrovat pomocí příkazů (system() a eval()) na konzoli stroje a následně nám umožňuje další činnost. Jednou z možností je využití scriptu pro vytvoření reverzního shellu\footnote{Reverse Shell - otevření spojení z cílového stroje na náš počítač \uv{jakoby} SSH obráceně}. Tento skript umí vytvořit například oblíbený Metasploit framework\footnote{Metasploit framework je velice oblíbený penetrační tester, který lze získat zdarma na: http://www.metasploit.com/}, který pak skýtá opravdu široké využití.
 
 \subsection{Obrana}
-Zde je obrana jednoduchá, a to dávát si pozor na to, co je nahráváno. Soubory můžeme tedy jednoduše přejmenovávat (změnit přípomnu z interpretovaných - \textit{.php}, \textit{.php3}  například na \textit{.txt}, které není interpretováno) nebo zakázat jejich vykonávání. Příklade Další užitečnou funkcí pro \uv{předejití} problémům je zákaz funkcí \textit{eval()} a \textit{system()}. Tyto funkce umožnějí volání systémových funkcí (spouštění programů, kopírování souborů atd.). Značný problém je, když webový server běží pod účtem superuživatele (\textit{root}). Útočník tedy získává automaticky práva hlavního administrátora, což může mít neblahé následky. Proto se webové servery a další služby spoušťí pod speciálními uživateli s omezenými právy.
+Zde je obrana jednoduchá, a to dávat si pozor na to, co je nahráváno. Soubory můžeme tedy jednoduše přejmenovávat (změnit příponu z interpretovaných - \textit{.php}, \textit{.php3}  například na \textit{.txt}, které není interpretováno) nebo zakázat jejich vykonávání. Příklade Další užitečnou funkcí pro \uv{předejití} problémům je zákaz funkcí \textit{eval()} a \textit{system()}. Tyto funkce umožňují volání systémových funkcí (spouštění programů, kopírování souborů atd.). Značný problém je, když webový server běží pod účtem superuživatele (\textit{root}). Útočník tedy získává automaticky práva hlavního administrátora, což může mít neblahé následky. Proto se webové servery a další služby spouští pod speciálními uživateli s omezenými právy.
 
 \section{Open Directory browsing}
 Další ukázka špatně nastaveného serveru. Jsme totiž schopni zjistit adresářovou strukturu projektů a z ní vyčíst mnoho informací, které měly zůstat skryty. Příkladem mohly být dříve používané soubory s příponou \textit{.inc}, které bylo možné číst, protože je PHP interpret standardně nevykonával. Tyto soubory je stále možné nalézt pomocí internetových vyhledávačů (často byly vyhledávány soubory s názvem \textit{config.php.inc}, které obsahovaly většinou údaje pro připojení k databázi a jiné konfigurační údaje).
@@ -295,7 +301,7 @@ Dnes jsou v oblibě frameworky pro rychlejší a snažší vývoj webů. Někter
 \item \textit{Ruby on Rails (RoR) - Ruby}
 \begin{itemize}
 \item \textit{http://rubyonrails.org/}
-\item \textit{SQL Injection} - 2. 1. 2013 byla objevena zásadní chyba tohoto typu v modulu Active Record, který Ruby on Rails využívá jako ORM\footnote{ORM - objektové relační mapování - mapuje data z databází na objekty}. Chybou, která byla označena jako CVE-2012-5664, jsou postiženy všechny verze Ruby on Rails: \textit{https://groups.google.com/\\forum/$\#$!topic/ rubyonrails-security/DCNTNp$\_$qjFM}. Veškeré dotazy jsou striktně escapovány, ale pro určite položky to lze vypnout tzn. položky, u kterých bylo escapování vypnuto se nebude nic ověřovat a tyto položky mohou být bezpečnostním rizikem.
+\item \textit{SQL Injection} - 2. 1. 2013 byla objevena zásadní chyba tohoto typu v modulu Active Record, který Ruby on Rails využívá jako ORM\footnote{ORM - objektové relační mapování - mapuje data z databází na objekty}. Chybou, která byla označena jako CVE-2012-5664, jsou postiženy všechny verze Ruby on Rails: \textit{https://groups.google.com/\\forum/$\#$!topic/ rubyonrails-security/DCNTNp$\_$qjFM}. Veškeré dotazy jsou striktně escapovány, ale pro určité položky to lze vypnout tzn. položky, u kterých bylo escapování vypnuto se nebude nic ověřovat a tyto položky mohou být bezpečnostním rizikem.
 \item \textit{CSRF} - Tokeny jsou přidávány ke všem formulářům automaticky od Ruby on Rails verze 2.
 \item \textit{XSS} 
 \begin{itemize}
@@ -311,7 +317,7 @@ Dnes jsou v oblibě frameworky pro rychlejší a snažší vývoj webů. Někter
 \item Querysets - ORM - hlídají proměnné automaticky, lze vynutit, aby se tak nedělo
 \item RAW queries - neescapují vůbec
 \end{itemize}
-\item \textit{CSRF} - Django obsahuje \textit{middleware}\footnote{Middleware je tzv. \uv{prostředník}, v tomto případě mezi jádrem DJanga a naší aplikací.}, který nám umožní přidávat CSRF token k formulářům a následně ho ověřovat: - víc e informcí na: \textit{https://docs.djangoproject.com/en/dev/ref/contrib/csrf/}.
+\item \textit{CSRF} - Django obsahuje \textit{middleware}\footnote{Middleware je tzv. \uv{prostředník}, v tomto případě mezi jádrem DJanga a naší aplikací.}, který nám umožní přidávat CSRF token k formulářům a následně ho ověřovat: - více informací na: \textit{https://docs.djangoproject.com/en/dev/ref/contrib/csrf/}.
 \item \textit{XSS} - Šablony DJanga automaticky escapují proměnné, ale ne všechny (více informací na: \textit{https://docs.djangoproject.com/en/ dev/topics/security/}).
 \end{itemize}
 \item \textit{Nette Framework - PHP}
@@ -389,7 +395,7 @@ Podstata útoku je v obou případech stejná, ovšem u \textit{Blind SQL Inject
 \item Kontrola příchozích dat na aplikační vrstvě - pokud vím, že mi v parametru \textit{category\_id} má přijít číslo, tak budu validovat číslo.
 \item Využití funkcí pro \uv{přepsání} speciálních znaků do entit (v php např.: \textit{mysql\_real\_escape\_string} \ldots). Tyto funkce nahradí znaky, které by mohly SQL dotaz nějakým způsobem \textit{upravit} nebo \textit{poškodit} na text.
 \item Využití databázové vrstvy, která má jako jeden z cílů právě předcházení těmto rizikům (příkladem může být \textit{Dibi - Database Abstraction Library pro PHP}\footnote{Je zdarma k dispozici na http://dibiphp.com}).
-\item Správně nastavená oprávnění - pro připojení webových aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme). Ideálně aplikace a k ní konkrétní uživatel s jednou databází, který nikam jinam nemůže (zabránění, aby se z DB jedné aplikace dostal i do dalších), dále zakáz nepotřebných příkazů pro tyto uživatele (například exec, drop, alter). Pak i kdyby útočník objevil SQL Injection chybu, tak nám například nemůže vymazat všechny tabulky.
+\item Správně nastavená oprávnění - pro připojení webových aplikací využívat speciálního uživatele s omezenými právy (pokud je z nějakého důvodu nepotřebujeme). Ideálně aplikace a k ní konkrétní uživatel s jednou databází, který nikam jinam nemůže (zabránění, aby se z DB jedné aplikace dostal i do dalších), dále zákaz nepotřebných příkazů pro tyto uživatele (například exec, drop, alter). Pak i kdyby útočník objevil SQL Injection chybu, tak nám například nemůže vymazat všechny tabulky.
 \end{itemize}
 
 \chapter{Důsledky}
@@ -420,7 +426,7 @@ Ukázka chybně zabezpečného vstup přihlašovacího formuláře na nejmenovan
 
 
 \subsection{Sony Pictures - 2011}
-Proti společnosti Sony byly v roce 2011 několikrát použity DDoS útoky a nakonec vše vyústilo v odcizení dat skupinou LulzSec\footnote{Lulz Security - skupina počítačových hackerů, jejich webové stránky byly zablokovány, ale twitter zůstal \textit{https://twitter.com/LulzSec}} pomocí SQL injection. I taková velká společnost jako sony, měla údaje v databázích v nešifrované podobě. Hackerům se podařilo odcizit 1 milion uživatelských dat (jména, hesla, adresy a datumy narození), dále hesla administrátorů a mnoho dalšího - více v \textit{http://www.thewhir.com/web-hosting-news/hackers-attack-sony-pictures-with-single-sql-injection}. Tato skupina byla nedávno zatčena díky chybě a následné spolupráci jejich hlavního člena.
+Proti společnosti Sony byly v roce 2011 několikrát použity DDoS útoky a nakonec vše vyústilo v odcizení dat skupinou LulzSec\footnote{Lulz Security - skupina počítačových hackerů, jejich webové stránky byly zablokovány, ale twitter zůstal \textit{https://twitter.com/LulzSec}} pomocí SQL injection. I taková velká společnost jako Sony, měla údaje v databázích v nešifrované podobě. Hackerům se podařilo odcizit 1 milion uživatelských dat (jména, hesla, adresy a datum narození), dále hesla administrátorů a mnoho dalšího - více v \textit{http://www.thewhir.com/web-hosting-news/hackers-attack-sony-pictures-with-single-sql-injection}. Většina členů této skupiny byla nedávno zatčena a pochytána, díky chybě hlavního člena s přezdívkou \uv{Sabu} a jeho následné spolupráci s FBI zdroj \textit{The Guardian}\cite{guardian}.
 
 \begin{center}
 \textit{You call it war, we laugh at your battleships.}\\
@@ -428,6 +434,7 @@ Proti společnosti Sony byly v roce 2011 několikrát použity DDoS útoky a nak
 \end{center}
 
 \chapter{Návrh nástroje pro penetrační testování}
+Pro detekování chyb typu SQL Injection je v této části vysvětlen postup a princip fungování nástroje pro penetrační testování. V další části 5.1 je uveden detailně postup od zpracování webové stránky až po metody testování a rozpoznání SQL Injection chyby.
 
 \section{Postup testu}
 \begin{enumerate}
@@ -455,7 +462,7 @@ Proti společnosti Sony byly v roce 2011 několikrát použity DDoS útoky a nak
 \end{enumerate}
 
 \section{Analýza zdrojového kódu stránky}
-Při analýze stojí za úvahu, zda si napsat vlastní HTML parser nebo použít nějaký stávající, čímž by bylo rozhodnuto i o jazyce, ve kterém bude testovací script napsán. Bylo možné použít  následující HTML parsery:
+Při analýze stojí za úvahu, zda si napsat vlastní HTML parser nebo použít nějaký stávající, čímž by bylo rozhodnuto i o jazyce, ve kterém bude testovací skript napsán. Bylo možné použít  následující HTML parsery:
 \begin{itemize}
 \item XML Reader - PHP
 \item Simple HTML DOM - PHP
@@ -618,14 +625,13 @@ Testování se zapnutými chybovými direktivami je postaveno na principu, že s
 \end{itemize}
 Pokud je nějaká tato chyba na stránce nalezena, existuje zde vysoká pravděpodobnost, že se podařil SQL injection a tudíž byl SQL dotaz modifikován.
 
-\section{Testování a výměna parametrů}
+\section{Testování obsahu stránky při výměně parametrů}
 Testování bez zapnutých direktiv není jednoznačné a výsledky je třeba ověřit ještě ručně. Pro porovnání výsledků s nahrazením parametrů se používají 3 možné případy:
 \begin{enumerate}
 \item \textit{'} - \uv{rozbití} SQL dotazu
 \item \textit{' --} - zakomentování zbytku SQL příkazu
 \item \textit{' OR '1' = '1} - logická pravda
 \end{enumerate}
-U všech je nutné počítat i s jejich \uv{"} - dvojitou uvozovkovou variantou, takže výsledek je  máme 6 získaných stránek.
 
 \subsection{Testování výsledků formulářů}
 Formuláře se obecně používají na běžných webových stránkách ke 3 účelům:
@@ -634,7 +640,7 @@ Formuláře se obecně používají na běžných webových stránkách ke 3 ú�
 \item Vyhledávání 
 \item Filtrování
 \end{enumerate}
-Pokud se \uv{podvodný} vstup dostane do dotazu, bude mít u každého typu formuláře jiný výsledek, proto se musí otestovat stránka jinak. Máme tudíž 4 webové stránky a vektor prvků na stránce. Vezmeme-li si možné situace, uvidíme, co se s vektory bude dít oproti bezchybnému průběhu.
+Pokud se \uv{podvodný} vstup dostane do dotazu, bude mít u každého typu formuláře jiný výsledek, proto se musí otestovat stránka jinak. Máme tudíž 4 webové stránky a vektor prvků na stránce. Vezmeme-li si možné situace, uvidíme, co se s vektory bude dít oproti bezchybnému průběhu. (Pozn. Body odpovídají výměně parametrů v sekci \textit{Testování a výměna parametrů})
 
 \begin{itemize}
 \item \textbf{Přihlašování}
@@ -643,31 +649,32 @@ Pokud se \uv{podvodný} vstup dostane do dotazu, bude mít u každého typu form
 \item Velká změna při nahrazení v položce \uv{jména}. Díky zakomentování dotazu bude uživatel autorizován a bude přesměrován na stránku s jiným obsahem, zbytek SQL dotazu bylo zakomentováno popřípadě nastala logická pravda, tudíž vždy vrací výsledek.
 \item To samé jako v bodě 2)
 \end{enumerate}
-\item \textbf{Vyhledávání}
+\item \textbf{Vyhledávání a filtrování}
 \begin{enumerate}
 \item Snížením počtu prvků na 0 dotaz nevrátí žádný výsledek = snížení počtu elementů stránky.
 \item Zvýšení počtu elementů, může být dosti zásadní (vypisují se všechny prvky) nebo menší (přibudou položky ve stránkování).
 \end{enumerate}
 \end{itemize}
-Z výše zmíněného vyplývá, že je třeba určit všechny možnosti a zjistit značné rozdíly dle modelu chování, protože nejsme schopni strojově rozpoznat, jaký formulář testujeme.
+Z výše zmíněného vyplývá, že je třeba určit všechny možnosti a určit příapady značnými rozdíly dle modelu chování, protože nejsme schopni strojově rozpoznat, jaký formulář testujeme.
 
 \subsection{Testování výsledků odkazů}
 Odkazy se testují na stejném principu jako formuláře, tj. hledají se změny obsahu pomocí vektoru elementů na stránce.
 
-\subsection{Insert-into metoda}
-Tato metoda vyžaduje předchozí zásah administrátora nebo vývojáře, je totiž nucen předem vytvořit tabulku \textit{sid\_log} (jejíž definice je ve složce \textit{sql\_dump}). Po spuštění testu je do každého dotazu přidávána struktura \textit{'; INSERT INTO sid\_log(param) VALUE(param\_name)}. Tudíž pokud dotaz projde, je do tabulky přidáno jméno parametru, který tento vstup umožnil. Odpovědné osobě následně stačí tuto tabulku projít po dokončení testu.
+\section{Insert-into metoda}
+Další možná metoda zjištění SQL injection, tato metoda vyžaduje předchozí zásah administrátora nebo vývojáře, je totiž nucen předem vytvořit tabulku \textit{sid\_log} (jejíž definice je uložena ve složce \textit{sql\_dump}). Po spuštění testu je do každého dotazu přidávána struktura \textit{'; INSERT INTO sid\_log(param) VALUE(param\_name)}. Tudíž pokud dotaz projde, je do tabulky přidáno jméno parametru, který tento vstup umožnil. Odpovědné osobě následně stačí tuto tabulku projít po dokončení testu.
 
-\subsection{Drop-All metoda}
-Do každého dotazu je přidána direktiva \textit{'; DROP ALL tables; ' --} nebo \textit{'; TRUNCATE ALL tables; ' --}, která způsobí vymazání všech tabulek. Pokud tento dotaz projde, změna obsahu bude skutečně zásadní, popřípadě bude zobrazena stránka 500 (služba je nedostupná). Tato metoda je \textit{opravdu destruktivní}, protože smaže opravdu vše...
+\section{Drop-All metoda}
+Do každého dotazu je přidána direktiva \textit{'; DROP ALL tables; ' --} nebo \textit{'; TRUNCATE ALL tables; ' --}, která způsobí vymazání všech tabulek. Pokud tento dotaz projde, změna obsahu bude skutečně zásadní, popřípadě bude zobrazena stránka 500 (služba je nedostupná). Tato metoda je \textit{opravdu destruktivní}, protože smaže opravdu vše.
 
 
 \chapter{Porovnání s existujícími nástroji}
+
 \section{Jak probíhalo testování?}
-Testování probíhalo na vzorové stránce, která byla připojena na databázi s katalogem hudby (jako v ukázkovém případě). Testovací stránka obsahovala 4 formuláře (2x POST, 2x GET) a odkazy. Polovina parametrů byla nezabezpečených, tudíž mohli být napadnuty. V testu není uveden nástroj od firmy Acunetix - \textit{Web Vulnerability Scanner}, který je pouze pro OS Windows a je placený!
+Testování probíhalo na vzorové stránce, která byla připojena k databázi s katalogem hudby (viz kapitola 3). Testovací stránka obsahovala 4 formuláře různých typů a odkazy. Polovina parametrů byla nezabezpečených, tudíž mohli být napadnuty.
 
 \section{OWASP ZAP}
 \subsection{Co je OWASP ZAP?}
-\textit{The Open Web Application Security Project} je celosvětová nezisková charitativní organizace, jejíž cílem je zvýšit zabezpeční softwarových řešení, veškeré jejich snahy jsou cíleny na zviditelnění možností bezpečnostních opatření, veškeré materiály, knihy a software, který je vyvíjen je zdarma. 
+\textit{The Open Web Application Security Project} je celosvětová nezisková charitativní organizace\cite{owasp}, jejíž cílem je zvýšit zabezpečení softwarových řešení. Veškeré jejich snahy jsou cíleny na zviditelnění možností bezpečnostních opatření. Všechny materiály, knihy a software, který je vyvíjen je zdarma. 
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=325px]{./examples/owasp.jpeg}}
@@ -676,23 +683,27 @@ Testování probíhalo na vzorové stránce, která byla připojena na databázi
 \end{figure}
 
 \subsection{OWASP ZAP}
-\textit{OWASP Zed Attack Proxy Project} je penetrační test pro nalezení bezpečnostních chyb ve webových aplikacích, umožňuje jak manuální kontrolu tak automatické testy. Je k dispozici zdarma: \textit{https://code.google.com/p/zaproxy/}.
+\textit{OWASP Zed Attack Proxy Project} je penetrační test pro nalezení bezpečnostních chyb ve webových aplikacích, umožňuje manuální kontrolu i automatické testy. Je k dispozici zdarma na: \textit{https://code.google.com/p/zaproxy/}.
 
 \subsection{Nalezené výsledky}
-OWASP na testovací stránce nezjistil vůbec žádné problémy typu SQL injection, i když byly zapnuty chybové direktivy. Detekoval ovšem dalších plno problémů s procházením adresářů či špatném zasílání hlaviček.
+OWASP na testovací stránce nezjistil vůbec žádné problémy typu SQL injection, i když byly zapnuty chybové direktivy. Detekoval ovšem dalších mnoho problémů s procházením adresářů či špatném zasílání hlaviček.
 
 \section{SQLMap}
-\textit{SQLMap - Automatic SQL Injection and database takeover tool}, tato chytrá utilita byla zajímavější než výše předchozí OWASP. Je napsána v jazyce Python a je zdarma k dispozici na \textit{http://sqlmap.org/}. 
+\textit{SQLMap - Automatic SQL Injection and database takeover tool}, tato utilita byla zajímavější než výše předchozí OWASP. Je napsána v jazyce Python a je zdarma k dispozici na \textit{http://sqlmap.org/}. Dokáže přes nezabezpečený parametr získat veškeré informace o databázovém serveru, vytvořit uživatele (je-li to možné) nebo získat struktury tabulek celé databáze.
 
 \subsection{Nalezené výsledky}
-Nepodařilo se mi SQL Map přesvědčit, aby stránky prohledával sám (jako to dělá OWASP), ale při nalezení nezabezpečeného vstupu se ukázal jako výborný pomocník (jak už název napovídá) k převzetí databáze, což se na nezabezpečeném vstupu povedlo bez problémů.
+Nepodařilo se mi realizovat, aby SQLMap stránky prohledával sám (jako to dělá OWASP), ale při nalezení nezabezpečeného vstupu se ukázal jako výborný pomocník (jak už název napovídá) k převzetí databáze, což se na nezabezpečeném vstupu povedlo bez problémů.
 
 \section{OWASP / SID + SQLMap}
 SQLMap a OWASP / SID dohromady tvoří zajímavý nástroj pro detekci a následné \uv{zneužití} SQL injection chyby. OWASP by byl využit pro zjištění všech možných vstupů, které by následně SQL Map otestoval, které je značné množství a SQL Map provádí testy opravdu dlouho. Při využití SIDu a SQL Mapu bude tento čas menší. Při testech SID + SQL Map na vlastním serveru jsem získal všechny tabulky a data z nich.
 
-\chapter{Ukázky}
+\section{Acunetix - Web Vulnerability Scanner}
+Tento nástroj nebyl v testu použit, protože je placený a není k dispozici pro jiné operační systémy než je Microsoft Windows. Dle informací od výrobce (\textit{http://www.acunetix.com/}) by měl být schopen automaticky detekovat jak SQL Injection tak XSS problémy.
+
+
+\chapter{Ukázky použití SID}
 \subsection{Stažení a instalace}
-SID je možné se zdrojovými kódy stáhnout z GIT repozitáře, který je umístěn na serveru GitHub, kde byl v rámci bakalářské práce vyvíjen. Repozitář je read-only, takže je možné ho standartní cestou naklonovat. Dále je přiložen soubor \textit{Gemfile} a \textit{Rakefile}. První ze souborů umožňuje automatické stažení potřebných balíčků (tzv. \textit{Gemů}) pro spuštění programu. Druhý (\textit{Rakefile}) je pro automatické spuštění testů, ze složky \textit{test}. Celý postup je uveden v následující části \ref{SID_instalace}.
+SID je možné se zdrojovými kódy stáhnout z GIT repozitáře, který je umístěn na serveru GitHub, kde byl v rámci bakalářské práce vyvíjen. Repozitář je read-only, takže je možné ho standardní cestou naklonovat. Dále je přiložen soubor \textit{Gemfile} a \textit{Rakefile}. První ze souborů umožňuje automatické stažení potřebných balíčků (tzv. \textit{Gemů}) pro spuštění programu. Druhý (\textit{Rakefile}) slouží pro automatické spuštění testů ze složky \textit{test}. Celý postup je uveden v následující části \ref{SID_instalace}.
 \begin{lstlisting}[label=SID_instalace,language=Bash, caption=Instalace]
 # Klonovani repozitare
 git clone git@github.com:Strnadj/SID.git SID
@@ -728,8 +739,8 @@ Používáme tři parametry:
 \end{enumerate}
 Pokud test spustíme bez parametrů zobrazí se nápověda se seznamem parametrů, které můžeme použít a jejich popisem.
 
-\subsection{Identifikace podezdřelé proměnné}
-Pokud test nalezne proměnnou, která je podezdřelá na SQL injection, je přehledně vypsána i s testovacími URL, které byly použity. Administrátor následně může tyto URL zkontrolovat a zkontrolovat parametry (pro identifikaci ve zdrojových kódech můžeme využít například grep).
+\subsection{Identifikace podezřelé proměnné}
+Pokud test nalezne proměnnou, která je podezřelá na SQL injection, je přehledně vypsána i s testovacími URL, které byly použity. Administrátor následně může tyto URL zkontrolovat a zkontrolovat parametry (pro identifikaci ve zdrojových kódech můžeme využít například příkaz  grep).
 \begin{figure}[h!]
 \centerline{\includegraphics[width=250px]{./examples/SID-success.png}}
 \caption{Úspěšné nalezení nezabezpečeného parametru}
@@ -737,39 +748,55 @@ Pokud test nalezne proměnnou, která je podezdřelá na SQL injection, je přeh
 \end{figure}
 
 \chapter{Závěr}
-I přes pokus o zobecnění chování změny parametrů, které jsou náchylné právě k SQL injection není možné ve všech ohledech jistě říci, že tyto parametry jsou nechráněné při ověřování porovnání obsahu stránky. Webových aplikací a stránek je nepřeberné množství a každá se chováním trochu odlišuje. I přes testování na vlastních testovacích stránkách a na vzorové stránce společnosti Acunetix (\textit{http://testphp.vulnweb.com/}) se mi podařilo detekovat značné množství výskytů této chyby. I přesto stačí tato chyba pouze jedna a je problém, proto bych při skutečném testování použil kombinaci všech možných dostupných nástrojů (určitě bych i zvažoval zakoupení komerčních nástrojů), tak manuální procházení zdrojových kódů (minimálně částí, týkajících se zpracování těchto požadavků). Rozhodně bych rád tento penetrační test vyvíjel dále, jedním z dalších rozšíření by bylo procházení JavaScriptových souborů pro hledání Ajaxových požadavků a jejich testování a testování při aktivním přihlášení. Ze subjektivního hlediska práce byla velice zajímavá, jak z hlediska jazyka ruby tak i parsování stránek. Penetrační test je pouze pro testovací účel, doufám, že nebude nikdy využit k nelegálním účelům.
+Cílem práce bylo získat cenné informace o problematice bezpečnosti webových stránek a aplikací a vytvořit nástroj pro penetrační testování na problém typu SQL Injection.
+
+SID umožňuje 3 metody testování na SQL injection, využíváme-li metodu porovnání změny obsahu stránky, tak i přes pokus o zobecnění chování změn parametrů, které jsou náchylné k SQL injection, není možné zcela jistě ve všech ohledech říci, že tyto parametry jsou nechráněné, vždy získáváme pouze podezření.  Webových aplikací a stránek je nepřeberné množství a každá se chováním trochu odlišuje. I přes testování na vlastních testovacích stránkách a na vzorové stránce společnosti Acunetix (\textit{http://testphp.vulnweb.com/}) se mi podařilo detekovat značné množství výskytů SQL injection. I přesto stačí pouze jeden neochráněný vstup a je problém. Proto bych při skutečném testování použil kombinaci všech možných dostupných nástrojů (zvažoval bych i zakoupení komerčních nástrojů), manuální procházení zdrojových kódů (minimálně částí, týkajících se zpracování těchto požadavků). 
+
+Tento nástroj pro penetrační testování bych rád vyvíjel dále, jedním z dalších rozšíření by bylo procházení JavaScriptových souborů pro hledání Ajaxových požadavků a jejich testování a testování při aktivním přihlášení. 
+
+Na několika testovacích webových aplikací se povedlo najít vytvořeným nástrojem všechny problémy.
+
+Ze subjektivního hlediska práce byla velice zajímavá a přínosná, jak z hlediska jazyka ruby tak i parsování stránek. Vyvinutý nástroj pro penetrační testování je pouze pro testovací účely, jako autor se zříkám veškeré zodpovědnosti při použití k jiným účelům.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Použitá literatura a zdroje}
 \bibitem{owasp}{\em OWASP comunity}
-	{\bf OWASP Wiki} \\
-	\texttt{https://www.owasp.org/}
+	{\bf OWASP Wiki} [on-line] \\
+	\texttt{https://www.owasp.org/}, 2013
 
 \bibitem{soom.cz}{\em Komunitní server}
-	{\bf Soom.cz}\\
-	\texttt{http://www.soom.cz/}
+	{\bf Soom.cz - Pokročilé techniky XSS} [on-line]\\
+	\texttt{http://www.soom.cz/index.php?name=articles/show\&aid=485\&\\title=Pokrocile-techniky-XSS}, 2008
+
+\bibitem{cgisecurity}{\em Robert Auger}
+	{\bf Cgisecurity.com} [on-line]\\
+	\texttt{http://www.cgisecurity.com/csrf-faq.html}, 2010
+
+\bibitem{owasppt}{\em OWASP comunity}{\bf OWASP Wiki - Path traversal}\\
+	\texttt{https://www.owasp.org/index.php/Path$\_$Traversal}, 2013 [on-line]
 
 \bibitem{ruby}{\em Ruby comunnity}
-	{\bf Ruby doc}\\
-	\texttt{http://www.ruby-lang.org/en/documentation/}
+	{\bf Ruby doc} [on-line]\\
+	\texttt{http://www.ruby-lang.org/en/documentation/}, 2013
 
-\bibitem{LearnRubyHardWay}{\em E-Book} {\bf Learn Ruby The Hard Way}\\
-	\texttt{http://programming-motherfucker.com/}
+\bibitem{LearnRubyHardWay}{\em Zed A. Shaw and Rob Sobers} {\bf Learn Ruby The Hard Way rev.2}\\
+	\texttt{http://programming-motherfucker.com/}, 2012 E-book
 
 \bibitem{HackingBezTajemstvi}{\em Joel Scambray, Stuart McClure, George Kurtz}
                {\bf Hacking bez tajemství} \\
            	Computer Press, 2010
 
 \bibitem{php}{\em The PHP Group}
-	{\bf PHP - Documentation}\\
-	\texttt{http://php.net/manual/en/}
+	{\bf PHP - Documentation} [on-line]\\
+	\texttt{http://php.net/manual/en/}, 2013
 
 \bibitem{exploitdb}{\em Offensive Security}
-	{\bf Exploit-Db}\\
-	\texttt{http://www.exploit-db.com/webapps/}
+	{\bf Exploit-Db} [on-line]\\
+	\texttt{http://www.exploit-db.com/webapps/}, 2013
 
-\bibitem{backtrack}{\em Linux Penetration Distribution} {\bf BackTrack 5}\\
-	\texttt{http://www.backtrack-linux.org/}
+\bibitem{guardian}{\em Charles Arthur, Dan Sabbagh and Sandra Laville
+} {\bf The Guardian}\\
+	\texttt{http://www.guardian.co.uk/technology/2012/mar/06/lulz\\sec-sabu-working-for-us-fbi}, 2012 [on-line]
 
 
 \end{thebibliography}
