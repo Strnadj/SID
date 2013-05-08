@@ -1,1641 +1,203 @@
-  
-
-
-<!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Strnadj/SID at master · GitHub</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
-    <link rel="logo" type="image/svg" href="http://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
-    <link rel="xhr-socket" href="/_sockets" />
-
-
-    <meta name="msapplication-TileImage" content="/windows-tile.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="selected-link" value="repo_source" data-pjax-transient />
-
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="RNgkpo99DHMWweFAKB3OeMHs238WBYJ4JWMhTuGyPm4=" name="csrf-token" />
-
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github-2bf871a9b64bd2274d95998848be29a48393d86b.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="https://a248.e.akamai.net/assets.github.com/assets/github2-efec9e1c49198032b9e454c52d6853c14695e07f.css" media="all" rel="stylesheet" type="text/css" />
-    
-
-
-      <script src="https://a248.e.akamai.net/assets.github.com/assets/frameworks-92d138f450f2960501e28397a2f63b0f100590f0.js" type="text/javascript"></script>
-      <script src="https://a248.e.akamai.net/assets.github.com/assets/github-3ffa893be587495b34c3fbe60416ae9cdb8a9210.js" type="text/javascript"></script>
-      
-      <meta http-equiv="x-pjax-version" content="2e7afd50ffe5aa9500e4231241306463">
-
-          <meta property="og:title" content="SID"/>
-    <meta property="og:type" content="githubog:gitrepository"/>
-    <meta property="og:url" content="https://github.com/Strnadj/SID"/>
-    <meta property="og:image" content="https://secure.gravatar.com/avatar/8c01631722b81d94d12362706eaa59e3?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"/>
-    <meta property="og:site_name" content="GitHub"/>
-    <meta property="og:description" content="SID - Sql injection vulnerabilities detector for web applications!"/>
-    <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:site" content="@GitHub">
-    <meta property="twitter:title" content="Strnadj/SID"/>
-
-    <meta name="description" content="SID - Sql injection vulnerabilities detector for web applications!" />
-
-  <link href="https://github.com/Strnadj/SID/commits/master.atom" rel="alternate" title="Recent Commits to SID:master" type="application/atom+xml" />
-
-  </head>
-
-
-  <body class="logged_out   vis-public env-production  ">
-    <div id="wrapper">
-
-      
-
-      
-      
-      
-
-      
-      <div class="header header-logged-out">
-  <div class="container clearfix">
-
-    <a class="header-logo-wordmark" href="https://github.com/">Github</a>
-
-    <div class="header-actions">
-        <a class="button primary" href="https://github.com/signup">Sign up for free</a>
-      <a class="button" href="https://github.com/login?return_to=%2FStrnadj%2FSID%2Fblame%2Fmaster%2FBC%2Furl_tree.svg">Sign in</a>
-    </div>
-
-      <ul class="top-nav">
-          <li class="explore"><a href="https://github.com/explore">Explore GitHub</a></li>
-        <li class="search"><a href="https://github.com/search">Search</a></li>
-        <li class="features"><a href="https://github.com/features">Features</a></li>
-          <li class="blog"><a href="https://github.com/blog">Blog</a></li>
-      </ul>
-
-  </div>
-</div>
-
-
-      
-
-      
-
-
-            <div class="site hfeed" itemscope itemtype="http://schema.org/WebPage">
-      <div class="hentry">
-        
-        <div class="pagehead repohead instapaper_ignore readability-menu ">
-          <div class="container">
-            <div class="title-actions-bar">
-              
-
-<ul class="pagehead-actions">
-
-
-
-    <li>
-      <a href="/login?return_to=%2FStrnadj%2FSID"
-        class="minibutton js-toggler-target star-button entice tooltipped upwards"
-        title="You must be signed in to use this feature" rel="nofollow">
-        <span class="mini-icon mini-icon-star"></span>Star
-      </a>
-      <a class="social-count js-social-count" href="/Strnadj/SID/stargazers">
-        1
-      </a>
-    </li>
-    <li>
-      <a href="/login?return_to=%2FStrnadj%2FSID"
-        class="minibutton js-toggler-target fork-button entice tooltipped upwards"
-        title="You must be signed in to fork a repository" rel="nofollow">
-        <span class="mini-icon mini-icon-fork"></span>Fork
-      </a>
-      <a href="/Strnadj/SID/network" class="social-count">
-        0
-      </a>
-    </li>
-</ul>
-
-              <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-                <span class="repo-label"><span>public</span></span>
-                <span class="mega-icon mega-icon-public-repo"></span>
-                <span class="author vcard">
-                  <a href="/Strnadj" class="url fn" itemprop="url" rel="author">
-                  <span itemprop="title">Strnadj</span>
-                  </a></span> /
-                <strong><a href="/Strnadj/SID" class="js-current-repository">SID</a></strong>
-              </h1>
-            </div>
-
-            
-  <ul class="tabs">
-    <li class="pulse-nav"><a href="/Strnadj/SID/pulse" class="js-selected-navigation-item " data-selected-links="pulse /Strnadj/SID/pulse" rel="nofollow"><span class="mini-icon mini-icon-pulse"></span></a></li>
-    <li><a href="/Strnadj/SID" class="js-selected-navigation-item selected" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /Strnadj/SID">Code</a></li>
-    <li><a href="/Strnadj/SID/network" class="js-selected-navigation-item " data-selected-links="repo_network /Strnadj/SID/network">Network</a></li>
-    <li><a href="/Strnadj/SID/pulls" class="js-selected-navigation-item " data-selected-links="repo_pulls /Strnadj/SID/pulls">Pull Requests <span class='counter'>0</span></a></li>
-
-      <li><a href="/Strnadj/SID/issues" class="js-selected-navigation-item " data-selected-links="repo_issues /Strnadj/SID/issues">Issues <span class='counter'>0</span></a></li>
-
-      <li><a href="/Strnadj/SID/wiki" class="js-selected-navigation-item " data-selected-links="repo_wiki /Strnadj/SID/wiki">Wiki</a></li>
-
-
-    <li><a href="/Strnadj/SID/graphs" class="js-selected-navigation-item " data-selected-links="repo_graphs repo_contributors /Strnadj/SID/graphs">Graphs</a></li>
-
-
-  </ul>
-  
-<div class="tabnav">
-
-  <span class="tabnav-right">
-    <ul class="tabnav-tabs">
-          <li><a href="/Strnadj/SID/tags" class="js-selected-navigation-item tabnav-tab" data-selected-links="repo_tags /Strnadj/SID/tags">Tags <span class="counter blank">0</span></a></li>
-    </ul>
-  </span>
-
-  <div class="tabnav-widget scope">
-
-
-    <div class="select-menu js-menu-container js-select-menu js-branch-menu">
-      <a class="minibutton select-menu-button js-menu-target" data-hotkey="w" data-ref="master">
-        <span class="mini-icon mini-icon-branch"></span>
-        <i>branch:</i>
-        <span class="js-select-button">master</span>
-      </a>
-
-      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
-
-        <div class="select-menu-modal">
-          <div class="select-menu-header">
-            <span class="select-menu-title">Switch branches/tags</span>
-            <span class="mini-icon mini-icon-remove-close js-menu-close"></span>
-          </div> <!-- /.select-menu-header -->
-
-          <div class="select-menu-filters">
-            <div class="select-menu-text-filter">
-              <input type="text" id="commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
-            </div>
-            <div class="select-menu-tabs">
-              <ul>
-                <li class="select-menu-tab">
-                  <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
-                </li>
-                <li class="select-menu-tab">
-                  <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
-                </li>
-              </ul>
-            </div><!-- /.select-menu-tabs -->
-          </div><!-- /.select-menu-filters -->
-
-          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="branches">
-
-            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
-
-                <div class="select-menu-item js-navigation-item ">
-                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/Strnadj/SID/blame/development/BC/url_tree.svg" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="development" rel="nofollow" title="development">development</a>
-                </div> <!-- /.select-menu-item -->
-                <div class="select-menu-item js-navigation-item selected">
-                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/Strnadj/SID/blame/master/BC/url_tree.svg" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
-                </div> <!-- /.select-menu-item -->
-                <div class="select-menu-item js-navigation-item ">
-                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
-                  <a href="/Strnadj/SID/blame/rubydevel/BC/url_tree.svg" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="rubydevel" rel="nofollow" title="rubydevel">rubydevel</a>
-                </div> <!-- /.select-menu-item -->
-            </div>
-
-              <div class="select-menu-no-results">Nothing to show</div>
-          </div> <!-- /.select-menu-list -->
-
-
-          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="tags">
-            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
-
-            </div>
-
-            <div class="select-menu-no-results">Nothing to show</div>
-
-          </div> <!-- /.select-menu-list -->
-
-        </div> <!-- /.select-menu-modal -->
-      </div> <!-- /.select-menu-modal-holder -->
-    </div> <!-- /.select-menu -->
-
-  </div> <!-- /.scope -->
-
-  <ul class="tabnav-tabs">
-    <li><a href="/Strnadj/SID" class="selected js-selected-navigation-item tabnav-tab" data-selected-links="repo_source /Strnadj/SID">Files</a></li>
-    <li><a href="/Strnadj/SID/commits/master" class="js-selected-navigation-item tabnav-tab" data-selected-links="repo_commits /Strnadj/SID/commits/master">Commits</a></li>
-    <li><a href="/Strnadj/SID/branches" class="js-selected-navigation-item tabnav-tab" data-selected-links="repo_branches /Strnadj/SID/branches" rel="nofollow">Branches <span class="counter ">3</span></a></li>
-  </ul>
-
-</div>
-
-  
-  
-  
-
-
-            
-          </div>
-        </div><!-- /.repohead -->
-
-        <div id="js-repo-pjax-container" class="container context-loader-container" data-pjax-container>
-          
-
-
-
-<div class="breadcrumb css-truncate blame-breadcrumb">
-  <span class="css-truncate-target"><span class='bold'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Strnadj/SID" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">SID</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Strnadj/SID/tree/master/BC" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">BC</span></a></span><span class="separator"> / </span><strong class="final-path">url_tree.svg</strong></span> <span class="js-zeroclipboard zeroclipboard-button" data-clipboard-text="BC/url_tree.svg" data-copied-hint="copied!" title="copy to clipboard"><span class="mini-icon mini-icon-clipboard"></span></span>
-</div>
-
-<div class="line-age-legend">
-  <span>Newer</span>
-  <ol>
-    <li class='heat1'></li>
-    <li class='heat2'></li>
-    <li class='heat3'></li>
-    <li class='heat4'></li>
-    <li class='heat5'></li>
-    <li class='heat6'></li>
-    <li class='heat7'></li>
-    <li class='heat8'></li>
-    <li class='heat9'></li>
-    <li class='heat10'></li>
-  </ol>
-  <span>Older</span>
-</div>
-
-<div id="files">
-  <div class="file">
-    <div class="meta" style="border-bottom: none;">
-      <div class="info">
-        <span class="icon"><span class="mini-icon mini-icon-text-file"></span></span>
-        <span class="mode" title="File Mode">100644</span>
-          <span>204 lines (202 sloc)</span>
-        <span>7.879 kb</span>
-      </div>
-      <div class="actions">
-        <div class="button-group">
-          <a href="/Strnadj/SID/raw/master/BC/url_tree.svg" class="minibutton" id="raw-url">Raw</a>
-          <a href="/Strnadj/SID/blob/master/BC/url_tree.svg" class="minibutton">Normal View</a>
-          <a href="/Strnadj/SID/commits/master/BC/url_tree.svg" class="minibutton" rel="nofollow">History</a>
-        </div><!-- /.button-group -->
-      </div><!-- /.actions -->
-    </div>
-
-    <div class="highlight data blame">
-      <table class="file-code file-blame js-blame-heat" data-repo-created="2012-05-24 03:53:10 -0700">
-
-            <tr class="section-first">
-              <td nowrap class="commitinfo">
-                <code>
-                  <a href="/Strnadj/SID/commit/bb5e488b2d33a02028c849106a58b0c7e066246a">bb5e488b</a>
-                  <a href="/Strnadj/SID/blame/bb5e488b2d33a02028c849106a58b0c7e066246a/BC/url_tree.svg">&#187;</a>
-                  <a href="/Strnadj" rel="author">Strnadj</a>
-                </code>
-                <br />
-                <span class="date">2013-04-09</span>
-                <span class="message" title="Bc work">Bc work </span>
-              </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID1" rel="#L1">1</td>
-            <td nowrap class="diff-line-code line-data" id="LC1"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID2" rel="#L2">2</td>
-            <td nowrap class="diff-line-code line-data" id="LC2"><span class="c">&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID3" rel="#L3">3</td>
-            <td nowrap class="diff-line-code line-data" id="LC3"></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID4" rel="#L4">4</td>
-            <td nowrap class="diff-line-code line-data" id="LC4"><span class="nt">&lt;svg</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID5" rel="#L5">5</td>
-            <td nowrap class="diff-line-code line-data" id="LC5">   <span class="na">xmlns:dc=</span><span class="s">&quot;http://purl.org/dc/elements/1.1/&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID6" rel="#L6">6</td>
-            <td nowrap class="diff-line-code line-data" id="LC6">   <span class="na">xmlns:cc=</span><span class="s">&quot;http://creativecommons.org/ns#&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID7" rel="#L7">7</td>
-            <td nowrap class="diff-line-code line-data" id="LC7">   <span class="na">xmlns:rdf=</span><span class="s">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID8" rel="#L8">8</td>
-            <td nowrap class="diff-line-code line-data" id="LC8">   <span class="na">xmlns:svg=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID9" rel="#L9">9</td>
-            <td nowrap class="diff-line-code line-data" id="LC9">   <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID10" rel="#L10">10</td>
-            <td nowrap class="diff-line-code line-data" id="LC10">   <span class="na">xmlns:sodipodi=</span><span class="s">&quot;http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID11" rel="#L11">11</td>
-            <td nowrap class="diff-line-code line-data" id="LC11">   <span class="na">xmlns:inkscape=</span><span class="s">&quot;http://www.inkscape.org/namespaces/inkscape&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID12" rel="#L12">12</td>
-            <td nowrap class="diff-line-code line-data" id="LC12">   <span class="na">width=</span><span class="s">&quot;744.09448819&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID13" rel="#L13">13</td>
-            <td nowrap class="diff-line-code line-data" id="LC13">   <span class="na">height=</span><span class="s">&quot;1052.3622047&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID14" rel="#L14">14</td>
-            <td nowrap class="diff-line-code line-data" id="LC14">   <span class="na">id=</span><span class="s">&quot;svg2&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID15" rel="#L15">15</td>
-            <td nowrap class="diff-line-code line-data" id="LC15">   <span class="na">inkscape:label=</span><span class="s">&quot;Pozadí&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID16" rel="#L16">16</td>
-            <td nowrap class="diff-line-code line-data" id="LC16">   <span class="na">version=</span><span class="s">&quot;1.1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID17" rel="#L17">17</td>
-            <td nowrap class="diff-line-code line-data" id="LC17">   <span class="na">inkscape:version=</span><span class="s">&quot;0.48.2 r9819&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID18" rel="#L18">18</td>
-            <td nowrap class="diff-line-code line-data" id="LC18">   <span class="na">sodipodi:docname=</span><span class="s">&quot;Nový dokument 1&quot;</span><span class="nt">&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID19" rel="#L19">19</td>
-            <td nowrap class="diff-line-code line-data" id="LC19">  <span class="nt">&lt;defs</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID20" rel="#L20">20</td>
-            <td nowrap class="diff-line-code line-data" id="LC20">     <span class="na">id=</span><span class="s">&quot;defs3&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID21" rel="#L21">21</td>
-            <td nowrap class="diff-line-code line-data" id="LC21">  <span class="nt">&lt;sodipodi:namedview</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID22" rel="#L22">22</td>
-            <td nowrap class="diff-line-code line-data" id="LC22">     <span class="na">id=</span><span class="s">&quot;base&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID23" rel="#L23">23</td>
-            <td nowrap class="diff-line-code line-data" id="LC23">     <span class="na">pagecolor=</span><span class="s">&quot;#ffffff&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID24" rel="#L24">24</td>
-            <td nowrap class="diff-line-code line-data" id="LC24">     <span class="na">bordercolor=</span><span class="s">&quot;#666666&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID25" rel="#L25">25</td>
-            <td nowrap class="diff-line-code line-data" id="LC25">     <span class="na">borderopacity=</span><span class="s">&quot;1.0&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID26" rel="#L26">26</td>
-            <td nowrap class="diff-line-code line-data" id="LC26">     <span class="na">inkscape:pageopacity=</span><span class="s">&quot;0.0&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID27" rel="#L27">27</td>
-            <td nowrap class="diff-line-code line-data" id="LC27">     <span class="na">inkscape:pageshadow=</span><span class="s">&quot;2&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID28" rel="#L28">28</td>
-            <td nowrap class="diff-line-code line-data" id="LC28">     <span class="na">inkscape:zoom=</span><span class="s">&quot;0.81454783&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID29" rel="#L29">29</td>
-            <td nowrap class="diff-line-code line-data" id="LC29">     <span class="na">inkscape:cx=</span><span class="s">&quot;375&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID30" rel="#L30">30</td>
-            <td nowrap class="diff-line-code line-data" id="LC30">     <span class="na">inkscape:cy=</span><span class="s">&quot;660.00526&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID31" rel="#L31">31</td>
-            <td nowrap class="diff-line-code line-data" id="LC31">     <span class="na">inkscape:document-units=</span><span class="s">&quot;px&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID32" rel="#L32">32</td>
-            <td nowrap class="diff-line-code line-data" id="LC32">     <span class="na">inkscape:current-layer=</span><span class="s">&quot;layer1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID33" rel="#L33">33</td>
-            <td nowrap class="diff-line-code line-data" id="LC33">     <span class="na">showgrid=</span><span class="s">&quot;false&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID34" rel="#L34">34</td>
-            <td nowrap class="diff-line-code line-data" id="LC34">     <span class="na">inkscape:window-width=</span><span class="s">&quot;1280&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID35" rel="#L35">35</td>
-            <td nowrap class="diff-line-code line-data" id="LC35">     <span class="na">inkscape:window-height=</span><span class="s">&quot;708&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID36" rel="#L36">36</td>
-            <td nowrap class="diff-line-code line-data" id="LC36">     <span class="na">inkscape:window-x=</span><span class="s">&quot;0&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID37" rel="#L37">37</td>
-            <td nowrap class="diff-line-code line-data" id="LC37">     <span class="na">inkscape:window-y=</span><span class="s">&quot;0&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID38" rel="#L38">38</td>
-            <td nowrap class="diff-line-code line-data" id="LC38">     <span class="na">inkscape:window-maximized=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID39" rel="#L39">39</td>
-            <td nowrap class="diff-line-code line-data" id="LC39">  <span class="nt">&lt;metadata</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID40" rel="#L40">40</td>
-            <td nowrap class="diff-line-code line-data" id="LC40">     <span class="na">id=</span><span class="s">&quot;metadata6&quot;</span><span class="nt">&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID41" rel="#L41">41</td>
-            <td nowrap class="diff-line-code line-data" id="LC41">    <span class="nt">&lt;rdf:RDF&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID42" rel="#L42">42</td>
-            <td nowrap class="diff-line-code line-data" id="LC42">      <span class="nt">&lt;cc:Work</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID43" rel="#L43">43</td>
-            <td nowrap class="diff-line-code line-data" id="LC43">         <span class="na">rdf:about=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID44" rel="#L44">44</td>
-            <td nowrap class="diff-line-code line-data" id="LC44">        <span class="nt">&lt;dc:format&gt;</span>image/svg+xml<span class="nt">&lt;/dc:format&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID45" rel="#L45">45</td>
-            <td nowrap class="diff-line-code line-data" id="LC45">        <span class="nt">&lt;dc:type</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID46" rel="#L46">46</td>
-            <td nowrap class="diff-line-code line-data" id="LC46">           <span class="na">rdf:resource=</span><span class="s">&quot;http://purl.org/dc/dcmitype/StillImage&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID47" rel="#L47">47</td>
-            <td nowrap class="diff-line-code line-data" id="LC47">        <span class="nt">&lt;dc:title&gt;&lt;/dc:title&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID48" rel="#L48">48</td>
-            <td nowrap class="diff-line-code line-data" id="LC48">      <span class="nt">&lt;/cc:Work&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID49" rel="#L49">49</td>
-            <td nowrap class="diff-line-code line-data" id="LC49">    <span class="nt">&lt;/rdf:RDF&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID50" rel="#L50">50</td>
-            <td nowrap class="diff-line-code line-data" id="LC50">  <span class="nt">&lt;/metadata&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID51" rel="#L51">51</td>
-            <td nowrap class="diff-line-code line-data" id="LC51">  <span class="nt">&lt;g</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID52" rel="#L52">52</td>
-            <td nowrap class="diff-line-code line-data" id="LC52">     <span class="na">inkscape:label=</span><span class="s">&quot;Vrstva 1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID53" rel="#L53">53</td>
-            <td nowrap class="diff-line-code line-data" id="LC53">     <span class="na">inkscape:groupmode=</span><span class="s">&quot;layer&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID54" rel="#L54">54</td>
-            <td nowrap class="diff-line-code line-data" id="LC54">     <span class="na">id=</span><span class="s">&quot;layer1&quot;</span><span class="nt">&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID55" rel="#L55">55</td>
-            <td nowrap class="diff-line-code line-data" id="LC55">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID56" rel="#L56">56</td>
-            <td nowrap class="diff-line-code line-data" id="LC56">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID57" rel="#L57">57</td>
-            <td nowrap class="diff-line-code line-data" id="LC57">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID58" rel="#L58">58</td>
-            <td nowrap class="diff-line-code line-data" id="LC58">       <span class="na">x=</span><span class="s">&quot;172.71037&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID59" rel="#L59">59</td>
-            <td nowrap class="diff-line-code line-data" id="LC59">       <span class="na">y=</span><span class="s">&quot;75.655304&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID60" rel="#L60">60</td>
-            <td nowrap class="diff-line-code line-data" id="LC60">       <span class="na">id=</span><span class="s">&quot;text2984&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID61" rel="#L61">61</td>
-            <td nowrap class="diff-line-code line-data" id="LC61">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID62" rel="#L62">62</td>
-            <td nowrap class="diff-line-code line-data" id="LC62">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID63" rel="#L63">63</td>
-            <td nowrap class="diff-line-code line-data" id="LC63">         <span class="na">id=</span><span class="s">&quot;tspan2986&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID64" rel="#L64">64</td>
-            <td nowrap class="diff-line-code line-data" id="LC64">         <span class="na">x=</span><span class="s">&quot;172.71037&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID65" rel="#L65">65</td>
-            <td nowrap class="diff-line-code line-data" id="LC65">         <span class="na">y=</span><span class="s">&quot;75.655304&quot;</span><span class="nt">&gt;</span>http://unicv.zcu.cz/<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID66" rel="#L66">66</td>
-            <td nowrap class="diff-line-code line-data" id="LC66">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID67" rel="#L67">67</td>
-            <td nowrap class="diff-line-code line-data" id="LC67">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1.05877638px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID68" rel="#L68">68</td>
-            <td nowrap class="diff-line-code line-data" id="LC68">       <span class="na">d=</span><span class="s">&quot;M 361.27275,99.506813 90.720608,272.44573 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID69" rel="#L69">69</td>
-            <td nowrap class="diff-line-code line-data" id="LC69">       <span class="na">id=</span><span class="s">&quot;path2988&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID70" rel="#L70">70</td>
-            <td nowrap class="diff-line-code line-data" id="LC70">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID71" rel="#L71">71</td>
-            <td nowrap class="diff-line-code line-data" id="LC71">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID72" rel="#L72">72</td>
-            <td nowrap class="diff-line-code line-data" id="LC72">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:0.9926343px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID73" rel="#L73">73</td>
-            <td nowrap class="diff-line-code line-data" id="LC73">       <span class="na">d=</span><span class="s">&quot;M 361.30582,99.473742 274.99552,276.55364 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID74" rel="#L74">74</td>
-            <td nowrap class="diff-line-code line-data" id="LC74">       <span class="na">id=</span><span class="s">&quot;path2990&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID75" rel="#L75">75</td>
-            <td nowrap class="diff-line-code line-data" id="LC75">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID76" rel="#L76">76</td>
-            <td nowrap class="diff-line-code line-data" id="LC76">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID77" rel="#L77">77</td>
-            <td nowrap class="diff-line-code line-data" id="LC77">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:0.94965017px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID78" rel="#L78">78</td>
-            <td nowrap class="diff-line-code line-data" id="LC78">       <span class="na">d=</span><span class="s">&quot;M 361.27697,99.45225 445.74955,275.5303 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID79" rel="#L79">79</td>
-            <td nowrap class="diff-line-code line-data" id="LC79">       <span class="na">id=</span><span class="s">&quot;path2992&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID80" rel="#L80">80</td>
-            <td nowrap class="diff-line-code line-data" id="LC80">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID81" rel="#L81">81</td>
-            <td nowrap class="diff-line-code line-data" id="LC81">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID82" rel="#L82">82</td>
-            <td nowrap class="diff-line-code line-data" id="LC82">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1.12913573px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID83" rel="#L83">83</td>
-            <td nowrap class="diff-line-code line-data" id="LC83">       <span class="na">d=</span><span class="s">&quot;M 363.35188,97.556817 631.84848,278.62729 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID84" rel="#L84">84</td>
-            <td nowrap class="diff-line-code line-data" id="LC84">       <span class="na">id=</span><span class="s">&quot;path2994&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID85" rel="#L85">85</td>
-            <td nowrap class="diff-line-code line-data" id="LC85">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID86" rel="#L86">86</td>
-            <td nowrap class="diff-line-code line-data" id="LC86">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID87" rel="#L87">87</td>
-            <td nowrap class="diff-line-code line-data" id="LC87">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID88" rel="#L88">88</td>
-            <td nowrap class="diff-line-code line-data" id="LC88">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID89" rel="#L89">89</td>
-            <td nowrap class="diff-line-code line-data" id="LC89">       <span class="na">x=</span><span class="s">&quot;18.415121&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID90" rel="#L90">90</td>
-            <td nowrap class="diff-line-code line-data" id="LC90">       <span class="na">y=</span><span class="s">&quot;308.70813&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID91" rel="#L91">91</td>
-            <td nowrap class="diff-line-code line-data" id="LC91">       <span class="na">id=</span><span class="s">&quot;text2996&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID92" rel="#L92">92</td>
-            <td nowrap class="diff-line-code line-data" id="LC92">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;0%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID93" rel="#L93">93</td>
-            <td nowrap class="diff-line-code line-data" id="LC93">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID94" rel="#L94">94</td>
-            <td nowrap class="diff-line-code line-data" id="LC94">         <span class="na">id=</span><span class="s">&quot;tspan2998&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID95" rel="#L95">95</td>
-            <td nowrap class="diff-line-code line-data" id="LC95">         <span class="na">x=</span><span class="s">&quot;18.415121&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID96" rel="#L96">96</td>
-            <td nowrap class="diff-line-code line-data" id="LC96">         <span class="na">y=</span><span class="s">&quot;308.70813&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID97" rel="#L97">97</td>
-            <td nowrap class="diff-line-code line-data" id="LC97">         <span class="na">style=</span><span class="s">&quot;font-size:28px&quot;</span><span class="nt">&gt;</span>/prihlaseni<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID98" rel="#L98">98</td>
-            <td nowrap class="diff-line-code line-data" id="LC98">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID99" rel="#L99">99</td>
-            <td nowrap class="diff-line-code line-data" id="LC99">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID100" rel="#L100">100</td>
-            <td nowrap class="diff-line-code line-data" id="LC100">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID101" rel="#L101">101</td>
-            <td nowrap class="diff-line-code line-data" id="LC101">       <span class="na">x=</span><span class="s">&quot;198.88336&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID102" rel="#L102">102</td>
-            <td nowrap class="diff-line-code line-data" id="LC102">       <span class="na">y=</span><span class="s">&quot;307.48044&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID103" rel="#L103">103</td>
-            <td nowrap class="diff-line-code line-data" id="LC103">       <span class="na">id=</span><span class="s">&quot;text3002&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID104" rel="#L104">104</td>
-            <td nowrap class="diff-line-code line-data" id="LC104">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID105" rel="#L105">105</td>
-            <td nowrap class="diff-line-code line-data" id="LC105">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID106" rel="#L106">106</td>
-            <td nowrap class="diff-line-code line-data" id="LC106">         <span class="na">id=</span><span class="s">&quot;tspan3004&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID107" rel="#L107">107</td>
-            <td nowrap class="diff-line-code line-data" id="LC107">         <span class="na">x=</span><span class="s">&quot;198.88336&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID108" rel="#L108">108</td>
-            <td nowrap class="diff-line-code line-data" id="LC108">         <span class="na">y=</span><span class="s">&quot;307.48044&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID109" rel="#L109">109</td>
-            <td nowrap class="diff-line-code line-data" id="LC109">         <span class="na">style=</span><span class="s">&quot;font-size:28px&quot;</span><span class="nt">&gt;</span>/registrace<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID110" rel="#L110">110</td>
-            <td nowrap class="diff-line-code line-data" id="LC110">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID111" rel="#L111">111</td>
-            <td nowrap class="diff-line-code line-data" id="LC111">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID112" rel="#L112">112</td>
-            <td nowrap class="diff-line-code line-data" id="LC112">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID113" rel="#L113">113</td>
-            <td nowrap class="diff-line-code line-data" id="LC113">       <span class="na">x=</span><span class="s">&quot;573.32422&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID114" rel="#L114">114</td>
-            <td nowrap class="diff-line-code line-data" id="LC114">       <span class="na">y=</span><span class="s">&quot;306.39114&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID115" rel="#L115">115</td>
-            <td nowrap class="diff-line-code line-data" id="LC115">       <span class="na">id=</span><span class="s">&quot;text3006&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID116" rel="#L116">116</td>
-            <td nowrap class="diff-line-code line-data" id="LC116">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID117" rel="#L117">117</td>
-            <td nowrap class="diff-line-code line-data" id="LC117">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID118" rel="#L118">118</td>
-            <td nowrap class="diff-line-code line-data" id="LC118">         <span class="na">id=</span><span class="s">&quot;tspan3008&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID119" rel="#L119">119</td>
-            <td nowrap class="diff-line-code line-data" id="LC119">         <span class="na">x=</span><span class="s">&quot;573.32422&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID120" rel="#L120">120</td>
-            <td nowrap class="diff-line-code line-data" id="LC120">         <span class="na">y=</span><span class="s">&quot;306.39114&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID121" rel="#L121">121</td>
-            <td nowrap class="diff-line-code line-data" id="LC121">         <span class="na">style=</span><span class="s">&quot;font-size:28px&quot;</span><span class="nt">&gt;</span>/kontakt<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID122" rel="#L122">122</td>
-            <td nowrap class="diff-line-code line-data" id="LC122">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID123" rel="#L123">123</td>
-            <td nowrap class="diff-line-code line-data" id="LC123">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID124" rel="#L124">124</td>
-            <td nowrap class="diff-line-code line-data" id="LC124">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID125" rel="#L125">125</td>
-            <td nowrap class="diff-line-code line-data" id="LC125">       <span class="na">x=</span><span class="s">&quot;373.2132&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID126" rel="#L126">126</td>
-            <td nowrap class="diff-line-code line-data" id="LC126">       <span class="na">y=</span><span class="s">&quot;309.16348&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID127" rel="#L127">127</td>
-            <td nowrap class="diff-line-code line-data" id="LC127">       <span class="na">id=</span><span class="s">&quot;text3010&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID128" rel="#L128">128</td>
-            <td nowrap class="diff-line-code line-data" id="LC128">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID129" rel="#L129">129</td>
-            <td nowrap class="diff-line-code line-data" id="LC129">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID130" rel="#L130">130</td>
-            <td nowrap class="diff-line-code line-data" id="LC130">         <span class="na">id=</span><span class="s">&quot;tspan3012&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID131" rel="#L131">131</td>
-            <td nowrap class="diff-line-code line-data" id="LC131">         <span class="na">x=</span><span class="s">&quot;373.2132&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID132" rel="#L132">132</td>
-            <td nowrap class="diff-line-code line-data" id="LC132">         <span class="na">y=</span><span class="s">&quot;309.16348&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID133" rel="#L133">133</td>
-            <td nowrap class="diff-line-code line-data" id="LC133">         <span class="na">style=</span><span class="s">&quot;font-size:28px&quot;</span><span class="nt">&gt;</span>/vyhledavani<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID134" rel="#L134">134</td>
-            <td nowrap class="diff-line-code line-data" id="LC134">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID135" rel="#L135">135</td>
-            <td nowrap class="diff-line-code line-data" id="LC135">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID136" rel="#L136">136</td>
-            <td nowrap class="diff-line-code line-data" id="LC136">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID137" rel="#L137">137</td>
-            <td nowrap class="diff-line-code line-data" id="LC137">       <span class="na">x=</span><span class="s">&quot;14.790024&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID138" rel="#L138">138</td>
-            <td nowrap class="diff-line-code line-data" id="LC138">       <span class="na">y=</span><span class="s">&quot;499.45309&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID139" rel="#L139">139</td>
-            <td nowrap class="diff-line-code line-data" id="LC139">       <span class="na">id=</span><span class="s">&quot;text3020&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID140" rel="#L140">140</td>
-            <td nowrap class="diff-line-code line-data" id="LC140">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID141" rel="#L141">141</td>
-            <td nowrap class="diff-line-code line-data" id="LC141">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID142" rel="#L142">142</td>
-            <td nowrap class="diff-line-code line-data" id="LC142">         <span class="na">id=</span><span class="s">&quot;tspan3022&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID143" rel="#L143">143</td>
-            <td nowrap class="diff-line-code line-data" id="LC143">         <span class="na">x=</span><span class="s">&quot;14.790024&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID144" rel="#L144">144</td>
-            <td nowrap class="diff-line-code line-data" id="LC144">         <span class="na">y=</span><span class="s">&quot;499.45309&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID145" rel="#L145">145</td>
-            <td nowrap class="diff-line-code line-data" id="LC145">         <span class="na">style=</span><span class="s">&quot;font-size:22px&quot;</span><span class="nt">&gt;</span>/registrace-studenta<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID146" rel="#L146">146</td>
-            <td nowrap class="diff-line-code line-data" id="LC146">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID147" rel="#L147">147</td>
-            <td nowrap class="diff-line-code line-data" id="LC147">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID148" rel="#L148">148</td>
-            <td nowrap class="diff-line-code line-data" id="LC148">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID149" rel="#L149">149</td>
-            <td nowrap class="diff-line-code line-data" id="LC149">       <span class="na">x=</span><span class="s">&quot;266.54385&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID150" rel="#L150">150</td>
-            <td nowrap class="diff-line-code line-data" id="LC150">       <span class="na">y=</span><span class="s">&quot;499.3147&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID151" rel="#L151">151</td>
-            <td nowrap class="diff-line-code line-data" id="LC151">       <span class="na">id=</span><span class="s">&quot;text3024&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID152" rel="#L152">152</td>
-            <td nowrap class="diff-line-code line-data" id="LC152">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID153" rel="#L153">153</td>
-            <td nowrap class="diff-line-code line-data" id="LC153">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID154" rel="#L154">154</td>
-            <td nowrap class="diff-line-code line-data" id="LC154">         <span class="na">id=</span><span class="s">&quot;tspan3026&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID155" rel="#L155">155</td>
-            <td nowrap class="diff-line-code line-data" id="LC155">         <span class="na">x=</span><span class="s">&quot;266.54385&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID156" rel="#L156">156</td>
-            <td nowrap class="diff-line-code line-data" id="LC156">         <span class="na">y=</span><span class="s">&quot;499.3147&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID157" rel="#L157">157</td>
-            <td nowrap class="diff-line-code line-data" id="LC157">         <span class="na">style=</span><span class="s">&quot;font-size:22px&quot;</span><span class="nt">&gt;</span>/registrace-firmy<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID158" rel="#L158">158</td>
-            <td nowrap class="diff-line-code line-data" id="LC158">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID159" rel="#L159">159</td>
-            <td nowrap class="diff-line-code line-data" id="LC159">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID160" rel="#L160">160</td>
-            <td nowrap class="diff-line-code line-data" id="LC160">       <span class="na">d=</span><span class="s">&quot;M 273.77152,318.21254 125.22285,476.58261 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID161" rel="#L161">161</td>
-            <td nowrap class="diff-line-code line-data" id="LC161">       <span class="na">id=</span><span class="s">&quot;path3028&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID162" rel="#L162">162</td>
-            <td nowrap class="diff-line-code line-data" id="LC162">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID163" rel="#L163">163</td>
-            <td nowrap class="diff-line-code line-data" id="LC163">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID164" rel="#L164">164</td>
-            <td nowrap class="diff-line-code line-data" id="LC164">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1.09828889px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID165" rel="#L165">165</td>
-            <td nowrap class="diff-line-code line-data" id="LC165">       <span class="na">d=</span><span class="s">&quot;m 272.59299,318.26168 84.61129,158.27179 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID166" rel="#L166">166</td>
-            <td nowrap class="diff-line-code line-data" id="LC166">       <span class="na">id=</span><span class="s">&quot;path3030&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID167" rel="#L167">167</td>
-            <td nowrap class="diff-line-code line-data" id="LC167">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID168" rel="#L168">168</td>
-            <td nowrap class="diff-line-code line-data" id="LC168">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID169" rel="#L169">169</td>
-            <td nowrap class="diff-line-code line-data" id="LC169">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID170" rel="#L170">170</td>
-            <td nowrap class="diff-line-code line-data" id="LC170">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID171" rel="#L171">171</td>
-            <td nowrap class="diff-line-code line-data" id="LC171">       <span class="na">x=</span><span class="s">&quot;485.70395&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID172" rel="#L172">172</td>
-            <td nowrap class="diff-line-code line-data" id="LC172">       <span class="na">y=</span><span class="s">&quot;497.63168&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID173" rel="#L173">173</td>
-            <td nowrap class="diff-line-code line-data" id="LC173">       <span class="na">id=</span><span class="s">&quot;text3032&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID174" rel="#L174">174</td>
-            <td nowrap class="diff-line-code line-data" id="LC174">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID175" rel="#L175">175</td>
-            <td nowrap class="diff-line-code line-data" id="LC175">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID176" rel="#L176">176</td>
-            <td nowrap class="diff-line-code line-data" id="LC176">         <span class="na">id=</span><span class="s">&quot;tspan3034&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID177" rel="#L177">177</td>
-            <td nowrap class="diff-line-code line-data" id="LC177">         <span class="na">x=</span><span class="s">&quot;485.70395&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID178" rel="#L178">178</td>
-            <td nowrap class="diff-line-code line-data" id="LC178">         <span class="na">y=</span><span class="s">&quot;497.63168&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID179" rel="#L179">179</td>
-            <td nowrap class="diff-line-code line-data" id="LC179">         <span class="na">style=</span><span class="s">&quot;font-size:22px&quot;</span><span class="nt">&gt;</span>/jmena<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID180" rel="#L180">180</td>
-            <td nowrap class="diff-line-code line-data" id="LC180">    <span class="nt">&lt;text</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID181" rel="#L181">181</td>
-            <td nowrap class="diff-line-code line-data" id="LC181">       <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID182" rel="#L182">182</td>
-            <td nowrap class="diff-line-code line-data" id="LC182">       <span class="na">style=</span><span class="s">&quot;font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID183" rel="#L183">183</td>
-            <td nowrap class="diff-line-code line-data" id="LC183">       <span class="na">x=</span><span class="s">&quot;603.38214&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID184" rel="#L184">184</td>
-            <td nowrap class="diff-line-code line-data" id="LC184">       <span class="na">y=</span><span class="s">&quot;497.45309&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID185" rel="#L185">185</td>
-            <td nowrap class="diff-line-code line-data" id="LC185">       <span class="na">id=</span><span class="s">&quot;text3036&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID186" rel="#L186">186</td>
-            <td nowrap class="diff-line-code line-data" id="LC186">       <span class="na">sodipodi:linespacing=</span><span class="s">&quot;125%&quot;</span><span class="nt">&gt;&lt;tspan</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID187" rel="#L187">187</td>
-            <td nowrap class="diff-line-code line-data" id="LC187">         <span class="na">sodipodi:role=</span><span class="s">&quot;line&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID188" rel="#L188">188</td>
-            <td nowrap class="diff-line-code line-data" id="LC188">         <span class="na">id=</span><span class="s">&quot;tspan3038&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID189" rel="#L189">189</td>
-            <td nowrap class="diff-line-code line-data" id="LC189">         <span class="na">x=</span><span class="s">&quot;603.38214&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID190" rel="#L190">190</td>
-            <td nowrap class="diff-line-code line-data" id="LC190">         <span class="na">y=</span><span class="s">&quot;497.45309&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID191" rel="#L191">191</td>
-            <td nowrap class="diff-line-code line-data" id="LC191">         <span class="na">style=</span><span class="s">&quot;font-size:22px&quot;</span><span class="nt">&gt;</span>/stitku<span class="nt">&lt;/tspan&gt;&lt;/text&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID192" rel="#L192">192</td>
-            <td nowrap class="diff-line-code line-data" id="LC192">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID193" rel="#L193">193</td>
-            <td nowrap class="diff-line-code line-data" id="LC193">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID194" rel="#L194">194</td>
-            <td nowrap class="diff-line-code line-data" id="LC194">       <span class="na">d=</span><span class="s">&quot;M 457.92277,316.98486 642.07402,476.58261 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID195" rel="#L195">195</td>
-            <td nowrap class="diff-line-code line-data" id="LC195">       <span class="na">id=</span><span class="s">&quot;path3042&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID196" rel="#L196">196</td>
-            <td nowrap class="diff-line-code line-data" id="LC196">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID197" rel="#L197">197</td>
-            <td nowrap class="diff-line-code line-data" id="LC197">    <span class="nt">&lt;path</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID198" rel="#L198">198</td>
-            <td nowrap class="diff-line-code line-data" id="LC198">       <span class="na">style=</span><span class="s">&quot;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID199" rel="#L199">199</td>
-            <td nowrap class="diff-line-code line-data" id="LC199">       <span class="na">d=</span><span class="s">&quot;m 456.6951,315.75719 68.7498,160.82542 z&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID200" rel="#L200">200</td>
-            <td nowrap class="diff-line-code line-data" id="LC200">       <span class="na">id=</span><span class="s">&quot;path3044&quot;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID201" rel="#L201">201</td>
-            <td nowrap class="diff-line-code line-data" id="LC201">       <span class="na">inkscape:connector-curvature=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID202" rel="#L202">202</td>
-            <td nowrap class="diff-line-code line-data" id="LC202">  <span class="nt">&lt;/g&gt;</span></td>
-          </tr>
-            <tr>
-              <td nowrap class="commitinfo"> </td>
-            <td class="js-line-age line-age" data-date="2013-04-09 10:32:21 -0700"></td>
-            <td nowrap class="diff-line-num line-number" id="LID203" rel="#L203">203</td>
-            <td nowrap class="diff-line-code line-data" id="LC203"><span class="nt">&lt;/svg&gt;</span></td>
-          </tr>
-      </table>
-    </div>
-
-  </div>
-</div>
-
-
-        </div>
-      </div>
-      <div class="modal-backdrop"></div>
-    </div>
-
-      <div id="footer-push"></div><!-- hack for sticky footer -->
-    </div><!-- end of wrapper - hack for sticky footer -->
-
-      <!-- footer -->
-      <div id="footer">
-  <div class="container clearfix">
-
-      <dl class="footer_nav">
-        <dt>GitHub</dt>
-        <dd><a href="https://github.com/about">About us</a></dd>
-        <dd><a href="https://github.com/blog">Blog</a></dd>
-        <dd><a href="https://github.com/contact">Contact &amp; support</a></dd>
-        <dd><a href="http://enterprise.github.com/">GitHub Enterprise</a></dd>
-        <dd><a href="http://status.github.com/">Site status</a></dd>
-      </dl>
-
-      <dl class="footer_nav">
-        <dt>Applications</dt>
-        <dd><a href="http://mac.github.com/">GitHub for Mac</a></dd>
-        <dd><a href="http://windows.github.com/">GitHub for Windows</a></dd>
-        <dd><a href="http://eclipse.github.com/">GitHub for Eclipse</a></dd>
-        <dd><a href="http://mobile.github.com/">GitHub mobile apps</a></dd>
-      </dl>
-
-      <dl class="footer_nav">
-        <dt>Services</dt>
-        <dd><a href="http://get.gaug.es/">Gauges: Web analytics</a></dd>
-        <dd><a href="http://speakerdeck.com">Speaker Deck: Presentations</a></dd>
-        <dd><a href="https://gist.github.com">Gist: Code snippets</a></dd>
-        <dd><a href="http://jobs.github.com/">Job board</a></dd>
-      </dl>
-
-      <dl class="footer_nav">
-        <dt>Documentation</dt>
-        <dd><a href="http://help.github.com/">GitHub Help</a></dd>
-        <dd><a href="http://developer.github.com/">Developer API</a></dd>
-        <dd><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></dd>
-        <dd><a href="http://pages.github.com/">GitHub Pages</a></dd>
-      </dl>
-
-      <dl class="footer_nav">
-        <dt>More</dt>
-        <dd><a href="http://training.github.com/">Training</a></dd>
-        <dd><a href="https://github.com/edu">Students &amp; teachers</a></dd>
-        <dd><a href="http://shop.github.com">The Shop</a></dd>
-        <dd><a href="/plans">Plans &amp; pricing</a></dd>
-        <dd><a href="http://octodex.github.com/">The Octodex</a></dd>
-      </dl>
-
-      <hr class="footer-divider">
-
-
-    <p class="right">&copy; 2013 <span title="0.06728s from fe3.rs.github.com">GitHub</span>, Inc. All rights reserved.</p>
-    <a class="left" href="https://github.com/">
-      <span class="mega-icon mega-icon-invertocat"></span>
-    </a>
-    <ul id="legal">
-        <li><a href="https://github.com/site/terms">Terms of Service</a></li>
-        <li><a href="https://github.com/site/privacy">Privacy</a></li>
-        <li><a href="https://github.com/security">Security</a></li>
-    </ul>
-
-  </div><!-- /.container -->
-
-</div><!-- /.#footer -->
-
-
-    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
-  <div class="fullscreen-container js-fullscreen-container">
-    <div class="textarea-wrap">
-      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
-          <div class="suggester-container">
-              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
-                 data-url="/Strnadj/SID/suggestions/commit">
-              </div>
-          </div>
-    </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
-      <span class="mega-icon mega-icon-normalscreen"></span>
-    </a>
-    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
-      title="Switch themes">
-      <span class="mini-icon mini-icon-brightness"></span>
-    </a>
-  </div>
-</div>
-
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="mini-icon mini-icon-exclamation"></span>
-      Something went wrong with that request. Please try again.
-      <a href="#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
-    </div>
-
-    
-    
-    <span id='server_response_time' data-time='0.06777' data-host='fe3'></span>
-    
-  </body>
-</html>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<!-- Created with Inkscape (http://www.inkscape.org/) -->
+	
+	<svg
+	   xmlns:dc="http://purl.org/dc/elements/1.1/"
+	   xmlns:cc="http://creativecommons.org/ns#"
+	   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	   xmlns:svg="http://www.w3.org/2000/svg"
+	   xmlns="http://www.w3.org/2000/svg"
+	   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+	   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	   width="744.09448819"
+	   height="1052.3622047"
+	   id="svg2"
+	   inkscape:label="Pozadí"
+	   version="1.1"
+	   inkscape:version="0.48.2 r9819"
+	   sodipodi:docname="Nový dokument 1">
+	  <defs
+	     id="defs3" />
+	  <sodipodi:namedview
+	     id="base"
+	     pagecolor="#ffffff"
+	     bordercolor="#666666"
+	     borderopacity="1.0"
+	     inkscape:pageopacity="0.0"
+	     inkscape:pageshadow="2"
+	     inkscape:zoom="0.81454783"
+	     inkscape:cx="375"
+	     inkscape:cy="660.00526"
+	     inkscape:document-units="px"
+	     inkscape:current-layer="layer1"
+	     showgrid="false"
+	     inkscape:window-width="1280"
+	     inkscape:window-height="708"
+	     inkscape:window-x="0"
+	     inkscape:window-y="0"
+	     inkscape:window-maximized="1" />
+	  <metadata
+	     id="metadata6">
+	    <rdf:RDF>
+	      <cc:Work
+	         rdf:about="">
+	        <dc:format>image/svg+xml</dc:format>
+	        <dc:type
+	           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+	        <dc:title></dc:title>
+	      </cc:Work>
+	    </rdf:RDF>
+	  </metadata>
+	  <g
+	     inkscape:label="Vrstva 1"
+	     inkscape:groupmode="layer"
+	     id="layer1">
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="172.71037"
+	       y="75.655304"
+	       id="text2984"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan2986"
+	         x="172.71037"
+	         y="75.655304">http://unicv.zcu.cz/</tspan></text>
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1.05877638px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 361.27275,99.506813 90.720608,272.44573 z"
+	       id="path2988"
+	       inkscape:connector-curvature="0" />
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:0.9926343px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 361.30582,99.473742 274.99552,276.55364 z"
+	       id="path2990"
+	       inkscape:connector-curvature="0" />
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:0.94965017px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 361.27697,99.45225 445.74955,275.5303 z"
+	       id="path2992"
+	       inkscape:connector-curvature="0" />
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1.12913573px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 363.35188,97.556817 631.84848,278.62729 z"
+	       id="path2994"
+	       inkscape:connector-curvature="0" />
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="18.415121"
+	       y="308.70813"
+	       id="text2996"
+	       sodipodi:linespacing="0%"><tspan
+	         sodipodi:role="line"
+	         id="tspan2998"
+	         x="18.415121"
+	         y="308.70813"
+	         style="font-size:28px">/prihlaseni</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="198.88336"
+	       y="307.48044"
+	       id="text3002"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+          id="tspan3004"
+	         x="198.88336"
+	         y="307.48044"
+	         style="font-size:28px">/registrace</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="573.32422"
+	       y="306.39114"
+	       id="text3006"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3008"
+	         x="573.32422"
+	         y="306.39114"
+	         style="font-size:28px">/kontakt</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="373.2132"
+	       y="309.16348"
+	       id="text3010"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3012"
+	         x="373.2132"
+	         y="309.16348"
+	         style="font-size:28px">/vyhledavani</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="14.790024"
+	       y="499.45309"
+	       id="text3020"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3022"
+	         x="14.790024"
+	         y="499.45309"
+	         style="font-size:22px">/registrace-studenta</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="266.54385"
+	       y="499.3147"
+	       id="text3024"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3026"
+	         x="266.54385"
+	         y="499.3147"
+	         style="font-size:22px">/registrace-firmy</tspan></text>
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 273.77152,318.21254 125.22285,476.58261 z"
+	       id="path3028"
+	       inkscape:connector-curvature="0" />
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1.09828889px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="m 272.59299,318.26168 84.61129,158.27179 z"
+	       id="path3030"
+	       inkscape:connector-curvature="0" />
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="485.70395"
+	       y="497.63168"
+	       id="text3032"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3034"
+	         x="485.70395"
+	         y="497.63168"
+	         style="font-size:22px">/jmena</tspan></text>
+	    <text
+	       xml:space="preserve"
+	       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+	       x="603.38214"
+	       y="497.45309"
+	       id="text3036"
+	       sodipodi:linespacing="125%"><tspan
+	         sodipodi:role="line"
+	         id="tspan3038"
+	         x="603.38214"
+	         y="497.45309"
+	         style="font-size:22px">/stitku</tspan></text>
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="M 457.92277,316.98486 642.07402,476.58261 z"
+	       id="path3042"
+	       inkscape:connector-curvature="0" />
+	    <path
+	       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+	       d="m 456.6951,315.75719 68.7498,160.82542 z"
+	       id="path3044"
+	       inkscape:connector-curvature="0" />
+	  </g>
+	</svg>

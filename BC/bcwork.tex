@@ -114,7 +114,7 @@ Nástroj byl testován ve srovnání s existujícími nástroji a byly porovnán
 
 
 \chapter{Úvod}
-V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá všude stejné heslo, proto obezřetnému hackerovi stačí získat login a heslo z jedné databáze a zkusit to i jinde. K této situace došlo nedávno při napadení porno stránek (\textit{pron.com}) skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, která následně získaná data zveřejnila. Hesla nebyla v databázích nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v podobě otevřeného textu, a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, které tito uživatelé využívali. Nikdy přesně nevíme, komu vlastně data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchovávána v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové aplikace, webové stránky nebo přímo servery je mnoho. Významnější budou popsány v následující kapitole.
+V dnešní době je internet synonymem pro používání počítače, tabletu, smartphone a jiných zařízení. S tím rozhodně souvisí otázka bezpečnosti uživatelských dat. Většina uživatelů bohužel využívá všude stejné heslo, proto obezřetnému hackerovi stačí získat login a heslo z jedné databáze a zkusit to i jinde. K této situace došlo nedávno při napadení porno stránek (\textit{pron.com}) skupinou \uv{LulzSec}\footnote{Lulz Security - tato skupina stála i za útokem na Sony Pictures v roce 2011, kde právě díky SQL Injection odcizila velké množství dat.}, která následně získaná data zveřejnila\cite{examiner}. Hesla nebyla v databázích nijak \uv{hashována}\footnote{Hash - algoritmus pro převedení vstupních dat do unikátního otisku, tato funkce \uv{by měla být jednosměrná!}}, byla uložena v podobě otevřeného textu, a proto nebyl problém vyzkoušet se přihlásit do emailových schránek, popřípadě dalších jiných webových služeb, které tito uživatelé využívali. Nikdy přesně nevíme, komu vlastně data svěřujeme a jaké bezpečnostní opatření je dotyčnou firmou či osobou zajištěno! Data jsou uchovávána v mnoha databázových systémech a jednou z hlavních otázek je také bezpečnost těchto dat. Možností útoků na webové aplikace, webové stránky nebo přímo servery je mnoho. Významnější budou popsány v následující kapitole.
 
 Cílem této práce je seznámení čtenáře s bezpečnostními riziky webových aplikací a jak jim předejít, dále podrobnější seznámení s problémem SQL injection a v praktické části vytvořením nástroje pro penetrační testy na detekci těchto bezpečnostních rizik.
 
@@ -549,7 +549,7 @@ alias eql? ==
 \subsection{Normalizace URL}
 Na webové stránce máme relativně hodně možností jak zapisovat různé odkazy, od relativních cest \textit{./}, přes absolutní \textit{http://server.cz/index.php?action=nova}, až k pouhým \uv{skokům} na stránce \textit{$\#$novinky}. Veškeré tyto URL je potřeba normalizovat, ověřit server (pokud odkazy směřují mimo naší doménu, nejsou použity dále), získat data a odstranit nepotřebné části URL adresy. Při spuštění skriptu můžeme definovat \uv{wildcardování} domén, což znamená, že zadáme doménu prvního řádu: \textit{http://zcu.cz} a pokud je povoleno, bude skritp indexovat i domény vyšších řádů, například \textit{http://unicv.zcu.cz}. V následující tabulce je ukázka případů, kde kořenová doména je \textit{http://unicv.zcu.cz/}:
 
-\begin{table}[!h]
+\begin{table}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -568,7 +568,7 @@ http://www.seznam.cz/ & \bf Chybná URL - mimo zadaný server \\
 \label{tab:url}
 \caption{Příklady normalizování URL}
 \end{table}
-
+\newpage
 Prvním krokem bylo nalezení již hotového řešení a výsledek byl překvapující. Ruby po provedení výchozí instalace obsahuje knihovnu \textit{uri}, která umožňuje požadované věci a umí s URL i velice snadno pracovat:
 
 \begin{lstlisting}[label=equals_classes,language=Ruby, caption=Normalizování URL pomocí třídy URI]
@@ -584,6 +584,7 @@ url.fragment = nil
 url.query
 # {:action => "help"}
 \end{lstlisting}
+
 
 \section{Získání URL vectoru stránky}
 Pro porovnání délky / obsahu stránek jsem vytvořil modul \textit{URLVector} (modul není třída), který má tři funkce:
@@ -778,6 +779,10 @@ Ze subjektivního hlediska práce byla velice zajímavá a přínosná, jak z hl
 \bibitem{ruby}{\em Ruby comunnity}
 	{\bf Ruby doc} [on-line]\\
 	\texttt{http://www.ruby-lang.org/en/documentation/}, 2013
+
+\bibitem{examiner}{\em Michael Santo}
+	{\bf Examiner.com} [on-line]\\
+	\texttt{http://www.examiner.com/article/lulzsec-posts-email-addres\\ses-passwords-for-26-000-porn-site-users}
 
 \bibitem{LearnRubyHardWay}{\em Zed A. Shaw and Rob Sobers} {\bf Learn Ruby The Hard Way rev.2}\\
 	\texttt{http://programming-motherfucker.com/}, 2012 E-book
