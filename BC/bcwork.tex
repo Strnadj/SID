@@ -45,6 +45,59 @@
 	linkcolor=black,
 	urlcolor=blue
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 			DEFINICE SEZNAMU 			%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Vysazeni seznamu obrazku
+\newcommand{\seznamobrazku}%
+  {{% prostredi kvuli \pagestyle
+    \pagestyle{empty}
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{Seznam obrázků}
+    \listoffigures
+    \newpage
+	
+    \if@twoside
+      \pagestyle{empty}
+      \cleardoublepage
+    \fi
+  }}%
+
+
+%% Vysazeni seznamu tabulek
+\newcommand{\seznamtabulek}%
+  {{% prostredi kvuli \pagestyle
+    \pagestyle{empty}
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{Seznam tabulek}
+    \listoftables
+    \newpage
+
+    \if@twoside
+      \pagestyle{empty}
+      \cleardoublepage
+    \fi
+  }}%
+
+\renewcommand\lstlistingname{Kód}
+\renewcommand\lstlistlistingname{Seznam algoritmů}
+
+%% Vysazeni seznamu algoritmiu
+\newcommand{\seznamalgoritmu}%
+  {{% prostredi kvuli \pagestyle
+    \pagestyle{empty}
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{Seznam algoritmů}
+    \lstlistoflistings
+    \newpage
+
+    \if@twoside
+      \pagestyle{empty}
+      \cleardoublepage
+    \fi
+  }}%
+
 \begin{document}
 \author{Jan Strnádek}
 \date{10.10.2012}
@@ -57,7 +110,7 @@
 \\[0.3cm]
 \textsc{\Large Katedra Informatiky a výpočetní techniky}
 \\[6cm]
-\textbf{\LARGE Bakalářská Práce}
+\textbf{\LARGE Bakalářská práce}
 \\[3cm]
 \textbf{\LARGE SID\\[0.3cm] SQL Injection Attack Detector}
 \\[6cm]
@@ -168,7 +221,7 @@ Tento typ je mnohem nebezpečnější, protože na napadené stránky se nevstup
 
 \subsection{Ukázka}
 Na obrázku \ref{obr.airbank} můžeme vidět úspěšný nepersistentní XSS útok na serveru air/bank. (Bohužel nebyly zveřejněny detaily a byl zveřejněn pouze tento obrázek v dost špatné kvalitě.) V nechráněném vstupu byl zadán kód výstražné hlášky javascriptu:
-\begin{lstlisting}[label=some-code, language=HTML, caption=Výstražná hláška v jazyce JavaScript]
+\begin{lstlisting}[label=JSAlertExample, language=HTML, caption=Výstražná hláška v jazyce JavaScript]
 <script type="text/javascritpt">alert("XSS by PiratezSec");</script>
 \end{lstlisting}
 
@@ -183,15 +236,15 @@ Tato chyba byla objevena skupinou Czechurity (\textit{https://twitter.com/Czechu
 \subsection{Různé varianty zapsání XSS}
 Výstupy na webových stránkách mohou být různým způsobem filtrovány, popřípadě může být přímo filtrován script tag. Toto lze bohužel jednoduše obejít\cite{soom.cz}. Zde několik příkladů (ale ne všechny prohlížeče toto interpretují):
 
-\begin{lstlisting}[label=some-code, language=HTML, caption=Schování JavaScriptu do neexistujícího obrázku]
+\begin{lstlisting}[label=FakeImageXSS, language=HTML, caption=Schování JavaScriptu do neexistujícího obrázku]
 <img src="javascript:alert('XSS');">
 \end{lstlisting}
 
-\begin{lstlisting}[label=some-code, language=HTML, caption=Zakázané uvozovky? Nahrazení entitami \ldots]
+\begin{lstlisting}[label=EntityXSSReplace, language=HTML, caption=Zakázané uvozovky? Nahrazení entitami \ldots]
 <img src=javascript:alert(\&quot;XSS\&quot;)>
 \end{lstlisting}
 
-\begin{lstlisting}[label=some-code, language=HTML, caption=Další možností je převedení na unikód]
+\begin{lstlisting}[label=unicodeXSSFormat, language=HTML, caption=Další možností je převedení na unikód]
 <img src=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;
 &#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;
 &#39;&#88;&#83;&#83;&#39;&#41;>
@@ -208,7 +261,7 @@ Webový server slouží hlavně pro poskytování souborů, které mohou být st
 
 \subsection{Příklad directory traversal útoku}
 Mějme:
-\begin{lstlisting}[label=some-code,caption=URL adresa s podezdřením na include souboru]
+\begin{lstlisting}[label=URLIncludeAddressVulnerability,caption=URL adresa s podezdřením na include souboru]
 http://portal.czu.cz/index.php?item=novinky.html
 \end{lstlisting}
 Při bližším zkoumání vidíme, že se zde pravděpodobně vkládá soubor \uv{novin ky.html} do stránky, a to odněkud ze souborového systému. Otázkou však zůstává, co se bude dít, budeme-li tento parametr měnit ručně, a kam až se dostaneme.
@@ -230,7 +283,7 @@ Starší verze IIS\footnote{Internet Information Service - Microsoftem distribuo
 http://iis.czu.cz/scr/..%5c../winnt/system32/ cmd.exe?/c+dir+c:\
 \end{lstlisting}
 
-Tento příkaz spustil \uv{cmd.exe} (příkazová řádka systému Windows) a v něm příkaz \uv{dir c:$\backslash$}. Nic nám tedy nebrání přidávat uživatele do systému, nebo formátovat pevné disky, jak lze vidět zde:
+Tento příkaz spustil \uv{cmd.exe} (příkazová řádka systému Windows) a\\ v něm příkaz \uv{dir c:$\backslash$}. Nic nám tedy nebrání přidávat uživatele do systému, nebo formátovat pevné disky, jak lze vidět zde:
 
 \begin{lstlisting}[label=iis_derave_format,caption=Formátování disku C: přes chybu v IIS]
 http://iis.czu.cz/scr/..%5c../winnt/system32/ cmd.exe?/c+format+c:\
@@ -481,7 +534,7 @@ Pro testování jsem si napsal 2 webové stránky, první s validním a správn�
 \textit{(Ke stažení na: http://simplehtmldom.sourceforge.net/)}\\
 \newline
 \textbf{Nokogiri - Ruby} - První parser v testu, který si bez problémů poradil s parsováním špatných HTML stránek, byl schopen rozpoznat správně odkazy, chybné uzavírání parametrů. Další obrovským přínosem je, že funguje na principu CSS3 selektorů:
-\begin{lstlisting}[label=some-code,language=Ruby, caption=CSS3 Selektory NokoGiri]
+\begin{lstlisting}[label=rubyNokogiriSelections,language=Ruby, caption=CSS3 Selektory NokoGiri]
 # Load Nokogiri::HTML Document for page
 doc = Nokogiri::HTML(open('http://www.google.com/search?q=sparklemotion'))
 
@@ -491,7 +544,7 @@ doc.css("body a").each do |link|
 end
 \end{lstlisting}
 Dále implementuje XPath a elementy dále rozděluje (ne jako předchozí parser Simple HTML DOM, který vrací pouze textovou podobu).
-\begin{lstlisting}[label=some-code,language=Ruby, caption=Parsování]
+\begin{lstlisting}[label=rubyparser,language=Ruby, caption=Parsování]
 # Search for nodes by css
 doc.css("body a").each do |link|
 	puts link['href'] # Print href attribute
@@ -520,10 +573,10 @@ Získávání stromu je postaveno na strukturách zásobník a datové pole. V z
 \subsection{Funkce zásobníku}
 \begin{figure}[h!]
 \centering{\includegraphics[width=250px]{stack_example.eps}}
-\caption{Ukázka stromu webových stránek}
+\caption{Ukázka funkce zásobníku a archívu}
 \label{obr.url_tree}
 \end{figure}
-Do zásobníku jsou ukládány instance třídy \textit{Parser::StackItem} (tato třída je pouze \uv{přepravka}\footnote{Třída, která slouží pouze k uchování dat.}), které mají 2 atributy: URL a hloubku zanoření. Před samotným spuštěním procházení je do zásobníku vložena kořenová stránka (\\v našem případě \textit{http://unicv.zcu.cz}). Následně je spuštěn cyklus, který běží dokud zásobník není prázdný. Pokud stránku zpracujeme (včetně odkazů a formulářů), je uložena do pole historie. Každá nově přidávaná stránka do zásobníku je ověřována proti zásobníku i proti historii, aby nebyla jedna stránka procházena 2x.
+Do zásobníku jsou ukládány instance třídy \textit{Parser::StackItem} (tato třída je pouze \uv{přepravka}\footnote{Třída, která slouží pouze k uchování dat.}), které mají 2 atributy: URL a hloubku zanoření. Před samotným spuštěním procházení je do zásobníku vložena kořenová stránka \\(v našem případě \textit{http://unicv.zcu.cz}). Následně je spuštěn cyklus, který běží dokud zásobník není prázdný. Pokud stránku zpracujeme (včetně odkazů a formulářů), je uložena do pole historie. Každá nově přidávaná stránka \\do zásobníku je ověřována proti zásobníku i proti historii, aby nebyla jedna stránka procházena 2x.
 
 \subsection{Získávání a uchovávání odkazů}
 Při vytváření URL stromu webových stránek se ihned prochází načtené stránky a zjišťují se formuláře a odkazy na dané stránce. Pro uchování a následné zpracování se využívají 2 pomocné třídy:
@@ -761,7 +814,7 @@ Ze subjektivního hlediska práce byla velice zajímavá a přínosná, jak z hl
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Použitá literatura a zdroje}
-\bibitem{owasp}{\em OWASP comunity}
+\bibitem{owasp}{\em OWASP community}
 	{\bf OWASP Wiki} [on-line] \\
 	\texttt{https://www.owasp.org/}, 2013
 
@@ -773,7 +826,7 @@ Ze subjektivního hlediska práce byla velice zajímavá a přínosná, jak z hl
 	{\bf Cgisecurity.com} [on-line]\\
 	\texttt{http://www.cgisecurity.com/csrf-faq.html}, 2010
 
-\bibitem{owasppt}{\em OWASP comunity}{\bf OWASP Wiki - Path traversal}\\
+\bibitem{owasppt}{\em OWASP comunity} {\bf OWASP Wiki - Path traversal}\\
 	\texttt{https://www.owasp.org/index.php/Path$\_$Traversal}, 2013 [on-line]
 
 \bibitem{ruby}{\em Ruby comunnity}
@@ -802,7 +855,16 @@ Ze subjektivního hlediska práce byla velice zajímavá a přínosná, jak z hl
 \bibitem{guardian}{\em Charles Arthur, Dan Sabbagh and Sandra Laville
 } {\bf The Guardian}\\
 	\texttt{http://www.guardian.co.uk/technology/2012/mar/06/lulz\\sec-sabu-working-for-us-fbi}, 2012 [on-line]
-
-
 \end{thebibliography}
+
+% Vysázení seznamu obrázků
+\seznamobrazku
+
+% Vysázení seznamu tabulek
+\seznamtabulek
+
+% Seznam algoritmu
+%\seznamalgoritmu
+\seznamalgoritmu
+
 \end{document}

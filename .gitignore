@@ -16,7 +16,9 @@ SID-build*
 
 # Nb project
 nbproject
-
+*.lof
+*.lol
+*.lot
 # TeX data
 *.aux
 *.out
