@@ -1,0 +1,12 @@
+\chapter{Závěr}
+Cílem práce bylo získat dostupné informace o problematice bezpečnosti webových stránek a aplikací a vytvořit nástroj pro penetrační testování (SID) jednoho hlavního bezpečnostního rizika SQL Injection.
+
+SID umožňuje 4 metody testování SQL injection: 1) Testování se zapnutými chybovými direktivami 2) Testování obsahu při výměně parametrů 3) Insert-into metoda a 4) Drop-all metoda. Využíváme-li metodu číslo 2, tak i přes pokus o zobecnění chování změn parametrů, které jsou náchylné k SQL injection, není bohužel možné zcela jistě ve všech ohledech říci, že tyto parametry jsou nechráněné. Vždy získáváme pouze podezření na SQLi.  
+
+Webových aplikací a stránek je nepřeberné množství a každá se chováním trochu odlišuje. Při testování na vlastních testovacích stránkách a na vzorové stránce společnosti Acunetix (\textit{http://testphp.vulnweb.com/}) se podařilo detekovat značné množství výskytů SQL injection. Bohužel ale stačí pouze jeden neochráněný vstup. Proto bych při skutečném testování použil kombinaci všech možných dostupných nástrojů (zvažoval bych i zakoupení komerčních nástrojů), manuální procházení zdrojových kódů (minimálně částí, týkajících se zpracování těchto požadavků). 
+
+Nástroj pro penetrační testování bych rád vyvíjel dále, jedním z~dalších rozšíření by bylo procházení JavaScriptových souborů pro hledání Ajaxových požadavků a jejich testování a testování při aktivním přihlášení. 
+
+Na několika testovacích webových aplikací se povedlo najít vytvořeným nástrojem všechny problémy oproti zbylým testovaným nástrojům.
+
+Ze subjektivního hlediska byla práce velice zajímavá a přínosná nejen z pohledu bezpečnosti, ale i z~hlediska jazyka ruby a parsování stránek. Vyvinutý nástroj pro penetrační testování je určen pouze pro testovací účely, jako autor se zříkám veškeré zodpovědnosti při použití k jiným účelům.
